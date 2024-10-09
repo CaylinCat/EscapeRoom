@@ -8,6 +8,8 @@ using UnityEngine;
 /// </summary>
 public class Room : MonoBehaviour
 {
+    // ETHAN VERSION
+
     public List<GameObject> Walls;
     private int wallIndex = 0;
 
@@ -50,5 +52,21 @@ public class Room : MonoBehaviour
         }
 
         Walls[wallIndex].SetActive(true);
+    }
+
+    // NATHAN VERSION
+
+    public RoomID ID;
+    public List<Wall> WallList;
+
+    public Wall GetWallByID(DirectionID direction)
+    {
+        foreach (Wall w in WallList)
+        {
+            if(w.Direction == direction) return w;
+        }
+
+        Debug.Log($"Wall could not be found, {direction} not a valid direction ID");
+        return null;
     }
 }
