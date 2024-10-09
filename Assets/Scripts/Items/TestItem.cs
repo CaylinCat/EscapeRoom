@@ -15,4 +15,11 @@ public class TestItem : Item
     {
         inInventory = true;
     }
+
+    // The functionality for using items should be located in the corresponding puzzle in practice
+    public void TestUseItem()
+    {
+        Debug.Log("Item Used");
+        Destroy(gameObject);
+    }
 }

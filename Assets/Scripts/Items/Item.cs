@@ -26,7 +26,7 @@ public abstract class Item : MonoBehaviour, IPointerClickHandler, IDragHandler, 
     {
         if (inInventory)
         {
-            InventoryManager.Instance.SelectedItem = GetItemID();
+            InventoryManager.Instance.SelectedItem = this;
         }
 
         Interact();
@@ -36,7 +36,7 @@ public abstract class Item : MonoBehaviour, IPointerClickHandler, IDragHandler, 
     {
         if(inInventory)
         {
-            InventoryManager.Instance.SelectedItem = GetItemID();
+            InventoryManager.Instance.SelectedItem = this;
             transform.position = eventData.position;
         }
     }

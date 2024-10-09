@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
-    public ItemID SelectedItem;
+    public Item SelectedItem;
     
     void Awake()
     {
@@ -15,10 +15,5 @@ public class InventoryManager : MonoBehaviour
             Debug.LogWarning("Tried to create more than one instance of the InventoryManager singleton!");
             Destroy(this);
         }
-    }
-
-    void Start()
-    {
-        SelectedItem = ItemID.NONE;
     }
 }
