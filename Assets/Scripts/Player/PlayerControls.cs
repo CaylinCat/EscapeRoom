@@ -5,8 +5,25 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
-    [SerializeField] private DirectionID currentDirection;
-    [SerializeField] private RoomID currentRoom;
+    public static PlayerControls Instance;
+
+    [SerializeField] private DirectionID _currentDirection;
+    [SerializeField] private Room _currentRoom;
+    [SerializeField] private Wall _currentWall;
+
+    void Awake()
+    {
+        if(Instance == null) Instance = this;
+        else
+        {
+            Debug.LogWarning("Tried to create more than one instance of the PlayerControls singleton!");
+            Destroy(this);
+        }
+
+        _currentDirection = RoomManager.Instance.StartDirection;
+        _currentRoom = RoomManager.Instance.GetRoomByID(RoomManager.Instance.StartRoom);
+        _currentWall = _currentRoom.GetWallByID(_currentDirection);
+    }
 
     void Update()
     {
@@ -15,40 +32,42 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) rotation += 1;
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) rotation -= 1;
 
-        if (Input.GetKeyDown(KeyCode.Space)) SwitchRoom(currentRoom);
+        if (Input.GetKeyDown(KeyCode.Space)) SwitchRoom(_currentRoom);
 
         if (rotation != 0) RotatePlayer(rotation);
     }
 
     void RotatePlayer(int delta)
     {
-        int wallCount = RoomManager.Instance.GetRoomWallList(currentRoom).Count;
-        RoomManager.Instance.SetRoomActive(currentRoom, (int) currentDirection, false);
-        currentDirection += delta;
+        int wallCount = _currentRoom.Walls.Count;
+        _currentWall.SetWallActive(false);
+        _currentDirection += delta;
 
-        if ((int) currentDirection < 0) currentDirection = (DirectionID) wallCount - math.abs(delta);
-        if ((int) currentDirection >= wallCount) currentDirection = (DirectionID) delta - 1;
+        if ((int) _currentDirection < 0) _currentDirection = (DirectionID) wallCount - math.abs(delta);
+        if ((int) _currentDirection >= wallCount) _currentDirection = (DirectionID) delta - 1;
 
-        RoomManager.Instance.SetRoomActive(currentRoom, (int) currentDirection, true);
+        _currentWall = _currentRoom.GetWallByID(_currentDirection);
+        _currentWall.SetWallActive(true);
     }
 
-    void SwitchRoom(RoomID room)
+    void SwitchRoom(Room room)
     {
-        RoomManager.Instance.SetRoomActive(currentRoom, (int) currentDirection, false);
+        _currentWall.SetWallActive(false);
 
-        switch(room)
+        switch(room.ID)
         {
             case RoomID.BODY:
-                currentRoom = RoomID.SOUL;
+                _currentRoom = RoomManager.Instance.GetRoomByID(RoomID.SOUL);
                 break;
             case RoomID.SOUL:
-                currentRoom = RoomID.BODY;
+                _currentRoom = RoomManager.Instance.GetRoomByID(RoomID.BODY);
                 break;
             default:
                 Debug.Log("Could not switch rooms, invalid room input");
                 break;
         }
 
-        RoomManager.Instance.SetRoomActive(currentRoom, (int) currentDirection, true);
+        _currentWall = _currentRoom.GetWallByID(_currentDirection);
+        _currentWall.SetWallActive(true);
     }
 }

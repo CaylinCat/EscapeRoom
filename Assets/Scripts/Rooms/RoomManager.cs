@@ -12,15 +12,18 @@ public enum DirectionID
 {
     NORTH,
     EAST,
-    WEST,
-    SOUTH
+    SOUTH,
+    WEST
 }
 
 public class RoomManager : MonoBehaviour
 {
     public static RoomManager Instance;
-    public List<GameObject> BodyRoomWalls;
-    public List<GameObject> SoulRoomWalls;
+    public List<Room> Rooms;
+
+    [Header("Starting Room")]
+    public RoomID StartRoom;
+    public DirectionID StartDirection;
 
     void Awake()
     {
@@ -31,26 +34,21 @@ public class RoomManager : MonoBehaviour
             Destroy(this);
         }
 
-        foreach (GameObject go in BodyRoomWalls) go.SetActive(false);
-        foreach (GameObject go in SoulRoomWalls) go.SetActive(false);
-        SetRoomActive(RoomID.BODY, (int) DirectionID.NORTH, true);
-    }
-
-    public void SetRoomActive(RoomID room, int index, bool state)
-    {
-        GetRoomWallList(room)[index].SetActive(state);
-    }
-
-    public List<GameObject> GetRoomWallList(RoomID room)
-    {
-        switch (room)
+        foreach(Room r in Rooms)
         {
-            case RoomID.BODY:
-                return BodyRoomWalls;
-            case RoomID.SOUL:
-                return SoulRoomWalls;
-            default:
-                return null;
+            foreach(Wall w in r.Walls) w.SetWallActive(false);
         }
+        GetRoomByID(StartRoom).GetWallByID(StartDirection).SetWallActive(true);
+    }
+
+    public Room GetRoomByID(RoomID room)
+    {
+        foreach(Room r in Rooms)
+        {
+            if(r.ID == room) return r;
+        }
+
+        Debug.Log($"Room could not be found, {room} not a valid room ID");
+        return null;
     }
 }
