@@ -5,12 +5,7 @@ using UnityEngine;
 public class Wall : MonoBehaviour
 {
     public DirectionID Direction;
-    private Canvas _canvas;
-
-    void Awake()
-    {
-        _canvas = gameObject.GetComponentInChildren<Canvas>();
-    }
+    [SerializeField] private Canvas _canvas;
 
     public void SetWallActive(bool state)
     {
