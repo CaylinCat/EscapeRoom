@@ -28,13 +28,24 @@ public class MusicBox : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)) Debug.Log(CheckSolution());
     }
 
+    public void PlacePin(GameObject source)
+    {
+        source.transform.GetChild(0).gameObject.SetActive(false);
+        source.transform.GetChild(1).gameObject.SetActive(true);
+
+        if(CheckSolution())
+        {
+            Debug.Log("PUZZLE SOLVED SUCCESSFULLY");
+        }
+    }
+
     public bool CheckSolution()
     {
         for(int i = 0; i < Rows.Count; ++i)
         {
             foreach(Transform tr in Rows[i].GetComponentInChildren<Transform>())
             {
-                if (_solutions[i].Contains(tr.gameObject) ^ tr.GetChild(0).gameObject.activeInHierarchy) return false;
+                if (_solutions[i].Contains(tr.gameObject) ^ tr.GetChild(1).gameObject.activeInHierarchy) return false;
             }
         }
         return true;
