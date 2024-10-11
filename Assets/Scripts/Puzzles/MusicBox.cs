@@ -7,6 +7,9 @@ public class MusicBox : MonoBehaviour
     public List<GameObject> Rows;
     public List<GameObject> Row1Solution;
     public List<GameObject> Row2Solution;
+    public List<GameObject> Row3Solution;
+    public List<GameObject> Row4Solution;
+    public List<GameObject> Row5Solution;
 
     private List<List<GameObject>> _solutions = new();
 
@@ -14,6 +17,9 @@ public class MusicBox : MonoBehaviour
     {
         _solutions.Add(Row1Solution);
         _solutions.Add(Row2Solution);
+        _solutions.Add(Row3Solution);
+        _solutions.Add(Row4Solution);
+        _solutions.Add(Row5Solution);
     }
 
     // DEBUG
