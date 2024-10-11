@@ -7,6 +7,7 @@ public class Clickable : MonoBehaviour
     public int entityIndex;
     public string actionType;
     public Bricks bricksManager;
+    public NecromancerCircle necromancerCircle;
 
     void OnMouseDown()
     {
@@ -16,6 +17,13 @@ public class Clickable : MonoBehaviour
                 if (bricksManager != null)
                 {
                     bricksManager.OnEntityClicked(GetComponent<Clickable>().entityIndex);
+                }
+                break;
+
+            case "NecromancerCircleOuter":
+                if (necromancerCircle != null)
+                {
+                    necromancerCircle.OnEntityClicked(GetComponent<Clickable>().entityIndex);
                 }
                 break;
 
