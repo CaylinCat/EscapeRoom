@@ -8,6 +8,8 @@ public class InventoryManager : MonoBehaviour
     public Item SelectedItem;
     public GameObject[] ItemSlots;
     public GameObject SelectionIcon;
+    public GameObject HoverIcon;
+    [HideInInspector] public bool CanHover = true;
     private List<GameObject> heldItems = new List<GameObject>();
     
     void Awake()
@@ -23,6 +25,7 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         SelectionIcon.SetActive(false);
+        HoverIcon.SetActive(false);
     }
 
     public void AddItem(Item item)
@@ -45,6 +48,20 @@ public class InventoryManager : MonoBehaviour
         SelectionIcon.SetActive(true);
         SelectionIcon.transform.SetParent(item.transform.parent);
         SelectionIcon.transform.localPosition = Vector3.zero;
+        UnhoverItem();
+    }
+
+    public void HoverItem(Item item)
+    {
+        if(CanHover)
+        HoverIcon.SetActive(true);
+        HoverIcon.transform.SetParent(item.transform.parent);
+        HoverIcon.transform.localPosition = Vector3.zero;
+    }
+
+    public void UnhoverItem()
+    {
+        HoverIcon.SetActive(false);
     }
 
     public void DeselectItem()

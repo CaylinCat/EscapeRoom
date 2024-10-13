@@ -58,6 +58,7 @@ MonoBehaviour:
   - {fileID: 5036070099995830754}
   - {fileID: 8344974697023188927}
   SelectionIcon: {fileID: 2787778584325503466}
+  HoverIcon: {fileID: 5525730439791523277}
 --- !u!1001 &3224087034707224077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -382,6 +383,11 @@ GameObject:
 --- !u!1 &5238949178727232807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7208642968179626794, guid: ad8571896c3b368428611f60579e2a65, type: 3}
+  m_PrefabInstance: {fileID: 3224087034707224077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5525730439791523277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6922336769085838272, guid: ad8571896c3b368428611f60579e2a65, type: 3}
   m_PrefabInstance: {fileID: 3224087034707224077}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7298961035824536241 stripped

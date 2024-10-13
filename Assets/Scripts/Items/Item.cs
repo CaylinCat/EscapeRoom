@@ -13,7 +13,7 @@ public enum ItemID
 /// <summary>
 /// The item superclass. Items are objects in the inventory.
 /// </summary>
-public abstract class Item : MonoBehaviour, IPointerDownHandler, IDragHandler, IEndDragHandler 
+public abstract class Item : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     /// <summary>
     /// Called whenever the item is clicked on
@@ -36,6 +36,11 @@ public abstract class Item : MonoBehaviour, IPointerDownHandler, IDragHandler, I
         transform.position = eventData.position;
     }
 
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        InventoryManager.Instance.CanHover = false;
+    }
+
     public void OnEndDrag(PointerEventData eventData)
     {
         // Check for interactions in world space rather than UI space
@@ -48,6 +53,17 @@ public abstract class Item : MonoBehaviour, IPointerDownHandler, IDragHandler, I
         }
 
         InventoryManager.Instance.DeselectItem();
+        InventoryManager.Instance.CanHover = true;
         transform.localPosition = Vector3.zero;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if(InventoryManager.Instance.SelectedItem != this) InventoryManager.Instance.HoverItem(this);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        InventoryManager.Instance.UnhoverItem();
     }
 }
