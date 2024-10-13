@@ -8,6 +8,7 @@ public enum ItemID
     TEST_ITEM,
     TEST_ITEM_2,
     TEST_ITEM_3,
+    ROOK,
 }
 
 /// <summary>
