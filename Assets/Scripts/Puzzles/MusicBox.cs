@@ -43,7 +43,7 @@ public class MusicBox : MonoBehaviour
 
     public void PlacePin(MusicBoxSlot source)
     {
-        Debug.Log("Activated PlacePin");
+        // Visually move pin to new slot position
         SelectedPin.Slot = source;
         SelectedPin.transform.position = source.transform.position;
         SelectedPin = null;
