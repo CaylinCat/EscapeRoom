@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MusicBox : MonoBehaviour
 {
+    public static MusicBox Instance;
+    
     public List<GameObject> Rows;
     public List<GameObject> Row1Solution;
     public List<GameObject> Row2Solution;
@@ -11,11 +14,20 @@ public class MusicBox : MonoBehaviour
     public List<GameObject> Row4Solution;
     public List<GameObject> Row5Solution;
 
+    public MusicBoxPin SelectedPin;
+    public MusicBoxSlot OldSlot;
+
     private List<List<GameObject>> _solutions = new();
-    private GameObject _movePinFrom;
 
     void Awake()
     {
+        if(Instance == null) Instance = this;
+        else
+        {
+            Debug.LogWarning("Tried to create more than one instance of the MusicBox singleton!");
+            Destroy(this);
+        }
+
         _solutions.Add(Row1Solution);
         _solutions.Add(Row2Solution);
         _solutions.Add(Row3Solution);
@@ -29,23 +41,26 @@ public class MusicBox : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)) Debug.Log(CheckSolution());
     }
 
-    public void PlacePin(GameObject source)
+    public void PlacePin(MusicBoxSlot source)
     {
+        Debug.Log("Activated PlacePin");
+        SelectedPin.Slot = source;
+        SelectedPin.transform.position = source.transform.position;
+        SelectedPin = null;
+
         // Deactivate use item zone for given slot
-        source.transform.GetChild(0).gameObject.SetActive(false);
+        Instance.OldSlot.IsFilled = false;
+        Instance.OldSlot.GetComponent<Image>().enabled = true;
+
         // Activate pin in given slot
-        source.transform.GetChild(1).gameObject.SetActive(true);
+        source.IsFilled = true;
+        source.GetComponent<Image>().enabled = false;
 
         // Check if puzzle is solved after each action
         if(CheckSolution())
         {
             Debug.Log("PUZZLE SOLVED SUCCESSFULLY");
         }
-    }
-
-    public void MovePinStart(GameObject source)
-    {
-        
     }
 
     public bool CheckSolution()
@@ -61,7 +76,7 @@ public class MusicBox : MonoBehaviour
                 // the puzzle is not solved and the loop immediately exits
 
                 // Simplifies to: (pin in solution) XOR (pin activated) --> puzzle failed
-                if (_solutions[i].Contains(tr.gameObject) ^ tr.GetChild(1).gameObject.activeInHierarchy) return false;
+                if (_solutions[i].Contains(tr.gameObject) ^ tr.GetComponent<MusicBoxSlot>().IsFilled) return false;
             }
         }
         // If none of the pins fail, the puzzle is solved
