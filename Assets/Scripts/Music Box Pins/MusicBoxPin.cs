@@ -12,31 +12,33 @@ public enum PinRowID
     PIN_ROW_5
 }
 
-public class MusicBoxPin : MonoBehaviour, IPointerClickHandler, IDragHandler, IEndDragHandler
-{
+public class MusicBoxPin : MonoBehaviour {
     public MusicBoxSlot Slot;
     public PinRowID RowID;
 
     void Awake()
     {
-        if(Slot != null) Slot.GetComponent<Image>().enabled = false;
+        if(Slot != null) Slot.GetComponent<BoxCollider2D>().enabled = false;
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnMouseDown()
     {
         MusicBox.Instance.SelectedPin = this;
         MusicBox.Instance.OldSlot = Slot;
     }
 
-    public void OnDrag(PointerEventData eventData)
+    public void OnMouseDrag()
     {
-        transform.position = eventData.position;
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = new Vector3(worldPos.x, worldPos.y, 0);
         MusicBox.Instance.SelectedPin = this;
         MusicBox.Instance.OldSlot = Slot;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public void OnMouseUp()
     {
+        // TODO Check if over slots
+
         if(Slot != null) transform.position = Slot.transform.position;
         else transform.localPosition = Vector3.zero;
     }

@@ -3,13 +3,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class MusicBoxSlot : MonoBehaviour, IPointerClickHandler, IDropHandler
+public class MusicBoxSlot : MonoBehaviour
 {
     public List<PinRowID> AcceptedItems;
     public bool IsFilled;
 
-    public void OnPointerClick(PointerEventData eventData) { TryPlacePin(); }
-    public void OnDrop(PointerEventData eventData) { TryPlacePin(); }
+    void OnMouseDown() { TryPlacePin(); }
 
     private void TryPlacePin()
     {

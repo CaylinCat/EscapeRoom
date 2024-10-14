@@ -50,11 +50,11 @@ public class MusicBox : MonoBehaviour
 
         // Deactivate use item zone for given slot
         Instance.OldSlot.IsFilled = false;
-        Instance.OldSlot.GetComponent<Image>().enabled = true;
+        Instance.OldSlot.GetComponent<BoxCollider2D>().enabled = true;
 
         // Activate pin in given slot
         source.IsFilled = true;
-        source.GetComponent<Image>().enabled = false;
+        source.GetComponent<BoxCollider2D>().enabled = false;
 
         // Check if puzzle is solved after each action
         if(CheckSolution())
