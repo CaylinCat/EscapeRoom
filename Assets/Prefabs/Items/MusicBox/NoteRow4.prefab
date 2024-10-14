@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9088411278664892386, guid: dfd47e016e090f84aa83600c4d4d6731, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 16
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 9088411278664892386, guid: dfd47e016e090f84aa83600c4d4d6731, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 16
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 9088411278664892386, guid: dfd47e016e090f84aa83600c4d4d6731, type: 3}
       propertyPath: m_LocalPosition.x
@@ -140,11 +140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3760002692005457132, guid: 8e68f77af16b51c43a621788ab65ceda, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3760002692005457132, guid: 8e68f77af16b51c43a621788ab65ceda, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3760002692005457132, guid: 8e68f77af16b51c43a621788ab65ceda, type: 3}
       propertyPath: m_LocalPosition.x
@@ -205,6 +205,14 @@ PrefabInstance:
     - target: {fileID: 7101779486417651573, guid: 8e68f77af16b51c43a621788ab65ceda, type: 3}
       propertyPath: m_Name
       value: NoteRow4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8461360122015567998, guid: 8e68f77af16b51c43a621788ab65ceda, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8461360122015567998, guid: 8e68f77af16b51c43a621788ab65ceda, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
