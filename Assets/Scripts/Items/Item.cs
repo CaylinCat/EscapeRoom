@@ -11,43 +11,65 @@ public enum ItemID
     MUSICBOX_PIN_3,
     MUSICBOX_PIN_4,
     MUSICBOX_PIN_5,
+    TEST_ITEM_2,
+    TEST_ITEM_3,
+    ROOK,
 }
 
 /// <summary>
-/// The item superclass. Items are interactable objects that can
-/// be added to the inventory.
+/// The item superclass. Items are objects in the inventory.
 /// </summary>
-public abstract class Item : MonoBehaviour, IPointerClickHandler, IDragHandler, IEndDragHandler
+public abstract class Item : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    protected bool inInventory;
-
     /// <summary>
     /// Called whenever the item is clicked on
     /// </summary>
     protected abstract void Interact();
     public abstract ItemID GetItemID();
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)
     {
-        if (inInventory)
+        if(InventoryManager.Instance.SelectedItem != this) 
         {
-            InventoryManager.Instance.SelectedItem = this;
+            InventoryManager.Instance.SelectItem(this);
+            Interact();
         }
-
-        Interact();
+        else InventoryManager.Instance.DeselectItem();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if(inInventory)
-        {
-            InventoryManager.Instance.SelectedItem = this;
-            transform.position = eventData.position;
-        }
+        transform.position = eventData.position;
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        InventoryManager.Instance.CanHover = false;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        // Check for interactions in world space rather than UI space
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(worldPos, 1f);
+        foreach(Collider2D collider in colliders)
+        {
+            UseItemZone zone = collider.gameObject.GetComponent<UseItemZone>();
+            if(zone != null) zone.TryUseItem();
+        }
+
+        InventoryManager.Instance.DeselectItem();
+        InventoryManager.Instance.CanHover = true;
         transform.localPosition = Vector3.zero;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if(InventoryManager.Instance.SelectedItem != this) InventoryManager.Instance.HoverItem(this);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        InventoryManager.Instance.UnhoverItem();
     }
 }

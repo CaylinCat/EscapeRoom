@@ -36,6 +36,7 @@ public class Room : MonoBehaviour
 
     private void SwitchWall(bool direction)
     {
+        PuzzleManager.Instance.HidePuzzle();
         Walls[wallIndex].SetActive(false);
 
         if(direction) 

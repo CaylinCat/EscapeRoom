@@ -35,6 +35,8 @@ public class RoomManager : MonoBehaviour
 
     private void SwitchRooms()
     {
+        PuzzleManager.Instance.HidePuzzle();
+
         if(bodyRoomActive)
         {
             BodyRoom.gameObject.SetActive(false);

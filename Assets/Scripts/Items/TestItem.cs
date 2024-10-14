@@ -11,11 +11,6 @@ public class TestItem : Item
         Debug.Log("Clicked!");
     }
 
-    void Start()
-    {
-        inInventory = true;
-    }
-
     // The functionality for using items should be located in the corresponding puzzle in practice
     public void TestUseItem()
     {
