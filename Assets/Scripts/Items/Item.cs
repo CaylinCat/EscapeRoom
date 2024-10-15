@@ -23,6 +23,7 @@ public enum ItemID
     RING,
     PHOTOGRAPH,
     TORCH,
+    BIRDSEED,
 }
 
 /// <summary>
