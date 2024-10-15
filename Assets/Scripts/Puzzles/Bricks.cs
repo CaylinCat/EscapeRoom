@@ -4,34 +4,39 @@ using UnityEngine;
 
 public class Bricks : Puzzle
 {
-    private List<int> correctOrder;
-    private int nextClick;
+    private readonly int[] bricksOrder = { 0, 1, 2, 3, 4, 5, 6 };
+    public int nextBrickClicked = 0;
     public SpriteRenderer BrickStart;
-    public Sprite BricksComplete;
-    public bool complete = false;
+    public Sprite BricksEnd;
+    public bool bricksComplete = false;
 
     public void Start() {
-        correctOrder = new List<int> { 0, 1, 2, 3, 4, 5, 6 };
-        nextClick = 0;
-        Debug.Log($"Next expected: {nextClick}, CorrectOrderSize: {correctOrder.Count}");
+        nextBrickClicked = 0;
+        bricksComplete = false;
+        Debug.Log($"Next expected: {nextBrickClicked}, CorrectOrderSize: {bricksOrder.Length}");
+    }
+
+    void Awake()
+    {
+        ResetPuzzle();
     }
 
     // Call this method when a brick is clicked
     public void OnEntityClicked(int index)
     {
-        Debug.Log($"Clicked index: {index}, Next expected: {nextClick}, CorrectOrderSize: {correctOrder.Count}");
-        Debug.Log($"Complete?: {complete}");
-        if(complete) return;
+        Debug.Log($"Clicked index: {index}, Next expected: {nextBrickClicked}, CorrectOrderSize: {bricksOrder.Length}");
+        Debug.Log($"Complete?: {bricksComplete}");
+        if(bricksComplete) return;
 
-        if (index == correctOrder[nextClick])
+        if (index == bricksOrder[nextBrickClicked])
         {
-            nextClick++;
+            nextBrickClicked++;
 
-            if (nextClick >= correctOrder.Count) {
+            if (nextBrickClicked >= bricksOrder.Length) {
                 Debug.Log("Passed");
                 TriggerEvent();
-                BrickStart.sprite = BricksComplete;
-                //complete = true;
+                BrickStart.sprite = BricksEnd;
+                bricksComplete = true;
                 OnComplete();
             }
         }
@@ -44,7 +49,8 @@ public class Bricks : Puzzle
     
     private void ResetPuzzle()
     {
-        nextClick = 0;
+        nextBrickClicked = 0;
+        bricksComplete = false;
     }
 
     private void TriggerEvent()

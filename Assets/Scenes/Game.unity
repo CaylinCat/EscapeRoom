@@ -843,6 +843,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 983026397}
     m_Modifications:
+    - target: {fileID: -633176342198859930, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
+      propertyPath: BricksEnd
+      value: 
+      objectReference: {fileID: 21300000, guid: 53b0c76dd00d6014caccdab6054fef9f, type: 3}
     - target: {fileID: 1026136802408985282, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
