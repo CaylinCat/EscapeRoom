@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MusicBox : MonoBehaviour
+public class MusicBox : Puzzle
 {
     public static MusicBox Instance;
     
@@ -18,6 +18,7 @@ public class MusicBox : MonoBehaviour
     public MusicBoxSlot OldSlot;
 
     private List<List<GameObject>> _solutions = new();
+    private bool complete = false;
 
     void Awake()
     {
@@ -35,17 +36,13 @@ public class MusicBox : MonoBehaviour
         _solutions.Add(Row5Solution);
     }
 
-    // DEBUG
-    void Update()
+    public void PlacePin(MusicBoxSlot newSlot)
     {
-        if(Input.GetKeyDown(KeyCode.Space)) Debug.Log(CheckSolution());
-    }
+        if(complete) return;
 
-    public void PlacePin(MusicBoxSlot source)
-    {
         // Visually move pin to new slot position
-        SelectedPin.Slot = source;
-        SelectedPin.transform.position = source.transform.position;
+        SelectedPin.Slot = newSlot;
+        SelectedPin.transform.position = newSlot.transform.position;
         SelectedPin.Deselect();
         SelectedPin = null;
 
@@ -54,13 +51,14 @@ public class MusicBox : MonoBehaviour
         Instance.OldSlot.GetComponent<BoxCollider2D>().enabled = true;
 
         // Activate pin in given slot
-        source.IsFilled = true;
-        source.GetComponent<BoxCollider2D>().enabled = false;
+        newSlot.IsFilled = true;
+        newSlot.GetComponent<BoxCollider2D>().enabled = false;
 
         // Check if puzzle is solved after each action
         if(CheckSolution())
         {
-            Debug.Log("PUZZLE SOLVED SUCCESSFULLY");
+            complete = true;
+            OnComplete();
         }
     }
 
