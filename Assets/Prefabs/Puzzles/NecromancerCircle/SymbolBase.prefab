@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
+  m_FlipX: 1
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 2.5, y: 2.5}
   m_AdaptiveModeThreshold: 0.5
@@ -130,10 +130,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1862272260113966846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c22706c93c7b25429f506fa76916573, type: 3}
+  m_Script: {fileID: 11500000, guid: c0bbeda154de04d3a9d8f56eee0b52ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityIndex: 0
-  actionType: NecromancerCircleOuter
-  bricksManager: {fileID: 0}
+  Index: 0
   necromancerCircle: {fileID: 0}

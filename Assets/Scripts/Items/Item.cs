@@ -14,11 +14,14 @@ public enum ItemID
     MUSICBOX_PIN_3,
     MUSICBOX_PIN_4,
     MUSICBOX_PIN_5,
-=========
-    TEST_ITEM_2,
-    TEST_ITEM_3,
-    ROOK,
->>>>>>>>> Temporary merge branch 2
+    AMULET,
+    DRAGON_TOOTH,
+    HAIR,
+    MIRROR,
+    HEART,
+    FINGER_BONE,
+    RING,
+    PHOTOGRAPH,
 }
 
 /// <summary>
@@ -26,6 +29,8 @@ public enum ItemID
 /// </summary>
 public abstract class Item : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    public Sprite itemSprite;
+    
     /// <summary>
     /// Called whenever the item is clicked on
     /// </summary>
@@ -76,5 +81,10 @@ public abstract class Item : MonoBehaviour, IPointerDownHandler, IDragHandler, I
     public void OnPointerExit(PointerEventData eventData)
     {
         InventoryManager.Instance.UnhoverItem();
+    }
+
+    public Sprite GetItemSprite()
+    {
+        return itemSprite;
     }
 }
