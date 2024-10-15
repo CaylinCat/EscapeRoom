@@ -894,7 +894,7 @@ PrefabInstance:
     - target: {fileID: 1613050080721979967, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: -633176342198859930, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
+      objectReference: {fileID: 1704238542}
     - target: {fileID: 1662193772712442079, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7
@@ -958,7 +958,7 @@ PrefabInstance:
     - target: {fileID: 2335278989073095734, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: -633176342198859930, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
+      objectReference: {fileID: 1704238542}
     - target: {fileID: 2416978589185115231, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
@@ -966,7 +966,7 @@ PrefabInstance:
     - target: {fileID: 2416978589185115231, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: -633176342198859930, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
+      objectReference: {fileID: 1704238542}
     - target: {fileID: 2416978589185115231, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnEntityClicked
@@ -986,7 +986,7 @@ PrefabInstance:
     - target: {fileID: 3641440796537488796, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: -633176342198859930, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
+      objectReference: {fileID: 1704238542}
     - target: {fileID: 4227313323304560454, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: m_Name
       value: Bricks Puzzle
@@ -998,7 +998,7 @@ PrefabInstance:
     - target: {fileID: 4829389330296374850, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: -633176342198859930, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
+      objectReference: {fileID: 1704238542}
     - target: {fileID: 5389629246597721322, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
@@ -1022,11 +1022,11 @@ PrefabInstance:
     - target: {fileID: 6489091923573743918, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: -633176342198859930, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
+      objectReference: {fileID: 1704238542}
     - target: {fileID: 6579676044123777862, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: -633176342198859930, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
+      objectReference: {fileID: 1704238542}
     - target: {fileID: 6631596898538164672, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
@@ -1058,6 +1058,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2151846610394036966, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
   m_PrefabInstance: {fileID: 1704238540}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1704238542 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -633176342198859930, guid: c63ed0352aa9a884d92d8fdf54cc5abf, type: 3}
+  m_PrefabInstance: {fileID: 1704238540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058048789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b3aa2c1e4b7704bacc000cf181ef40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1896092012
 PrefabInstance:
   m_ObjectHideFlags: 0
