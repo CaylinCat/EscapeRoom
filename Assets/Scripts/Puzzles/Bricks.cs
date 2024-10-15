@@ -49,10 +49,4 @@ public class Bricks : Puzzle
         nextBrickClicked = 0;
         bricksComplete = false;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
