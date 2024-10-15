@@ -22,6 +22,7 @@ public enum ItemID
     FINGER_BONE,
     RING,
     PHOTOGRAPH,
+    TORCH,
 }
 
 /// <summary>
