@@ -6,17 +6,14 @@ public enum ItemID
 {
     NONE,
     TEST_ITEM,
+    MUSICBOX_PIN_1,
+    MUSICBOX_PIN_2,
+    MUSICBOX_PIN_3,
+    MUSICBOX_PIN_4,
+    MUSICBOX_PIN_5,
     TEST_ITEM_2,
     TEST_ITEM_3,
     ROOK,
-    FINGER_BONE,
-    HAIR, 
-    PHOTOGRAPH,
-    MIRROR,
-    RING,
-    AMULET,
-    DRAGON_TOOTH,
-    HEART,
 }
 
 /// <summary>
