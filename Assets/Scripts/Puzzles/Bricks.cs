@@ -2,55 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bricks : MonoBehaviour
+public class Bricks : Puzzle
 {
-    public List<GameObject> entities; // Assign your clickable entities in the Inspector
-    private List<int> correctOrder; // The order in which entities should be clicked
-    private List<int> clickedOrder; // The order in which entities were clicked
+    private List<int> correctOrder;
+    private int nextClick;
+    public SpriteRenderer BrickStart;
+    public Sprite BricksComplete;
+    public bool complete = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Initialize the correct order (this should match the indices of entities)
-        correctOrder = new List<int> { 0, 1, 2, 3, 4, 5, 6 }; // Example correct order
-        clickedOrder = new List<int>();
+    public void Start() {
+        correctOrder = new List<int> { 0, 1, 2, 3, 4, 5, 6 };
+        nextClick = 0;
+        Debug.Log($"Next expected: {nextClick}, CorrectOrderSize: {correctOrder.Count}");
     }
 
-    // Call this method when an entity is clicked
+    // Call this method when a brick is clicked
     public void OnEntityClicked(int index)
     {
-        clickedOrder.Add(index);
+        Debug.Log($"Clicked index: {index}, Next expected: {nextClick}, CorrectOrderSize: {correctOrder.Count}");
+        Debug.Log($"Complete?: {complete}");
+        if(complete) return;
 
-        if (clickedOrder.Count > correctOrder.Count)
+        if (index == correctOrder[nextClick])
         {
-            // Reset if clicked more than necessary
-            clickedOrder.Clear();
-        }
-        else if (clickedOrder.Count == correctOrder.Count)
-        {
-            // Check if the clicked order matches the correct order
-            if (IsOrderCorrect())
-            {
+            nextClick++;
+
+            if (nextClick >= correctOrder.Count) {
+                Debug.Log("Passed");
                 TriggerEvent();
+                BrickStart.sprite = BricksComplete;
+                //complete = true;
+                OnComplete();
             }
-            else
-            {
-                // Reset if the order is incorrect
-                clickedOrder.Clear();
-            }
+        }
+        else
+        {
+            Debug.Log("Incorrect order clicked. Resetting.");
+            ResetPuzzle();
         }
     }
     
-     private bool IsOrderCorrect()
+    private void ResetPuzzle()
     {
-        for (int i = 0; i < correctOrder.Count; i++)
-        {
-            if (clickedOrder[i] != correctOrder[i])
-            {
-                return false;
-            }
-        }
-        return true;
+        nextClick = 0;
     }
 
     private void TriggerEvent()
