@@ -8,18 +8,18 @@ public class TowerPole : MonoBehaviour
     public RingSizeID TopRingSize;
     public List<TowerRing> Rings;
 
-    void OnMouseDown() { TryPlacePin(); }
+    void OnMouseDown() { TryPlaceRing(); }
 
     void Awake()
     {
         UpdateInteractions();
     }
 
-    private void TryPlacePin()
+    public void TryPlaceRing()
     {
         if(TowerPuzzle.Instance.SelectedRing != null)
         {
-            if(TowerPuzzle.Instance.SelectedRing.RingSize < TopRingSize)
+            if(TowerPuzzle.Instance.SelectedRing.RingSize > TopRingSize)
             {
                 TowerPuzzle.Instance.PlaceRing(this);
             }
@@ -33,9 +33,9 @@ public class TowerPole : MonoBehaviour
         if(TopRingSize > RingSizeID.EMPTY)
         {
             Debug.Log($"{gameObject.name} TopRingSize = {TopRingSize}, disabling collider");
-            GetComponent<CircleCollider2D>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
-        else GetComponent<CircleCollider2D>().enabled = true;
+        else GetComponent<BoxCollider2D>().enabled = true;
     }
 
     private RingSizeID CalcTopRingSize()

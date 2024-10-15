@@ -30,7 +30,6 @@ public class TowerPuzzle : Puzzle
 
     public void PlaceRing(TowerPole newPole)
     {
-        Debug.Log($"Placing pin at {newPole.gameObject.name}");
         if(complete) return;
         
         // Visually move ring to new pole position

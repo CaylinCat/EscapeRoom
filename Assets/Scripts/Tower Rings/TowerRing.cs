@@ -17,11 +17,6 @@ public class TowerRing : MonoBehaviour {
     public RingSizeID RingSize;
     public SpriteRenderer RingSR;
 
-    void Awake()
-    {
-        if(Pole != null) Pole.GetComponent<CircleCollider2D>().enabled = false;
-    }
-
     public void OnMouseDown()
     {
         SelectThis();
@@ -39,14 +34,14 @@ public class TowerRing : MonoBehaviour {
     {
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        // TODO Check if over slots
+        // TODO Check if over rings
         Collider2D[] colliders = Physics2D.OverlapCircleAll(worldPos, 0.01f);
         foreach(Collider2D collider in colliders)
         {
-            TowerPole slot = collider.GetComponent<TowerPole>();
-            if(slot != null)
+            TowerPole pole = collider.GetComponent<TowerPole>();
+            if(pole != null)
             {
-                TowerPuzzle.Instance.PlaceRing(slot);
+                pole.TryPlaceRing();
                 break;
             }
         }
@@ -67,6 +62,7 @@ public class TowerRing : MonoBehaviour {
 
     public void Deselect()
     {
-        RingSR.color = Color.white;
+        // DEBUG, change back to Color.white
+        RingSR.color = Color.red;
     }
 }

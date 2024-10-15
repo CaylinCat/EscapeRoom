@@ -46,7 +46,7 @@ public class MusicBoxPin : MonoBehaviour {
             MusicBoxSlot slot = collider.GetComponent<MusicBoxSlot>();
             if(slot != null)
             {
-                MusicBox.Instance.PlacePin(slot);
+                slot.TryPlacePin();
                 break;
             }
         }

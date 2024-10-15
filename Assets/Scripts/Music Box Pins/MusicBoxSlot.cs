@@ -10,7 +10,7 @@ public class MusicBoxSlot : MonoBehaviour
 
     void OnMouseDown() { TryPlacePin(); }
 
-    private void TryPlacePin()
+    public void TryPlacePin()
     {
         if(MusicBox.Instance.SelectedPin != null)
         {
