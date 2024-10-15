@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640c06db24b5ff94686bc48a81dcefbc, type: 3}
+  m_Name: Riddle1
+  m_EditorClassIdentifier: 
+  Lines:
+  - Text: To advance you must answer our riddles three
+    Speaker: {fileID: 21300000, guid: 5e9d1aa14c9a515488a46cfe72db21de, type: 3}
+  - Text: You must bring us the items we seek
+    Speaker: {fileID: 21300000, guid: 569ba445f62f1784b9baa74f263acd1c, type: 3}
+  - Text: Then we shall reward you for your troubles
+    Speaker: {fileID: 21300000, guid: 86646ab39e14aca4cbb01b315b6d1347, type: 3}
