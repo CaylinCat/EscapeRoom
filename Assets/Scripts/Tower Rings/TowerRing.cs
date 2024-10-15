@@ -1,8 +1,6 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
 
 public enum RingSizeID
 {
@@ -46,7 +44,7 @@ public class TowerRing : MonoBehaviour {
             }
         }
 
-        if(Pole != null) transform.position = Pole.transform.position;
+        if(Pole != null) transform.position = Pole.GetAnchorPosition();
         else transform.localPosition = Vector3.zero;
     }
 

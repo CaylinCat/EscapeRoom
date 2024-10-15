@@ -5,37 +5,43 @@ using UnityEngine.EventSystems;
 
 public class TowerPole : MonoBehaviour
 {
-    public RingSizeID TopRingSize;
     public List<TowerRing> Rings;
+    private RingSizeID _topRingSize;
+    [SerializeField] private List<Transform> _anchors;
 
     void OnMouseDown() { TryPlaceRing(); }
-
-    void Awake()
-    {
-        UpdateInteractions();
-    }
 
     public void TryPlaceRing()
     {
         if(TowerPuzzle.Instance.SelectedRing != null)
         {
-            if(TowerPuzzle.Instance.SelectedRing.RingSize > TopRingSize)
+            if(TowerPuzzle.Instance.SelectedRing.RingSize > _topRingSize)
             {
                 TowerPuzzle.Instance.PlaceRing(this);
             }
         }
     }
 
+    public Vector3 GetAnchorPosition()
+    {
+        return _anchors[Rings.Count - 1].position;
+    }
+
     public void UpdateInteractions()
     {
-        Debug.Log($"{gameObject.name} updating...");
-        TopRingSize = CalcTopRingSize();
-        if(TopRingSize > RingSizeID.EMPTY)
+        _topRingSize = CalcTopRingSize();
+
+        if(TowerPuzzle.Instance.SelectedRing != null && TowerPuzzle.Instance.SelectedRing.RingSize > _topRingSize)
         {
-            Debug.Log($"{gameObject.name} TopRingSize = {TopRingSize}, disabling collider");
-            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = true;
         }
-        else GetComponent<BoxCollider2D>().enabled = true;
+        else GetComponent<BoxCollider2D>().enabled = false;
+
+        foreach(TowerRing r in Rings)
+        {
+            if(r.RingSize < _topRingSize) r.GetComponent<BoxCollider2D>().enabled = false;
+            else r.GetComponent<BoxCollider2D>().enabled = true;
+        }
     }
 
     private RingSizeID CalcTopRingSize()

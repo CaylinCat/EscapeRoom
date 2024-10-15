@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2383067895648068661}
+  - component: {fileID: -5738304284954310678}
   - component: {fileID: 7557781549122378858}
   - component: {fileID: 4137528833625924078}
-  - component: {fileID: -5738304284954310678}
   m_Layer: 0
   m_Name: RingBase
   m_TagString: Untagged
@@ -34,6 +34,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5738304284954310678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593474454173712361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a44172b9d988fe41b667d7cb538ae55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pole: {fileID: 0}
+  RingSize: 1
+  RingSR: {fileID: 7557781549122378858}
 --- !u!212 &7557781549122378858
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -131,18 +146,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.15}
   m_EdgeRadius: 0
---- !u!114 &-5738304284954310678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8593474454173712361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a44172b9d988fe41b667d7cb538ae55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pole: {fileID: 0}
-  RingSize: 1
-  RingSR: {fileID: 7557781549122378858}
