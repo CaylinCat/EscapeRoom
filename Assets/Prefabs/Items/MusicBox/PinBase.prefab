@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slot: {fileID: 0}
   RowID: 0
+  PinSR: {fileID: 7557781549122378858}
 --- !u!212 &7557781549122378858
 SpriteRenderer:
   m_ObjectHideFlags: 0
