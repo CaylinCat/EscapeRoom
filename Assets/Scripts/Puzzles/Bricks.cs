@@ -9,10 +9,16 @@ public class Bricks : Puzzle
     public SpriteRenderer BrickStart;
     public Sprite BricksEnd;
     private bool bricksComplete = false;
+    public Item Mandrake;
+    public Item Stamp;
+    public GameObject MandrakeClickable;
+    public GameObject StampClickable;
 
     public void Start() {
         nextBrickClicked = 0;
         bricksComplete = false;
+        MandrakeClickable.SetActive(false);
+        StampClickable.SetActive(false);
     }
 
     void Awake()
@@ -31,9 +37,10 @@ public class Bricks : Puzzle
 
             if (nextBrickClicked >= bricksOrder.Length) {
                 Debug.Log("Passed");
-                // TriggerEvent();
                 BrickStart.sprite = BricksEnd;
                 bricksComplete = true;
+                MandrakeClickable.SetActive(true);
+                StampClickable.SetActive(true);
                 OnComplete();
             }
         }
@@ -48,5 +55,20 @@ public class Bricks : Puzzle
     {
         nextBrickClicked = 0;
         bricksComplete = false;
+    }
+
+    public void GrabMandrake()
+    {
+        if(bricksComplete) {
+            InventoryManager.Instance.AddItem(Mandrake);
+            MandrakeClickable.SetActive(false);
+        }
+    }
+    public void GrabStamp()
+    {
+        if(bricksComplete) {
+            InventoryManager.Instance.AddItem(Stamp);
+            StampClickable.SetActive(false);
+        }
     }
 }
