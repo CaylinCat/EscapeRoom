@@ -46,6 +46,7 @@ public class MusicBox : MonoBehaviour
         // Visually move pin to new slot position
         SelectedPin.Slot = source;
         SelectedPin.transform.position = source.transform.position;
+        SelectedPin.Deselect();
         SelectedPin = null;
 
         // Deactivate use item zone for given slot
