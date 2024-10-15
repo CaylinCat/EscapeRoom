@@ -6,14 +6,19 @@ public enum ItemID
 {
     NONE,
     TEST_ITEM,
+    TEST_ITEM_2,
+    TEST_ITEM_3,
+    ROOK,
     MUSICBOX_PIN_1,
     MUSICBOX_PIN_2,
     MUSICBOX_PIN_3,
     MUSICBOX_PIN_4,
     MUSICBOX_PIN_5,
+=========
     TEST_ITEM_2,
     TEST_ITEM_3,
     ROOK,
+>>>>>>>>> Temporary merge branch 2
 }
 
 /// <summary>

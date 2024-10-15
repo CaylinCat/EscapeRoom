@@ -34,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2383067895648068661, guid: 4d0dab6969b80e04b8b109ddeb261025, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 16
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 2383067895648068661, guid: 4d0dab6969b80e04b8b109ddeb261025, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 16
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 2383067895648068661, guid: 4d0dab6969b80e04b8b109ddeb261025, type: 3}
       propertyPath: m_LocalPosition.x
@@ -90,30 +90,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8593474454173712361, guid: 4d0dab6969b80e04b8b109ddeb261025, type: 3}
       propertyPath: m_Name
-      value: Pin Row 1 Variant
+      value: PinRow1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8593474454173712361, guid: 4d0dab6969b80e04b8b109ddeb261025, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1090047405751150982}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d0dab6969b80e04b8b109ddeb261025, type: 3}
---- !u!1 &2914102993620968510 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8593474454173712361, guid: 4d0dab6969b80e04b8b109ddeb261025, type: 3}
-  m_PrefabInstance: {fileID: 6859789582431738839}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1090047405751150982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2914102993620968510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45f5ad7fcae8b97438b0d246b13ee2ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

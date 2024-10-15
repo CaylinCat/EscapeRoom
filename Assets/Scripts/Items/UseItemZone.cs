@@ -7,6 +7,7 @@ public class UseItemZone : MonoBehaviour
 {
     public List<ItemID> AcceptedItems;
     public UnityEvent OnUse;
+    public bool DontConsumeItem;
 
     public void OnMouseDown() { TryUseItem(); }
 
@@ -17,7 +18,7 @@ public class UseItemZone : MonoBehaviour
             if(AcceptedItems.Contains(InventoryManager.Instance.SelectedItem.GetItemID()))
             {
                 OnUse.Invoke();
-                InventoryManager.Instance.RemoveItem();
+                if(!DontConsumeItem) InventoryManager.Instance.RemoveItem();
             }
         }
     }
