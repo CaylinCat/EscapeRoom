@@ -1,0 +1,6 @@
+white
+32Pawn
+53Pawn
+73Rook
+34King
+64Pawn
