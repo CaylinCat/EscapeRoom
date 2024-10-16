@@ -4,11 +4,9 @@ using UnityEngine.UI;
 
 public class NRIngredientSlot : MonoBehaviour
 {
-    // public List<ItemID> AcceptedItems;
     public bool IsOccupied = false;
     public int Index;
     public InnerCircle innerCircle;
-    // public Sprite emptySprite;
     private SpriteRenderer slotSprite;
 
 
