@@ -6,8 +6,16 @@ using UnityEngine.EventSystems;
 public class TowerPole : MonoBehaviour
 {
     public List<TowerRing> Rings;
-    private RingSizeID _topRingSize;
+    [SerializeField] private RingSizeID _topRingSize;
     [SerializeField] private List<Transform> _anchors;
+
+    void OnEnable()
+    {
+        for(int i = 0; i < Rings.Count; ++i)
+        {
+            Rings[i].transform.position = _anchors[i].position;
+        }
+    }
 
     void OnMouseDown() { TryPlaceRing(); }
 
@@ -22,7 +30,7 @@ public class TowerPole : MonoBehaviour
         }
     }
 
-    public Vector3 GetAnchorPosition()
+    public Vector3 GetTopAnchorPosition()
     {
         return _anchors[Rings.Count - 1].position;
     }
@@ -39,8 +47,8 @@ public class TowerPole : MonoBehaviour
 
         foreach(TowerRing r in Rings)
         {
-            if(r.RingSize < _topRingSize) r.GetComponent<BoxCollider2D>().enabled = false;
-            else r.GetComponent<BoxCollider2D>().enabled = true;
+            r.GetComponent<BoxCollider2D>().enabled = false;
+            if(r.RingSize == _topRingSize) r.GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 

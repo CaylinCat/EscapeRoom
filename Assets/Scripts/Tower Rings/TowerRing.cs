@@ -51,7 +51,7 @@ public class TowerRing : MonoBehaviour
                 }
             }
 
-            if(Pole != null) transform.position = Pole.GetAnchorPosition();
+            if(Pole != null) transform.position = Pole.GetTopAnchorPosition();
             else transform.localPosition = Vector3.zero;
         }
     }
@@ -63,7 +63,6 @@ public class TowerRing : MonoBehaviour
             TowerPuzzle.Instance.SelectedRing.Deselect();
         }
         TowerPuzzle.Instance.SelectedRing = this;
-        TowerPuzzle.Instance.OldPole = Pole;
         
         RingSR.color = Color.white * 0.7f;
     }
@@ -71,7 +70,6 @@ public class TowerRing : MonoBehaviour
     public void Deselect()
     {
         TowerPuzzle.Instance.SelectedRing = null;
-        TowerPuzzle.Instance.OldPole = null;
         RingSR.color = Color.white;
     }
 }

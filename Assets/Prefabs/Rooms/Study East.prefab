@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 953064997040657115, guid: dc0561e4955b7cc4484b7246508be73c, type: 3}
       propertyPath: m_Name
-      value: Puzzle Popup Button
+      value: Puzzle Popup Button Cauldron
       objectReference: {fileID: 0}
     - target: {fileID: 3508985551702227198, guid: dc0561e4955b7cc4484b7246508be73c, type: 3}
       propertyPath: m_Size.x

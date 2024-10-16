@@ -178,7 +178,9 @@ MonoBehaviour:
   - {fileID: 3109330829198086134}
   - {fileID: 462137807958644157}
   StartPole: {fileID: 1998174257231500872}
-  SelectedRing: {fileID: 0}
+  _selectedRing: {fileID: 0}
+  _oldPole: {fileID: 0}
+  Complete: 0
 --- !u!1001 &1035160157074747171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -488,7 +490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2954442208191434665, guid: ee33c8c1d516e474b90ca2b6021b5cb0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2954442208191434665, guid: ee33c8c1d516e474b90ca2b6021b5cb0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -532,11 +534,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7747575983934365880, guid: ee33c8c1d516e474b90ca2b6021b5cb0, type: 3}
       propertyPath: m_Size.x
-      value: 26.47
+      value: 29.35
       objectReference: {fileID: 0}
     - target: {fileID: 7747575983934365880, guid: ee33c8c1d516e474b90ca2b6021b5cb0, type: 3}
       propertyPath: m_Size.y
-      value: 14.92
+      value: 11.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
