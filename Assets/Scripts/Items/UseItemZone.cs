@@ -13,7 +13,6 @@ public class UseItemZone : MonoBehaviour
 
     public void TryUseItem()
     {
-        Debug.Log("Hello world");
         if(InventoryManager.Instance.SelectedItem != null)
         {
             if(AcceptedItems.Contains(InventoryManager.Instance.SelectedItem.GetItemID()))

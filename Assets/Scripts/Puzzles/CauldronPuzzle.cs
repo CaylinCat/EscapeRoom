@@ -6,16 +6,22 @@ using UnityEngine.UI;
 public class CauldronPuzzle : Puzzle
 {
     public Item Goblet;
+    public Item GobletFilled;
     public SpriteRenderer CauldronSR;
     public Sprite CompleteCauldronSprite;
     public int AddedIngredients = 0;
+    public GameObject UseIngredientZone;
+    public GameObject UseGobletZone;
     private bool complete = false;
 
+    // TODO: delete debug
     public List<Item> DEBUG_Ingredients;
 
     // TODO: delete debug
     void Awake()
     {
+        UseIngredientZone.SetActive(true);
+        UseGobletZone.SetActive(false);
         foreach(Item i in DEBUG_Ingredients)
         {
             InventoryManager.Instance.AddItem(i);
@@ -24,7 +30,6 @@ public class CauldronPuzzle : Puzzle
 
     public void AddItem()
     {
-        Debug.Log("Added ingredient");
         if(complete) return;
 
         // TODO: play sound effect?
@@ -34,8 +39,15 @@ public class CauldronPuzzle : Puzzle
         {
             InventoryManager.Instance.AddItem(Goblet);
             CauldronSR.sprite = CompleteCauldronSprite;
+            UseIngredientZone.SetActive(false);
+            UseGobletZone.SetActive(true);
             complete = true;
             OnComplete();
         }
+    }
+
+    public void FillGoblet()
+    {
+        InventoryManager.Instance.AddItem(GobletFilled);
     }
 }

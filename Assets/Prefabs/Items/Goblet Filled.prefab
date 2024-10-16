@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3474806991705208828}
   - component: {fileID: 2309903731252236509}
   m_Layer: 0
-  m_Name: Goblet
+  m_Name: Goblet Filled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  Filled: 0
+  Filled: 1
   FingerBone: {fileID: 3565599695578534979, guid: 592cf21834ca3f24fa9bafe97989353e, type: 3}
 --- !u!1 &7464111432516684968
 GameObject:
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0505b3f883143ec43b32a95050b0f7d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61b25adaf3240154e9c28ea66d754635, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
