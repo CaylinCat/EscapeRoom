@@ -29,6 +29,7 @@ public enum ItemID
     MANDRAKE,
     EYEBALL,
     GOBLET,
+    WAX,
 }
 
 /// <summary>
