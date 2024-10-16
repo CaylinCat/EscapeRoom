@@ -8,6 +8,7 @@ public class RedCandlePuzzle : Puzzle
     public Item Wax;
     public SpriteRenderer spriteRenderer;
     public Sprite litCandleSprite;
+    public GameObject WaxImg;
     private bool complete = false;
 
     public void GrabWax()
@@ -19,11 +20,15 @@ public class RedCandlePuzzle : Puzzle
         OnComplete();
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public void LightCandle()
     {
-        if (collision.gameObject.tag == "torch")
-        {
-            spriteRenderer.sprite = litCandleSprite;
-        }
+        spriteRenderer.sprite = litCandleSprite;
+        WaxImg.SetActive(true);
+        Debug.Log("triggered light candle");
+    }
+
+    public void Start()
+    {
+        WaxImg.SetActive(false);
     }
 }
