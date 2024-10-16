@@ -60,7 +60,6 @@ public class TowerRing : MonoBehaviour {
 
     public void Deselect()
     {
-        // DEBUG, change back to Color.white
-        RingSR.color = Color.red;
+        RingSR.color = Color.white;
     }
 }
