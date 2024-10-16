@@ -146,6 +146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Armory
       objectReference: {fileID: 0}
+    - target: {fileID: 3189971479396982576, guid: dcfce2b48d01e214090e5e14368faf18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3800613888857350489, guid: dcfce2b48d01e214090e5e14368faf18, type: 3}
       propertyPath: Walls.Array.size
       value: 4
