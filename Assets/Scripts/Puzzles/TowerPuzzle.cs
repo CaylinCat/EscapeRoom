@@ -12,8 +12,22 @@ public class TowerPuzzle : Puzzle
     public List<TowerPole> Poles;
     public TowerPole StartPole;
 
-    public TowerRing SelectedRing;
-    private TowerPole _oldPole;
+    [SerializeField] private TowerRing _selectedRing;
+    public TowerRing SelectedRing
+    {
+        get
+        {
+            return _selectedRing;
+        }
+        set
+        {
+            _selectedRing = value;
+            if(value != null) OldPole = value.Pole;
+            else OldPole = null;
+            UpdatePoles();
+        }
+    }
+    [SerializeField] private TowerPole _oldPole;
     public TowerPole OldPole
     {
         get
@@ -23,14 +37,14 @@ public class TowerPuzzle : Puzzle
         set
         {
             _oldPole = value;
-            UpdatePoles();
         }
     }
-
-    private bool complete = false;
+    public bool Complete = false;
 
     void Awake()
     {
+        Complete = false;
+        
         if(Instance == null) Instance = this;
         else
         {
@@ -41,26 +55,29 @@ public class TowerPuzzle : Puzzle
         UpdatePoles();
     }
 
+    void OnEnable()
+    {
+        if(SelectedRing != null) SelectedRing.Deselect();
+        UpdatePoles();
+    }
+
     public void PlaceRing(TowerPole newPole)
     {
-        if(complete) return;
+        if(Complete) return;
 
         // Update pole interactability
-        Instance.OldPole.Rings.Remove(SelectedRing);
+        OldPole.Rings.Remove(SelectedRing);
         newPole.Rings.Add(SelectedRing);
         
         // Visually move ring to new pole position
         SelectedRing.Pole = newPole;
-        SelectedRing.transform.position = newPole.GetAnchorPosition();
+        SelectedRing.transform.position = newPole.GetTopAnchorPosition();
         SelectedRing.Deselect();
-        
-        SelectedRing = null;
-        OldPole = null;
 
         if(CheckSolution())
         {
             InventoryManager.Instance.AddItem(Ring);
-            complete = true;
+            Complete = true;
             OnComplete();
         }
     }

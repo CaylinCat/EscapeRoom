@@ -6,14 +6,15 @@ using UnityEngine.UI;
 public class Goblet : Item
 {
     public override ItemID GetItemID() { return ItemID.GOBLET; }
-    public Image GobletImage;
-    public Sprite FilledGobletSprite;
     public bool Filled;
+    public Item FingerBone;
 
     protected override void Interact()
     {
-        Debug.Log("Clicked!");
-        // TODO: remove debug
-        GobletImage.sprite = FilledGobletSprite;
+        if(Filled)
+        {
+            InventoryManager.Instance.RemoveItem();
+            InventoryManager.Instance.AddItem(FingerBone);
+        }
     }
 }
