@@ -261,8 +261,8 @@ MonoBehaviour:
   RightPage: {fileID: 4364257671668611842}
   JournalSR: {fileID: 1099675854373169881}
   pageSprites:
-  - {fileID: 21300000, guid: 547a533f945fa4102943691c5946afd2, type: 3}
-  - {fileID: 21300000, guid: a6fd2a976082c423cb072be1611cb29c, type: 3}
+  - {fileID: 21300000, guid: 3f6ac4665ba7543289b4caa9299e3b9a, type: 3}
+  - {fileID: 21300000, guid: 92474499f3fb845edbac4cad6c075984, type: 3}
 --- !u!212 &1099675854373169881
 SpriteRenderer:
   m_ObjectHideFlags: 0
