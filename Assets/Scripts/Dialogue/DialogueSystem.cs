@@ -15,8 +15,6 @@ public class DialogueSystem : MonoBehaviour
     private bool finishedTypewriterEffect;
     private const float SPEED = 0.05f;
 
-    void Start() { Reset(); }
-
     public void Reset()
     {
         StopAllCoroutines();
