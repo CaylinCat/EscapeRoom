@@ -9,6 +9,7 @@ public enum ItemID
     TEST_ITEM_2,
     TEST_ITEM_3,
     ROOK,
+    STAMP,
     MUSICBOX_PIN_1,
     MUSICBOX_PIN_2,
     MUSICBOX_PIN_3,

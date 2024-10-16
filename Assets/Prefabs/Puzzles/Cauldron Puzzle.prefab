@@ -227,7 +227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5528213235477506665, guid: 588593bac78440749946f87fe7ca2527, type: 3}
       propertyPath: AcceptedItems.Array.data[0]
-      value: 20
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5528213235477506665, guid: 588593bac78440749946f87fe7ca2527, type: 3}
       propertyPath: AcceptedItems.Array.data[1]
