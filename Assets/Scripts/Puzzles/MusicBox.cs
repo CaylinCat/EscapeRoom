@@ -7,6 +7,7 @@ public class MusicBox : Puzzle
 {
     public static MusicBox Instance;
     
+    public Item Hair;
     public List<GameObject> Rows;
     public List<GameObject> Row1Solution;
     public List<GameObject> Row2Solution;
@@ -57,6 +58,7 @@ public class MusicBox : Puzzle
         // Check if puzzle is solved after each action
         if(CheckSolution())
         {
+            InventoryManager.Instance.AddItem(Hair);
             complete = true;
             OnComplete();
         }

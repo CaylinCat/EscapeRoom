@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -5}
+  m_AnchoredPosition: {x: 6.8, y: 6.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2408285236111064877
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8d288c687791246cf8efe447d8e46cba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f178aeab173f146a9bf0999fa7278add, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -85,11 +85,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 544162573672933029, guid: 0e073d4dbe9748e4cb351acd46ab9dbc, type: 3}
       propertyPath: m_Name
-      value: Ring
+      value: Hair
       objectReference: {fileID: 0}
     - target: {fileID: 2076574513808495541, guid: 0e073d4dbe9748e4cb351acd46ab9dbc, type: 3}
       propertyPath: Type
-      value: 16
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3474806991705208828, guid: 0e073d4dbe9748e4cb351acd46ab9dbc, type: 3}
       propertyPath: m_Color.a

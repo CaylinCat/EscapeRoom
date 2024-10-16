@@ -59,6 +59,7 @@ public class TowerPuzzle : Puzzle
 
         if(CheckSolution())
         {
+            InventoryManager.Instance.AddItem(Ring);
             complete = true;
             OnComplete();
         }
