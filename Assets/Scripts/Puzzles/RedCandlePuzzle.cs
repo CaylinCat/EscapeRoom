@@ -16,6 +16,7 @@ public class RedCandlePuzzle : Puzzle
         if(complete) return;
 
         InventoryManager.Instance.AddItem(Wax);
+        WaxImg.SetActive(false);
         complete = true;
         OnComplete();
     }
