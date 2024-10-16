@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    public float timeRemaining = 1200;
+    public float timeRemaining;
     public bool timerIsRunning = false;
     
     public TMPro.TMP_Text timeText;
@@ -33,7 +33,12 @@ public class CountdownTimer : MonoBehaviour
 
     void UpdateTimerDisplay()
     {
-        timeText.text = Mathf.Ceil(timeRemaining).ToString();
+        if (timeRemaining >= 0)
+        {
+            int minutes = Mathf.FloorToInt(timeRemaining / 60);
+            int seconds = Mathf.FloorToInt(timeRemaining % 60);
+            timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
     }
 
     void TimerEnded()
