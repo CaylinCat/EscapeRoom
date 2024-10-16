@@ -26,11 +26,12 @@ public class TowerPuzzle : Puzzle
             UpdatePoles();
         }
     }
-
-    private bool complete = false;
+    public bool Complete = false;
 
     void Awake()
     {
+        Complete = false;
+        
         if(Instance == null) Instance = this;
         else
         {
@@ -43,7 +44,7 @@ public class TowerPuzzle : Puzzle
 
     public void PlaceRing(TowerPole newPole)
     {
-        if(complete) return;
+        if(Complete) return;
 
         // Update pole interactability
         Instance.OldPole.Rings.Remove(SelectedRing);
@@ -60,7 +61,7 @@ public class TowerPuzzle : Puzzle
         if(CheckSolution())
         {
             InventoryManager.Instance.AddItem(Ring);
-            complete = true;
+            Complete = true;
             OnComplete();
         }
     }
