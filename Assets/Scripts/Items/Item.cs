@@ -26,6 +26,10 @@ public enum ItemID
     PHOTOGRAPH,
     TORCH,
     BIRDSEED,
+    LIZARD_LEG,
+    MANDRAKE,
+    EYEBALL,
+    GOBLET,
 }
 
 /// <summary>

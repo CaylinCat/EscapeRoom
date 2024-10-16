@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-
 public enum PinRowID
 {
     PIN_ROW_1,
@@ -46,7 +45,7 @@ public class MusicBoxPin : MonoBehaviour {
             MusicBoxSlot slot = collider.GetComponent<MusicBoxSlot>();
             if(slot != null)
             {
-                MusicBox.Instance.PlacePin(slot);
+                slot.TryPlacePin();
                 break;
             }
         }
