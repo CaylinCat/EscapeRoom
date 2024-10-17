@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7f3c7cf0-1872-42ae-8c7b-8b2fe5cf4e9d}">
+		<property name="assetPath">
+			<value>173438__perel__sfx_submerge.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.3510204081632655</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{09f47125-d08c-4d36-9baf-2651d7276065}</destination>
+		</relationship>
+	</object>
+</objects>
