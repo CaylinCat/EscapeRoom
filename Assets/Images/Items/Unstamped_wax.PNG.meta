@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9489ed675c2bbcc43a42d27ad4d99302
+guid: e7f0c697e225cea4f94e194f52b244ff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Unstamped_wax_0
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 464
+        width: 429
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220bee1cfcec1ae488cd956c6dde2b15
+      internalID: 1827093747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Unstamped_wax_0: 1827093747
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

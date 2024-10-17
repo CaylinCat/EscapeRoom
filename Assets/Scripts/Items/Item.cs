@@ -30,6 +30,7 @@ public enum ItemID
     EYEBALL,
     GOBLET,
     CHESS_SCROLL,
+    WAX,
 }
 
 /// <summary>
