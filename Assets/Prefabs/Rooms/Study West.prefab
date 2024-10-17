@@ -633,6 +633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Candle Puzzle
       objectReference: {fileID: 0}
+    - target: {fileID: 2318529111871494097, guid: f4d459645550f2a42ba0a31818f63471, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4642304019240261189, guid: f4d459645550f2a42ba0a31818f63471, type: 3}
       propertyPath: DontConsumeItem
       value: 0
