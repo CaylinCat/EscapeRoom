@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+using UnityEngine.UI;
 
 public enum ItemID
 {
@@ -38,6 +38,7 @@ public enum ItemID
 public abstract class Item : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Sprite itemSprite;
+    public GameObject ItemInspectOverride;
     
     /// <summary>
     /// Called whenever the item is clicked on
@@ -47,6 +48,13 @@ public abstract class Item : MonoBehaviour, IPointerDownHandler, IDragHandler, I
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if(eventData.clickCount == 1) 
+        {
+            if(ItemInspectOverride == null) PuzzleManager.Instance.InspectGenericItem(this);
+            else PuzzleManager.Instance.ShowPuzzle(ItemInspectOverride); 
+            return;
+        }
+
         if(InventoryManager.Instance.SelectedItem != this) 
         {
             InventoryManager.Instance.SelectItem(this);
@@ -93,6 +101,15 @@ public abstract class Item : MonoBehaviour, IPointerDownHandler, IDragHandler, I
 
     public Sprite GetItemSprite()
     {
-        return itemSprite;
+        if(itemSprite != null) return itemSprite;
+        
+        foreach(Transform child in transform)
+        {
+            Image itemImage = child.GetComponent<Image>();
+            if(itemImage != null) return itemImage.sprite;
+        }
+        
+        Debug.LogWarning("No sprite was found for this Item!");
+        return null;
     }
 }

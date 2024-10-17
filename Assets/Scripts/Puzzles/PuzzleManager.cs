@@ -6,6 +6,8 @@ public class PuzzleManager : MonoBehaviour
 {
     public static PuzzleManager Instance;
     public GameObject Background;
+    public GameObject ItemInspect;
+    public SpriteRenderer ItemInspectSR;
     private GameObject activePuzzle;
 
     void Awake()
@@ -25,6 +27,8 @@ public class PuzzleManager : MonoBehaviour
 
     public void ShowPuzzle(GameObject puzzle)
     {
+        if(activePuzzle != null) HidePuzzle();
+
         activePuzzle = puzzle;
         activePuzzle.SetActive(true);
         Background.SetActive(true);
@@ -48,5 +52,11 @@ public class PuzzleManager : MonoBehaviour
     {
         if(activePuzzle != null) activePuzzle.SetActive(false);
         Background.SetActive(false);
+    }
+
+    public void InspectGenericItem(Item item)
+    {
+        ItemInspectSR.sprite = item.GetItemSprite();
+        ShowPuzzle(ItemInspect);
     }
 }
