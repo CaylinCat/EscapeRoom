@@ -6,6 +6,7 @@ public class Journal : Puzzle
     public GameObject RightPage;
     public SpriteRenderer JournalSR;
     public Sprite[] pageSprites;
+    public FMODUnity.StudioEventEmitter PageTurnSFX;
     private int currentPage = 0;
     
     void Start()
@@ -20,6 +21,7 @@ public class Journal : Puzzle
     {
         if (currentPage < 1) // change if ever add more interactable pages
         {
+            PageTurnSFX.Play();
             currentPage++;
             JournalSR.sprite = pageSprites[currentPage];
         }
@@ -29,6 +31,7 @@ public class Journal : Puzzle
     {
         if (currentPage > 0) 
         {
+            PageTurnSFX.Play();
             currentPage--;
             JournalSR.sprite = pageSprites[currentPage];
         }

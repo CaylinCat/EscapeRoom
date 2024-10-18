@@ -221,6 +221,8 @@ GameObject:
   - component: {fileID: 1005833008186476607}
   - component: {fileID: 985702675170035823}
   - component: {fileID: 1099675854373169881}
+  - component: {fileID: 8212294968767402570}
+  - component: {fileID: 6393194093541652526}
   m_Layer: 0
   m_Name: Journal
   m_TagString: Untagged
@@ -263,6 +265,7 @@ MonoBehaviour:
   pageSprites:
   - {fileID: 21300000, guid: 3f6ac4665ba7543289b4caa9299e3b9a, type: 3}
   - {fileID: 21300000, guid: 92474499f3fb845edbac4cad6c075984, type: 3}
+  PageTurnSFX: {fileID: 6393194093541652526}
 --- !u!212 &1099675854373169881
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -315,3 +318,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8212294968767402570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5604077806342289648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1859150341
+      Data2: 1157729349
+      Data3: 599639997
+      Data4: 295042468
+    Path: event:/Puzzles/Journal/journal-pickup
+  Event: 
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &6393194093541652526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5604077806342289648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1631559192
+      Data2: 1282832161
+      Data3: 1879225998
+      Data4: -470951753
+    Path: event:/Puzzles/Journal/journal-page-turn
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
