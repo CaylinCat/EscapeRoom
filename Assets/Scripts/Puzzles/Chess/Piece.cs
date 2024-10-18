@@ -313,7 +313,9 @@ public class Piece : MonoBehaviour
         return (isPlayerTeam && !piece.isPlayerTeam) || (!isPlayerTeam && piece.isPlayerTeam);
     }
 
-    private void OnMouseDown()
+ 
+
+    public void OnClickPiece()
     {
         if (!IsEnemyPiece(Chessboard.selectedPiece))
         {
@@ -323,6 +325,5 @@ public class Piece : MonoBehaviour
         {
             Chessboard.board[posX, posY].MovePieceHere();
         }
-
     }
 }
