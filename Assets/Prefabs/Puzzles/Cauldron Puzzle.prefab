@@ -94,6 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6465264175762713517}
   - component: {fileID: 9048731491085568212}
+  - component: {fileID: 2248257151211987701}
+  - component: {fileID: 5124433338856700143}
+  - component: {fileID: 7958784039925942236}
   m_Layer: 0
   m_Name: Cauldron Puzzle
   m_TagString: Untagged
@@ -139,10 +142,105 @@ MonoBehaviour:
   AddedIngredients: 0
   UseIngredientZone: {fileID: 1412000322184562635}
   UseGobletZone: {fileID: 7750803859384910539}
+  AddItemSFX: {fileID: 5124433338856700143}
+  GobletSubmergeSFX: {fileID: 7958784039925942236}
   DEBUG_Ingredients:
   - {fileID: 3565599695578534979, guid: 21a6d54c44f437b4b8d67d89d101b79b, type: 3}
   - {fileID: 3565599695578534979, guid: 2c855ff517324ce4e943282a7b7cb584, type: 3}
   - {fileID: 3565599695578534979, guid: 604dbc4e8158f1f40922cbd7597f727f, type: 3}
+--- !u!114 &2248257151211987701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567341486905664526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -860388758
+      Data2: 1337086512
+      Data3: 314472066
+      Data4: -987180769
+    Path: event:/Puzzles/Cauldron/bubbling
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &5124433338856700143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567341486905664526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -638865560
+      Data2: 1262606160
+      Data3: 2012899254
+      Data4: -1787616287
+    Path: event:/Puzzles/Cauldron/plop
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &7958784039925942236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567341486905664526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -843701230
+      Data2: 1317773073
+      Data3: 515787952
+      Data4: -805414311
+    Path: event:/Puzzles/Cauldron/goblet submerge
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &4070296407607838409
 PrefabInstance:
   m_ObjectHideFlags: 0

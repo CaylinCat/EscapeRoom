@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 553734928221198647}
   - component: {fileID: 110806800756559378}
+  - component: {fileID: 4173830293415270235}
   m_Layer: 0
   m_Name: Inventory Manager
   m_TagString: Untagged
@@ -60,7 +61,39 @@ MonoBehaviour:
   - {fileID: 8344974697023188927}
   SelectionIcon: {fileID: 2787778584325503466}
   HoverIcon: {fileID: 5525730439791523277}
+  SFX: {fileID: 4173830293415270235}
   CanHover: 1
+--- !u!114 &4173830293415270235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8306426566794533658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1881311604
+      Data2: 1075575699
+      Data3: 2032754563
+      Data4: -1946901766
+    Path: event:/UI/ui-hover
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &3224087034707224077
 PrefabInstance:
   m_ObjectHideFlags: 0

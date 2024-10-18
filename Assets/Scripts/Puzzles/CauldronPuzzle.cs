@@ -12,6 +12,8 @@ public class CauldronPuzzle : Puzzle
     public int AddedIngredients = 0;
     public GameObject UseIngredientZone;
     public GameObject UseGobletZone;
+    public FMODUnity.StudioEventEmitter AddItemSFX;
+    public FMODUnity.StudioEventEmitter GobletSubmergeSFX;
     private bool complete = false;
 
     // TODO: delete debug
@@ -32,7 +34,7 @@ public class CauldronPuzzle : Puzzle
     {
         if(complete) return;
 
-        // TODO: play sound effect?
+        AddItemSFX.Play();
         ++AddedIngredients;
 
         if(AddedIngredients == 3)
@@ -49,5 +51,6 @@ public class CauldronPuzzle : Puzzle
     public void FillGoblet()
     {
         InventoryManager.Instance.AddItem(GobletFilled);
+        GobletSubmergeSFX.Play();
     }
 }

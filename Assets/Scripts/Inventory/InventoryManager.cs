@@ -9,6 +9,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject[] ItemSlots;
     public GameObject SelectionIcon;
     public GameObject HoverIcon;
+    public FMODUnity.StudioEventEmitter SFX;
     [HideInInspector] public bool CanHover = true;
     private List<GameObject> heldItems = new List<GameObject>();
     
@@ -44,6 +45,7 @@ public class InventoryManager : MonoBehaviour
 
     public void SelectItem(Item item)
     {
+        SFX.Play();
         SelectedItem = item;
         SelectionIcon.SetActive(true);
         SelectionIcon.transform.SetParent(item.transform.parent);
@@ -54,6 +56,7 @@ public class InventoryManager : MonoBehaviour
     public void HoverItem(Item item)
     {
         if(CanHover)
+        SFX.Play();
         HoverIcon.SetActive(true);
         HoverIcon.transform.SetParent(item.transform.parent);
         HoverIcon.transform.localPosition = Vector3.zero;
@@ -66,6 +69,7 @@ public class InventoryManager : MonoBehaviour
 
     public void DeselectItem()
     {
+        SFX.Play();
         SelectedItem = null;
         SelectionIcon.SetActive(false);
     }
