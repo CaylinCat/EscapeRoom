@@ -50,7 +50,6 @@ public class LetterPuzzle : Puzzle
 
     public void OpenLetter()
     {
-        Debug.Log("Opening letter");
         EnvelopeSR.sprite = EnvelopeSeparateSprite;
         LetterSR.gameObject.SetActive(true);
         NameInput.transform.parent.gameObject.SetActive(true);
@@ -59,10 +58,8 @@ public class LetterPuzzle : Puzzle
 
     public void TryName(string nameGuess)
     {
-        Debug.Log($"Name guess: {nameGuess}");
         if(nameGuess.Equals(_solutionName))
         {
-            Debug.Log("Guess correct!");
             LetterSR.sprite = NamedLetterSprite;
             NameInput.transform.parent.gameObject.SetActive(false);
             StartCoroutine(WaitCloseLetter());
@@ -81,7 +78,6 @@ public class LetterPuzzle : Puzzle
 
     public void CloseLetter()
     {
-        Debug.Log("Closing letter");
         EnvelopeSR.sprite = ClosedEnvelopeSprite;
         LetterSR.gameObject.SetActive(false); 
         UseWaxZone.SetActive(true);
@@ -89,7 +85,6 @@ public class LetterPuzzle : Puzzle
 
     public void PlaceWax()
     {
-        Debug.Log("Placing wax");
         WaxUnstamped.SetActive(true);
         UseWaxZone.SetActive(false);
         UseStampZone.SetActive(true);
@@ -97,7 +92,6 @@ public class LetterPuzzle : Puzzle
 
     public void StampWax()
     {
-        Debug.Log("Stamping wax");
         WaxUnstamped.SetActive(false);
         WaxStamped.SetActive(true);
         UseStampZone.SetActive(false);
@@ -106,7 +100,6 @@ public class LetterPuzzle : Puzzle
 
     public void GrabLetter()
     {
-        Debug.Log("Grabbing letter");
         if(letterComplete) return;
 
         letterComplete = true;
@@ -114,11 +107,11 @@ public class LetterPuzzle : Puzzle
         EnvelopeSR.gameObject.SetActive(false);
         GrabEnvelopeZone.SetActive(false);
         InventoryManager.Instance.AddItem(SealedEnvelope);
+        OnComplete();
     }
 
     public void GrabKey()
     {
-        Debug.Log("Grabbing map key");
         if(mapKeyComplete) return;
 
         mapKeyComplete = true;
