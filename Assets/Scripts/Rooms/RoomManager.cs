@@ -42,7 +42,11 @@ public class RoomManager : MonoBehaviour
     private void SwitchRooms()
     {
         PuzzleManager.Instance.HidePuzzle();
+        TransitionManager.Instance.SwitchRoomsTransition(SetRoom);
+    }
 
+    private void SetRoom()
+    {
         if(bodyRoomActive)
         {
             BodyRoom.gameObject.SetActive(false);
