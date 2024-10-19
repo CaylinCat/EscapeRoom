@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4220276209002748206}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.04, z: 0.10398952}
+  m_LocalPosition: {x: 0, y: 0, z: 0.10398952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48,8 +48,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 1590985011812428047}
-  ItemSpriteRenderer: {fileID: 4080401058315113338}
-  NewSprite: {fileID: 21300000, guid: cfd7ae086d63540ada7b76171ae68921, type: 3}
 --- !u!61 &2485944293437712790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -353,7 +351,7 @@ PrefabInstance:
     - target: {fileID: 1894453569337024998, guid: 0205a29c4915a6c4785f41fbda43551e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2d990da6b7906b842905bbbe2a1dbe2d, type: 3}
+      objectReference: {fileID: 21300000, guid: cfd7ae086d63540ada7b76171ae68921, type: 3}
     - target: {fileID: 1894453569337024998, guid: 0205a29c4915a6c4785f41fbda43551e, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
