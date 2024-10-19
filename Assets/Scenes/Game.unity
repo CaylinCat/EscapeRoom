@@ -122,6 +122,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &142441017 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3151037128930839550, guid: b2ac4484edc188e47922fcdde4457b7c, type: 3}
+  m_PrefabInstance: {fileID: 311687788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &311687788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1044,6 +1055,18 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 986380832}
+    - target: {fileID: 5931359821177596451, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: InventoryBar
+      value: 
+      objectReference: {fileID: 142441017}
+    - target: {fileID: 5931359821177596451, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: BodyInventorySprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 67cb781eca7939d428532ca283bac6fb, type: 3}
+    - target: {fileID: 5931359821177596451, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: SoulInventorySprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 48b65ca855bb94bab9127053e53d93e6, type: 3}
     - target: {fileID: 6636772908125924939, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: m_Name
       value: Room Manager

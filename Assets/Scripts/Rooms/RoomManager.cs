@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Controls which room is currently active and handles switching between the two rooms.
@@ -10,6 +11,9 @@ public class RoomManager : MonoBehaviour
     public static RoomManager Instance;
     public Room BodyRoom;
     public Room SpiritRoom;
+    public Image InventoryBar;
+    public Sprite BodyInventorySprite;
+    public Sprite SoulInventorySprite;
     private bool bodyRoomActive = true;
 
     void Awake()
@@ -26,6 +30,8 @@ public class RoomManager : MonoBehaviour
     {
         BodyRoom.gameObject.SetActive(true);
         SpiritRoom.gameObject.SetActive(false);
+        UpdateInventoryBarSprite();
+
     }
 
     void Update()
@@ -48,6 +54,19 @@ public class RoomManager : MonoBehaviour
             BodyRoom.gameObject.SetActive(true);
             SpiritRoom.gameObject.SetActive(false);
             bodyRoomActive = true;
+        }
+        UpdateInventoryBarSprite();
+    }
+
+    private void UpdateInventoryBarSprite()
+    {
+        if (bodyRoomActive)
+        {
+            InventoryBar.sprite = BodyInventorySprite;
+        }
+        else
+        {
+            InventoryBar.sprite = SoulInventorySprite;
         }
     }
 }
