@@ -31,6 +31,9 @@ public enum ItemID
     GOBLET,
     CHESS_SCROLL,
     WAX,
+    ENVELOPE,
+    MAP_KEY,
+    LETTER_NAMED,
 }
 
 /// <summary>
