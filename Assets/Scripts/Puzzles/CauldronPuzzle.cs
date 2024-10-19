@@ -39,7 +39,7 @@ public class CauldronPuzzle : Puzzle
 
         if(AddedIngredients == 3)
         {
-            InventoryManager.Instance.AddItem(Goblet);
+            // InventoryManager.Instance.AddItem(Goblet);
             CauldronSR.sprite = CompleteCauldronSprite;
             UseIngredientZone.SetActive(false);
             UseGobletZone.SetActive(true);
