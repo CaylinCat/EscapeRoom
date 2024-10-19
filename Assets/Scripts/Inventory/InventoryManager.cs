@@ -83,7 +83,41 @@ public class InventoryManager : MonoBehaviour
         DeselectItem();
         heldItems.Remove(item.gameObject);
         Destroy(item.gameObject);
-        
+        ReorganizeInventory();
+    }
+
+    /// <summary>
+    /// Removes the first instance of an item with the matching ID.
+    /// If no items match then nothing happens and a warning is logged.
+    /// </summary>
+    /// <param name="id"></param>
+    public void RemoveItemByID(ItemID id)
+    {
+        foreach(GameObject itemObject in heldItems)
+        {
+            Item item = itemObject.GetComponent<Item>();
+            if(item != null && item.GetItemID() == id)
+            {
+                DeselectItem();
+                heldItems.Remove(item.gameObject);
+                Destroy(item.gameObject);
+                ReorganizeInventory();
+                return;
+            }
+        }
+
+        Debug.LogWarning($"Trying to remove item with the ID {id} but no match was found!");
+    }
+
+    private void SetItemToSlot(GameObject item, GameObject slot)
+    {
+        item.transform.SetParent(slot.transform);
+        item.transform.localPosition = Vector3.zero;
+        item.transform.localScale = Vector3.one;
+    }
+
+    private void ReorganizeInventory()
+    {
         // Reorganize inventory
         // TODO account for multiple pages of items
         int slotIndex = 0;
@@ -92,12 +126,5 @@ public class InventoryManager : MonoBehaviour
             SetItemToSlot(itemObject, ItemSlots[slotIndex]);
             slotIndex++;
         }
-    }
-
-    private void SetItemToSlot(GameObject item, GameObject slot)
-    {
-        item.transform.SetParent(slot.transform);
-        item.transform.localPosition = Vector3.zero;
-        item.transform.localScale = Vector3.one;
     }
 }
