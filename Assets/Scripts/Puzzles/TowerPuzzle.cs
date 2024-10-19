@@ -76,6 +76,7 @@ public class TowerPuzzle : Puzzle
 
         if(CheckSolution())
         {
+            Rings[2].gameObject.SetActive(false);
             InventoryManager.Instance.AddItem(Ring);
             Complete = true;
             OnComplete();
