@@ -34,6 +34,7 @@ public enum ItemID
     ENVELOPE,
     MAP_KEY,
     LETTER_NAMED,
+    NR_CLUE_3,
 }
 
 /// <summary>

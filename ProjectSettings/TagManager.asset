@@ -6,6 +6,8 @@ TagManager:
   tags:
   - blocker
   - torch
+  - goblet-inspect
+  - coin-inspect
   layers:
   - Default
   - TransparentFX
