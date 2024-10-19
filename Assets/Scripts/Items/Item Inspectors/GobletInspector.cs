@@ -35,11 +35,11 @@ public class GobletInspector : MonoBehaviour
     {
         InventoryManager.Instance.AddItem(Bone);
         Destroy(BoneObject);
+        --_itemsRemaining;
 
         if(_itemsRemaining == 0)
         {
-            Debug.Log("Done!");
-            InventoryManager.Instance.RemoveItem();
+            InventoryManager.Instance.RemoveItemByID(ItemID.GOBLET);
             PuzzleManager.Instance.HidePuzzle();
         }
     }
@@ -48,11 +48,11 @@ public class GobletInspector : MonoBehaviour
     {
         InventoryManager.Instance.AddItem(Coin);
         Destroy(CoinObject);
+        --_itemsRemaining;
 
         if(_itemsRemaining == 0)
         {
-            Debug.Log("Done!");
-            InventoryManager.Instance.RemoveItem();
+            InventoryManager.Instance.RemoveItemByID(ItemID.GOBLET);
             PuzzleManager.Instance.HidePuzzle();
         }
     }

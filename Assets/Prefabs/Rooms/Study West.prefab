@@ -637,30 +637,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4642304019240261189, guid: f4d459645550f2a42ba0a31818f63471, type: 3}
-      propertyPath: DontConsumeItem
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4642304019240261189, guid: f4d459645550f2a42ba0a31818f63471, type: 3}
-      propertyPath: OnUse.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4642304019240261189, guid: f4d459645550f2a42ba0a31818f63471, type: 3}
-      propertyPath: OnUse.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2183499849317783837}
-    - target: {fileID: 4642304019240261189, guid: f4d459645550f2a42ba0a31818f63471, type: 3}
-      propertyPath: OnUse.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LightCandle
-      objectReference: {fileID: 0}
-    - target: {fileID: 4642304019240261189, guid: f4d459645550f2a42ba0a31818f63471, type: 3}
-      propertyPath: OnUse.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: RedCandlePuzzle, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4642304019240261189, guid: f4d459645550f2a42ba0a31818f63471, type: 3}
-      propertyPath: OnUse.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5626414375619336521, guid: f4d459645550f2a42ba0a31818f63471, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -719,17 +695,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2198544771245723514, guid: f4d459645550f2a42ba0a31818f63471, type: 3}
   m_PrefabInstance: {fileID: 1693141951819797960}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2183499849317783837 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 662704422080695509, guid: f4d459645550f2a42ba0a31818f63471, type: 3}
-  m_PrefabInstance: {fileID: 1693141951819797960}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3986299554227503641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c585c7df087664eac60eb7f8e8c15d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3986299554227503641 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2318529111871494097, guid: f4d459645550f2a42ba0a31818f63471, type: 3}
@@ -1122,6 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b77bc375ae64ebc87f776e63cfe53d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
   innerCircle: {fileID: 6903203445302428941}
   outerCircle: {fileID: 6075254333045995647}
 --- !u!1001 &3882884146085224557
