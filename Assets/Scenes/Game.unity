@@ -946,6 +946,10 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 986380832}
+    - target: {fileID: 4707805782689785582, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4864607817543559191, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: Timer
       value: 
@@ -975,7 +979,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
---- !u!1001 &2412226681176257259
+--- !u!1001 &2420620931895421349
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1271,5 +1275,5 @@ SceneRoots:
   - {fileID: 1896092012}
   - {fileID: 8088037667150235425}
   - {fileID: 4380620920456782227}
-  - {fileID: 2412226681176257259}
   - {fileID: 702137500}
+  - {fileID: 2420620931895421349}
