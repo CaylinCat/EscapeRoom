@@ -286,18 +286,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2158353388425534579, guid: b2ac4484edc188e47922fcdde4457b7c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.76711977
-      objectReference: {fileID: 0}
-    - target: {fileID: 2158353388425534579, guid: b2ac4484edc188e47922fcdde4457b7c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.76711977
-      objectReference: {fileID: 0}
-    - target: {fileID: 2158353388425534579, guid: b2ac4484edc188e47922fcdde4457b7c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.76711977
-      objectReference: {fileID: 0}
     - target: {fileID: 2209441846503246295, guid: b2ac4484edc188e47922fcdde4457b7c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -645,18 +633,6 @@ PrefabInstance:
     - target: {fileID: 8306426566794533658, guid: b2ac4484edc188e47922fcdde4457b7c, type: 3}
       propertyPath: m_Name
       value: Inventory Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8641134091756032084, guid: b2ac4484edc188e47922fcdde4457b7c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.76711977
-      objectReference: {fileID: 0}
-    - target: {fileID: 8641134091756032084, guid: b2ac4484edc188e47922fcdde4457b7c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.76711977
-      objectReference: {fileID: 0}
-    - target: {fileID: 8641134091756032084, guid: b2ac4484edc188e47922fcdde4457b7c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.76711977
       objectReference: {fileID: 0}
     - target: {fileID: 8650330823140297681, guid: b2ac4484edc188e47922fcdde4457b7c, type: 3}
       propertyPath: m_AnchorMax.x
