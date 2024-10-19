@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Candelabra : Puzzle
 {
@@ -9,16 +10,15 @@ public class Candelabra : Puzzle
     public SpriteRenderer spriteRenderer;
     public Sprite litCandelabraSprite;
     public GameObject GemstoneImg;
-    private bool complete = false;
+    // private bool complete = false;
 
     public void GrabGemstone()
     {
-        if(complete) return;
-
+        // if(complete) return;
         InventoryManager.Instance.AddItem(Gemstone);
         GemstoneImg.SetActive(false);
-        complete = true;
-        OnComplete();
+        // complete = true;
+        // OnComplete();
     }
 
     public void LightCandle()
