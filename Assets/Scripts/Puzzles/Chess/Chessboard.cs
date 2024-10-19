@@ -21,9 +21,14 @@ public class Chessboard : Puzzle
     [HideInInspector] public static Piece blackKing;
 
     [SerializeField] public Item scrollItem;
+    [SerializeField] public Item photograph;
+
     [HideInInspector] public List<Piece> pieceList;
 
     [HideInInspector] public static bool puzzleComplete = false;
+    [SerializeField] public SpriteRenderer chessBoardSR;
+    [SerializeField] public Sprite completedBoardSprite;
+
     private void Awake()
     {
         StreamReader reader = new StreamReader("Assets/Scripts/Puzzles/Chess/BestMoves.txt");
@@ -37,42 +42,49 @@ public class Chessboard : Puzzle
 
     private void OnEnable()
     {
-        turn = 0;
-
-        pieceList = new List<Piece>();
-
-        // populate anchors
-        StreamReader anchorReader = new StreamReader("Assets/Scripts/Puzzles/Chess/AnchorPositions.txt");
-        List<string> posStrings = new List<string>();
-
-        for (int i = 0; i < 64; i++)
+        if (puzzleComplete)
         {
-            posStrings.Add(anchorReader.ReadLine());
+            chessBoardSR.sprite = completedBoardSprite;
         }
-
-        for (int i = 0; i < 8; i++)
+        else
         {
-            for (int j = 0; j < 8; j++)
+            turn = 0;
+
+            pieceList = new List<Piece>();
+
+            // populate anchors
+            StreamReader anchorReader = new StreamReader("Assets/Scripts/Puzzles/Chess/AnchorPositions.txt");
+            List<string> posStrings = new List<string>();
+
+            for (int i = 0; i < 64; i++)
             {
-                string[] posString = posStrings[i + j * 8].Split();
-
-                board[i, j] = Instantiate(anchorPrefab, new Vector3(float.Parse(posString[1]), float.Parse(posString[2]) - 2f, -2), Quaternion.identity, transform).GetComponent<Anchor>();
-                board[i, j].x = i;
-                board[i, j].y = j;
-                board[i, j].chessboard = this;
+                posStrings.Add(anchorReader.ReadLine());
             }
+
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    string[] posString = posStrings[i + j * 8].Split();
+
+                    board[i, j] = Instantiate(anchorPrefab, new Vector3(float.Parse(posString[1]), float.Parse(posString[2]) - 2f, -2), Quaternion.identity, transform).GetComponent<Anchor>();
+                    board[i, j].x = i;
+                    board[i, j].y = j;
+                    board[i, j].chessboard = this;
+                }
+            }
+
+            if (hasMissingPiece)
+            {
+                AddMissingPiece();
+            }
+
+
+            
+
+            AddPiecesFromFile("Assets/Scripts/Puzzles/Chess/PiecesWhite.txt");
+            AddPiecesFromFile("Assets/Scripts/Puzzles/Chess/PiecesBlack.txt");
         }
-
-        if (hasMissingPiece)
-        {
-            AddMissingPiece();
-        }
-
-
-        
-
-        AddPiecesFromFile("Assets/Scripts/Puzzles/Chess/PiecesWhite.txt");
-        AddPiecesFromFile("Assets/Scripts/Puzzles/Chess/PiecesBlack.txt");
     }
 
 
@@ -93,7 +105,7 @@ public class Chessboard : Puzzle
         yield return new WaitForSeconds(0.8f);
         blackKing.GetComponent<SpriteRenderer>().sprite = blackKing.fallenKingSprite;
         // play sound effect?
-        InventoryManager.Instance.AddItem(scrollItem);
+        InventoryManager.Instance.AddItem(photograph);
         yield return new WaitForSeconds(1.0f);
         for (int i = 1; i < 11; i++)
         {
@@ -108,7 +120,7 @@ public class Chessboard : Puzzle
             }
         }
 
-        
+        chessBoardSR.sprite = completedBoardSprite;
         puzzleComplete = true;
 
         

@@ -1059,6 +1059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candebara Puzzle
       objectReference: {fileID: 0}
+    - target: {fileID: 6386194998560501717, guid: b8cd0056aeedc6e44bb9db7dbed0c143, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
