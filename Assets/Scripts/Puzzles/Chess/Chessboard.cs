@@ -26,6 +26,19 @@ public class Chessboard : Puzzle
     [HideInInspector] public static bool puzzleComplete = false;
     private void Awake()
     {
+        StreamReader reader = new StreamReader("Assets/Scripts/Puzzles/Chess/BestMoves.txt");
+        string bestMove;
+        while ((bestMove = reader.ReadLine()) != null)
+        {
+            bestMoves.Add(bestMove);
+        }
+
+    }
+
+    private void OnEnable()
+    {
+        turn = 0;
+
         pieceList = new List<Piece>();
 
         // populate anchors
@@ -43,7 +56,7 @@ public class Chessboard : Puzzle
             {
                 string[] posString = posStrings[i + j * 8].Split();
 
-                board[i, j] = Instantiate(anchorPrefab, new Vector3(float.Parse(posString[1]), float.Parse(posString[2]), -2), Quaternion.identity, transform).GetComponent<Anchor>();
+                board[i, j] = Instantiate(anchorPrefab, new Vector3(float.Parse(posString[1]), float.Parse(posString[2]) - 2f, -2), Quaternion.identity, transform).GetComponent<Anchor>();
                 board[i, j].x = i;
                 board[i, j].y = j;
                 board[i, j].chessboard = this;
@@ -55,18 +68,14 @@ public class Chessboard : Puzzle
             AddMissingPiece();
         }
 
-        turn = 0;
 
-        StreamReader reader = new StreamReader("Assets/Scripts/Puzzles/Chess/BestMoves.txt");
-        string bestMove;
-        while ((bestMove = reader.ReadLine()) != null)
-        {
-            bestMoves.Add(bestMove);
-        }
+        
 
         AddPiecesFromFile("Assets/Scripts/Puzzles/Chess/PiecesWhite.txt");
         AddPiecesFromFile("Assets/Scripts/Puzzles/Chess/PiecesBlack.txt");
     }
+
+
 
 
     public static IEnumerator MoveBlackPiece()
@@ -80,6 +89,7 @@ public class Chessboard : Puzzle
 
     public IEnumerator CompletePuzzle()
     {
+        OnComplete();
         yield return new WaitForSeconds(0.8f);
         blackKing.GetComponent<SpriteRenderer>().sprite = blackKing.fallenKingSprite;
         // play sound effect?
@@ -147,5 +157,6 @@ public class Chessboard : Puzzle
         missingPiece.type = Piece.PieceType.Rook;
         missingPiece.isPlayerTeam = true;
         AddPieceToBoard(missingPiece, 2, 4);
+        hasMissingPiece = true;
     }
 }
