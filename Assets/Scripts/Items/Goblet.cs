@@ -11,10 +11,6 @@ public class Goblet : Item
 
     protected override void Interact()
     {
-        if(Filled)
-        {
-            InventoryManager.Instance.RemoveItem();
-            InventoryManager.Instance.AddItem(FingerBone);
-        }
+        
     }
 }
