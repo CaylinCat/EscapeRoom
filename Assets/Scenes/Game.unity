@@ -1231,6 +1231,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 1868510631737699904, guid: 1dac5673d9d2d134cbb40605afaa1f7a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.43999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868510631737699904, guid: 1dac5673d9d2d134cbb40605afaa1f7a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.43999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868510631737699904, guid: 1dac5673d9d2d134cbb40605afaa1f7a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.43999997
+      objectReference: {fileID: 0}
     - target: {fileID: 2246346271165902275, guid: 1dac5673d9d2d134cbb40605afaa1f7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1269,6 +1281,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2246346271165902275, guid: 1dac5673d9d2d134cbb40605afaa1f7a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3941279379184394723, guid: 1dac5673d9d2d134cbb40605afaa1f7a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
