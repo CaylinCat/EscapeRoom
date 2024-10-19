@@ -132,7 +132,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7283108e3e83354ba02d912286952d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DS: {fileID: 5919217789570802323}
+  Timer: {fileID: 0}
+  DS: {fileID: 0}
+  intro: {fileID: 11400000, guid: 0e557f6989845fa47bd2c024e8564661, type: 2}
+  riddle1: {fileID: 11400000, guid: 57c4c3e94715ae640960a4fdd02f5031, type: 2}
+  riddle2: {fileID: 11400000, guid: da96d8978235de144a0eb1c9fbe7f7c7, type: 2}
+  riddle3: {fileID: 11400000, guid: eeff2d67737d98e4c9c7e616c9fc59a8, type: 2}
+  complete: {fileID: 11400000, guid: d45c590568c17cd469e6911e58c938ac, type: 2}
+  cage: {fileID: 0}
+  tooth: {fileID: 0}
 --- !u!61 &4934857877846106301
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -288,17 +296,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3095950947892222050, guid: 2e35830d6eafdea4882fdea94b1844ab, type: 3}
   m_PrefabInstance: {fileID: 2813101041576315859}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5919217789570802323 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8444087990736283968, guid: 2e35830d6eafdea4882fdea94b1844ab, type: 3}
-  m_PrefabInstance: {fileID: 2813101041576315859}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c8014a8431365949aef1aed35591080, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7510645424214246040
 PrefabInstance:
   m_ObjectHideFlags: 0
