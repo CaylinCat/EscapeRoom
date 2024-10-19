@@ -1076,6 +1076,102 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b700c11999a8f4c4f864fc27c896e9a0, type: 3}
+--- !u!1001 &3285726060458598292
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1502408685735368250, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+      propertyPath: m_Name
+      value: Background Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510837847028753815, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510837847028753815, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510837847028753815, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510837847028753815, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510837847028753815, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510837847028753815, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510837847028753815, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510837847028753815, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510837847028753815, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510837847028753815, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1502408685735368250, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3285726060458598294}
+  m_SourcePrefab: {fileID: 100100000, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+--- !u!1 &3285726060458598293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1502408685735368250, guid: 0cbcea40e7e48774d820e84aac6d728a, type: 3}
+  m_PrefabInstance: {fileID: 3285726060458598292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3285726060458598294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3285726060458598293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -440389020
+      Data2: 1313942376
+      Data3: -1102558300
+      Data4: 1691519742
+    Path: event:/Music/bg-music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &4380620920456782227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1275,5 +1371,6 @@ SceneRoots:
   - {fileID: 1896092012}
   - {fileID: 8088037667150235425}
   - {fileID: 4380620920456782227}
-  - {fileID: 702137500}
   - {fileID: 2420620931895421349}
+  - {fileID: 3285726060458598292}
+  - {fileID: 702137500}
