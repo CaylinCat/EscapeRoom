@@ -251,13 +251,8 @@ MonoBehaviour:
   - {fileID: 2508739146545626572}
   - {fileID: 7812600896988935193}
   FingerBone: {fileID: 8934472094949473095, guid: c45b904437f4a42af9300ab1392cb5b6, type: 3}
-  Hair: {fileID: 1848450918424860759, guid: 843238743fc5442c7a59027814da2971, type: 3}
-  Photograph: {fileID: 136919599575089999, guid: f60f2ea81575c4c75bf2f24b46280df9, type: 3}
-  Mirror: {fileID: 4416919286326719315, guid: c3ab0c5c6726f4b3395e5ac8ec0f5c4a, type: 3}
-  Ring: {fileID: 2354199041890017829, guid: 51d8a7d08a59341709811e6d7ff7d05e, type: 3}
   DragonTooth: {fileID: 7916020794808064661, guid: 10fc71a6e19644600b963a630a500e65, type: 3}
   Heart: {fileID: 3611734187061827831, guid: a03698ed880bc49879b6eb3bd38205a9, type: 3}
-  Amulet: {fileID: 283738166426592455, guid: 6251a6654b9964f7db8a4e7d3b352e1d, type: 3}
 --- !u!1 &7382226025667664790
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25db925eb263e7a439643c58159c1dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcceptedItems: 0a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  AcceptedItems: 0b0000000c0000000d0000000e0000000f000000100000001100000012000000
   OnUse:
     m_PersistentCalls:
       m_Calls:
@@ -782,7 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25db925eb263e7a439643c58159c1dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcceptedItems: 0a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  AcceptedItems: 0b0000000c0000000d0000000e0000000f000000100000001100000012000000
   OnUse:
     m_PersistentCalls:
       m_Calls:
@@ -923,7 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25db925eb263e7a439643c58159c1dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcceptedItems: 0a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  AcceptedItems: 0b0000000c0000000d0000000e0000000f000000100000001100000012000000
   OnUse:
     m_PersistentCalls:
       m_Calls:
@@ -1175,7 +1170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25db925eb263e7a439643c58159c1dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcceptedItems: 0a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  AcceptedItems: 0b0000000c0000000d0000000e0000000f000000100000001100000012000000
   OnUse:
     m_PersistentCalls:
       m_Calls:
@@ -1333,7 +1328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25db925eb263e7a439643c58159c1dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcceptedItems: 0a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  AcceptedItems: 0b0000000c0000000d0000000e0000000f000000100000001100000012000000
   OnUse:
     m_PersistentCalls:
       m_Calls:
@@ -1658,7 +1653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25db925eb263e7a439643c58159c1dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcceptedItems: 0a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  AcceptedItems: 0b0000000c0000000d0000000e0000000f000000100000001100000012000000
   OnUse:
     m_PersistentCalls:
       m_Calls:
@@ -2100,7 +2095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25db925eb263e7a439643c58159c1dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcceptedItems: 0a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  AcceptedItems: 0b0000000c0000000d0000000e0000000f000000100000001100000012000000
   OnUse:
     m_PersistentCalls:
       m_Calls:
@@ -2214,7 +2209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25db925eb263e7a439643c58159c1dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcceptedItems: 0a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  AcceptedItems: 0b0000000c0000000d0000000e0000000f000000100000001100000012000000
   OnUse:
     m_PersistentCalls:
       m_Calls:
