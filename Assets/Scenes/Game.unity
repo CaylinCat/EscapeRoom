@@ -890,10 +890,34 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 986380832}
+    - target: {fileID: 1827433674152063474, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 097a5ac0ed68a4840b2674fcba7922aa, type: 2}
+    - target: {fileID: 1827433674152063474, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145932328623309223, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 097a5ac0ed68a4840b2674fcba7922aa, type: 2}
+    - target: {fileID: 2145932328623309223, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2599053854635716023, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: Timer
       value: 
       objectReference: {fileID: 986380832}
+    - target: {fileID: 2670599863733498751, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 097a5ac0ed68a4840b2674fcba7922aa, type: 2}
+    - target: {fileID: 2670599863733498751, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2998640840594278185, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: Timer
       value: 
@@ -962,6 +986,14 @@ PrefabInstance:
       propertyPath: InventoryBar
       value: 
       objectReference: {fileID: 142441017}
+    - target: {fileID: 6522828311495226877, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 097a5ac0ed68a4840b2674fcba7922aa, type: 2}
+    - target: {fileID: 6522828311495226877, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6636772908125924939, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: m_Name
       value: Room Manager
