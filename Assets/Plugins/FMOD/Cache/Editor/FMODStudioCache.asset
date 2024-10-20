@@ -204,7 +204,7 @@ MonoBehaviour:
   Path: FMOD/EscapeRoom/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638649678316462989
+  lastModified: 638649667151369122
   FileSizes:
   - Name: Desktop
     Value: 1538
@@ -245,7 +245,7 @@ MonoBehaviour:
   - {fileID: 7953889665104228310}
   StringsBanks:
   - {fileID: -668679638939718583}
-  cacheTime: 638649678316462989
+  cacheTime: 638649667151369122
   cacheVersion: 131617
 --- !u!114 &555775798249439709
 MonoBehaviour:
@@ -445,7 +445,7 @@ MonoBehaviour:
   Path: FMOD/EscapeRoom/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638649678316452911
+  lastModified: 638649667151366338
   FileSizes:
   - Name: Desktop
     Value: 5428064
