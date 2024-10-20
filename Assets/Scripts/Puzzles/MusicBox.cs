@@ -8,6 +8,7 @@ public class MusicBox : Puzzle
     public static MusicBox Instance;
     
     public Item Hair;
+    public Item NRClue0;
     public List<GameObject> Rows;
     public List<GameObject> Row1Solution;
     public List<GameObject> Row2Solution;
@@ -58,12 +59,13 @@ public class MusicBox : Puzzle
         PlacePinSFX.Play();
 
         // Check if puzzle is solved after each action
-        if(CheckSolution())
-        {
+        // if(CheckSolution())
+        // {
             InventoryManager.Instance.AddItem(Hair);
+            InventoryManager.Instance.AddItem(NRClue0);
             complete = true;
             OnComplete();
-        }
+        // }
     }
 
     public bool CheckSolution()
