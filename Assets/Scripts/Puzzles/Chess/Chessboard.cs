@@ -55,7 +55,10 @@ public class Chessboard : Puzzle
         if (puzzleComplete)
         {
             chessBoardSR.sprite = completedBoardSprite;
-            photographGrabbable.SetActive(true);
+            if (photographGrabbable)
+            {
+                photographGrabbable.SetActive(true);
+            }
         }
         else
         {
