@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a78557a8ce75f4290019ce5cbb1f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
   bookSlots:
   - {fileID: 2667087818889736656}
   - {fileID: 6218141815782069217}
@@ -274,12 +275,14 @@ MonoBehaviour:
   - {fileID: 7545324054699542847}
   - {fileID: 6555711557748563988}
   - {fileID: 5447463176053293833}
+  - {fileID: 4944768752143561675}
   - {fileID: 8833923561567915803}
   - {fileID: 1788524359466791081}
-  - {fileID: 4944768752143561675}
   moon1: {fileID: 4170650362246478889}
   moon2: {fileID: 6662105382814671546}
   moon3: {fileID: 1309460187415804149}
+  mirror: {fileID: 0}
+  lizzardLeg: {fileID: 0}
 --- !u!114 &8995143668478140149
 MonoBehaviour:
   m_ObjectHideFlags: 0
