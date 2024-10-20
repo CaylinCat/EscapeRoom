@@ -57,16 +57,14 @@ public class Anchor : MonoBehaviour
         myPiece.posX = x; 
         myPiece.posY = y;
         Chessboard.selectedPiece = null;
-
+        // sfx go here
         Chessboard.turn++;
-        Debug.Log(Chessboard.turn);
 
         // black makes their move, if it's black's turn
         if (Chessboard.turn % 2 == 1)
         {
             if (Chessboard.turn >= Chessboard.bestMoves.Count)
             {
-                Debug.Log("you're winner!");
                 Chessboard.selectedPiece = null;
                 StartCoroutine(chessboard.CompletePuzzle());
             }

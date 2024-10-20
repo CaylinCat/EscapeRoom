@@ -49,7 +49,6 @@ MonoBehaviour:
   Timer: {fileID: 0}
   anchorPrefab: {fileID: 3139425315895216509, guid: b2cea6301fdae7848aac07a7ac808460, type: 3}
   piecePrefab: {fileID: 1808191096991452930, guid: 76520fef49e7e2749ae370d217979db3, type: 3}
-  scrollItem: {fileID: 0}
   photograph: {fileID: 136919599575089999, guid: f60f2ea81575c4c75bf2f24b46280df9, type: 3}
   pieceList: []
   chessBoardSR: {fileID: 6640221197808847648}
@@ -114,6 +113,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1279519809866228326}
     m_Modifications:
+    - target: {fileID: 939262550310126968, guid: 3ad4aad0fe78b36409482f28f994791b, type: 3}
+      propertyPath: m_Size.x
+      value: 9.814903
+      objectReference: {fileID: 0}
+    - target: {fileID: 939262550310126968, guid: 3ad4aad0fe78b36409482f28f994791b, type: 3}
+      propertyPath: m_Size.y
+      value: 8.500126
+      objectReference: {fileID: 0}
+    - target: {fileID: 939262550310126968, guid: 3ad4aad0fe78b36409482f28f994791b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.16785622
+      objectReference: {fileID: 0}
+    - target: {fileID: 939262550310126968, guid: 3ad4aad0fe78b36409482f28f994791b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.093505144
+      objectReference: {fileID: 0}
     - target: {fileID: 3375228157596431575, guid: 3ad4aad0fe78b36409482f28f994791b, type: 3}
       propertyPath: AcceptedItems.Array.size
       value: 1
@@ -164,7 +179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817288445230999450, guid: 3ad4aad0fe78b36409482f28f994791b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7817288445230999450, guid: 3ad4aad0fe78b36409482f28f994791b, type: 3}
       propertyPath: m_LocalRotation.w
