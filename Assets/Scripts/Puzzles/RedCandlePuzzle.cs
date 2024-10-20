@@ -9,6 +9,7 @@ public class RedCandlePuzzle : Puzzle
     public SpriteRenderer spriteRenderer;
     public Sprite litCandleSprite;
     public GameObject WaxImg;
+    public FMODUnity.StudioEventEmitter IgniteSFX;
     private bool complete = false;
 
     public void GrabWax()
@@ -23,6 +24,7 @@ public class RedCandlePuzzle : Puzzle
 
     public void LightCandle()
     {
+        IgniteSFX.Play();
         spriteRenderer.sprite = litCandleSprite;
         WaxImg.SetActive(true);
         Debug.Log("triggered light candle");
