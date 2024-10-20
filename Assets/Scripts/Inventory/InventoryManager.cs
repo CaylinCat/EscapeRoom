@@ -40,7 +40,7 @@ public class InventoryManager : MonoBehaviour
     {
         if(heldItems.Count >= ItemSlots.Length * (currentPage + 1))
         {
-            Debug.LogWarning("Item added exceeds the current page capacity. Moving to the next page.");
+            // Debug.LogWarning("Item added exceeds the current page capacity. Moving to the next page.");
             currentPage++;
             UpdateInventoryDisplay();
         }
@@ -90,7 +90,8 @@ public class InventoryManager : MonoBehaviour
         DeselectItem();
         heldItems.Remove(item.gameObject);
         Destroy(item.gameObject);
-        ReorganizeInventory();
+        UpdateInventoryDisplay();
+        if(heldItems.Count <= ItemSlots.Length * currentPage) ChangePage(-1);
     }
 
     /// <summary>
@@ -108,7 +109,8 @@ public class InventoryManager : MonoBehaviour
                 DeselectItem();
                 heldItems.Remove(item.gameObject);
                 Destroy(item.gameObject);
-                ReorganizeInventory();
+                UpdateInventoryDisplay();
+                if(heldItems.Count <= ItemSlots.Length * currentPage) ChangePage(-1);
                 return;
             }
         }
@@ -121,17 +123,6 @@ public class InventoryManager : MonoBehaviour
         item.transform.SetParent(slot.transform);
         item.transform.localPosition = Vector3.zero;
         item.transform.localScale = Vector3.one;
-    }
-
-    private void ReorganizeInventory()
-    {
-        // Reorganize inventory
-        int slotIndex = 0;
-        foreach(GameObject itemObject in heldItems)
-        {
-            SetItemToSlot(itemObject, ItemSlots[slotIndex]);
-            slotIndex++;
-        }
     }
 
     private void UpdateInventoryDisplay()
