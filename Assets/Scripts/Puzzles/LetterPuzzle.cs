@@ -31,6 +31,7 @@ public class LetterPuzzle : Puzzle
     public GameObject NameLetterCanvas;
     public FMODUnity.StudioEventEmitter WritingSFX;
     public FMODUnity.StudioEventEmitter PaperSFX;
+    public FMODUnity.StudioEventEmitter StampSFX;
 
     private string _solutionName = "Elizabeth";
     private bool letterComplete = false;
@@ -97,6 +98,7 @@ public class LetterPuzzle : Puzzle
 
     public void StampWax()
     {
+        StampSFX.Play();
         WaxUnstamped.SetActive(false);
         WaxStamped.SetActive(true);
         UseStampZone.SetActive(false);
