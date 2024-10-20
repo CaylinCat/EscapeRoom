@@ -24,6 +24,8 @@ public class BirdPuzzle : Puzzle
     public Sprite BirdLandAmuletSprite;
     public Transform AnchorAway;
     public Transform AnchorLand;
+    public FMODUnity.StudioEventEmitter ChirpingSFX;
+    public FMODUnity.StudioEventEmitter FlappingSFX;
 
     private bool complete = false;
     private int _state = 0;
@@ -81,6 +83,7 @@ public class BirdPuzzle : Puzzle
         if(!hasAmulet)
         {
             UseEnvelopeZone.SetActive(true);
+            ChirpingSFX.Play();
         }
         else
         {
@@ -123,6 +126,7 @@ public class BirdPuzzle : Puzzle
 
         yield return new WaitForSeconds(waitTime);
 
+        FlappingSFX.Play();
         BirdSR.sprite = fromSprite;
         while(BirdSR.transform.position != target.position)
         {

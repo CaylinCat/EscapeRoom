@@ -733,6 +733,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6465264175762713517}
   - component: {fileID: 4559649942028541647}
+  - component: {fileID: 7559626611133662700}
+  - component: {fileID: 4570632790764948469}
   m_Layer: 0
   m_Name: Bird Puzzle
   m_TagString: Untagged
@@ -795,6 +797,70 @@ MonoBehaviour:
   BirdLandAmuletSprite: {fileID: -421489904, guid: 42fcd34787ab98d489bb4fff93055907, type: 3}
   AnchorAway: {fileID: 1924215669319932520}
   AnchorLand: {fileID: 3545045492074765715}
+  ChirpingSFX: {fileID: 7559626611133662700}
+  FlappingSFX: {fileID: 4570632790764948469}
+--- !u!114 &7559626611133662700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567341486905664526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -822782613
+      Data2: 1341119155
+      Data3: 25359493
+      Data4: -142895393
+    Path: event:/Puzzles/Bird/chirp
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &4570632790764948469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567341486905664526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 589469031
+      Data2: 1305746204
+      Data3: -783137617
+      Data4: -699407543
+    Path: event:/Puzzles/Bird/flapping
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &4070296407607838409
 PrefabInstance:
   m_ObjectHideFlags: 0
