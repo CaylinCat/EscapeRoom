@@ -247,6 +247,33 @@ MonoBehaviour:
   - {fileID: -668679638939718583}
   cacheTime: 638649598777771638
   cacheVersion: 131617
+--- !u!114 &151695244109454803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Candle/ignition
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Candle/ignition
+  Guid:
+    Data1: 608330710
+    Data2: 1169863250
+    Data3: -1855748976
+    Data4: -2117052576
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1418
 --- !u!114 &555775798249439709
 MonoBehaviour:
   m_ObjectHideFlags: 0

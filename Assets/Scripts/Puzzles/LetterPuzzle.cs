@@ -28,6 +28,7 @@ public class LetterPuzzle : Puzzle
     public GameObject WaxUnstamped;
     public GameObject WaxStamped;
     public GameObject MapKeyObject;
+    public GameObject NameLetterCanvas;
     public FMODUnity.StudioEventEmitter WritingSFX;
     public FMODUnity.StudioEventEmitter PaperSFX;
 
@@ -44,7 +45,7 @@ public class LetterPuzzle : Puzzle
         MapKeyObject.SetActive(false);
 
         OpenLetterZone.SetActive(true);
-        NameInput.transform.parent.gameObject.SetActive(false);
+        NameLetterCanvas.SetActive(false);
         UseWaxZone.SetActive(false);
         UseStampZone.SetActive(false);
         GrabEnvelopeZone.SetActive(false);
@@ -54,7 +55,7 @@ public class LetterPuzzle : Puzzle
     {
         EnvelopeSR.sprite = EnvelopeSeparateSprite;
         LetterSR.gameObject.SetActive(true);
-        NameInput.transform.parent.gameObject.SetActive(true);
+        NameLetterCanvas.SetActive(true);
         OpenLetterZone.SetActive(false);
     }
 
@@ -63,7 +64,7 @@ public class LetterPuzzle : Puzzle
         if(nameGuess.Equals(_solutionName))
         {
             LetterSR.sprite = NamedLetterSprite;
-            NameInput.transform.parent.gameObject.SetActive(false);
+            NameLetterCanvas.SetActive(false);
             WritingSFX.Play();
             StartCoroutine(WaitCloseLetter());
         }
