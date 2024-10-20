@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2bb31ac421bf189419c4fa107d381478, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9dcb5b1b337bd94fb05f7e6c6e9ca55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -430,7 +430,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ed5578182cd32334a9b119c06ff2196f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a3635ec5db4dd2c47b940812c5332d93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -695,6 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69759e7f250b28f41b09482ec77d7de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
   Amulet: {fileID: 3929447430308849632, guid: 47920157babe57547a35791508d04984, type: 3}
   UseBirdseedZone: {fileID: 683908101434251413}
   UseEnvelopeZone: {fileID: 3795039095900293562}
