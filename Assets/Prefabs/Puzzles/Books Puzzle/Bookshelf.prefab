@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 7441993797159802510}
   - component: {fileID: 1296720670690068406}
   - component: {fileID: 6016937938117749989}
+  - component: {fileID: 2931307458782472146}
   m_Layer: 0
   m_Name: Bookshelf
   m_TagString: Untagged
@@ -423,6 +424,38 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  BookSFX: {fileID: 2931307458782472146}
+--- !u!114 &2931307458782472146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453211571135679926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1834614085
+      Data2: 1292736626
+      Data3: 1035773117
+      Data4: 205920808
+    Path: event:/Puzzles/Bookshelf/book
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5532736562530772340
 GameObject:
   m_ObjectHideFlags: 0
