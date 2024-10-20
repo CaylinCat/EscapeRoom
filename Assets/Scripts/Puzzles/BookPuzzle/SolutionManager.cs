@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SolutionManager : MonoBehaviour
+public class SolutionManager : Puzzle
 {
     public Transform[] bookSlots;
     public GameObject[] correctOrder;
@@ -11,6 +11,9 @@ public class SolutionManager : MonoBehaviour
     public GameObject moon1;
     public GameObject moon2;
     public GameObject moon3;
+    public Item mirror;
+    public Item lizzardLeg;
+    // public Item bricksClue;
     bool c = false;
     bool c2 = false;
     bool c3 = false;
@@ -49,10 +52,13 @@ public class SolutionManager : MonoBehaviour
     {
         if (completedCount == 1) {
             moon1.SetActive(true);
+            InventoryManager.Instance.AddItem(mirror);
         } else if (completedCount == 2) {
             moon2.SetActive(true);
+            InventoryManager.Instance.AddItem(lizzardLeg);
         } else if (completedCount == 3) {
             moon3.SetActive(true);
+            // bricks paper clue
         }
     }
 
