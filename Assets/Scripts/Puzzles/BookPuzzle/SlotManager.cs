@@ -5,6 +5,7 @@ public class SlotManager : MonoBehaviour
 {
     public List<Transform> bookSlots;
     public List<GameObject> books;
+    public FMODUnity.StudioEventEmitter BookSFX;
     private SolutionManager solutionManager;
     void Start()
     {
@@ -50,6 +51,7 @@ public class SlotManager : MonoBehaviour
     {
         if (targetIndex >= 0 && targetIndex < bookSlots.Count)
         {
+            BookSFX.Play();
             books.Remove(draggedBook);
             books.Insert(targetIndex, draggedBook);
             PlaceBooksInSlots();
