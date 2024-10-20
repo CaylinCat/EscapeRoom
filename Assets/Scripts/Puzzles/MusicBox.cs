@@ -8,6 +8,7 @@ public class MusicBox : Puzzle
     public static MusicBox Instance;
     
     public Item Hair;
+    public Item NRClue0;
     public List<GameObject> Rows;
     public List<GameObject> Row1Solution;
     public List<GameObject> Row2Solution;
@@ -61,6 +62,7 @@ public class MusicBox : Puzzle
         if(CheckSolution())
         {
             InventoryManager.Instance.AddItem(Hair);
+            InventoryManager.Instance.AddItem(NRClue0);
             complete = true;
             OnComplete();
         }

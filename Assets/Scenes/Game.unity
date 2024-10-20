@@ -974,6 +974,10 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 986380832}
+    - target: {fileID: 8659231762418790585, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: NRClue0
+      value: 
+      objectReference: {fileID: 8024224844977435112, guid: ab73c8c971e12a249a91ff9d9d1b5c49, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
