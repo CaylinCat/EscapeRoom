@@ -16,18 +16,10 @@ public class CauldronPuzzle : Puzzle
     public FMODUnity.StudioEventEmitter GobletSubmergeSFX;
     private bool complete = false;
 
-    // TODO: delete debug
-    public List<Item> DEBUG_Ingredients;
-
-    // TODO: delete debug
     void Awake()
     {
         UseIngredientZone.SetActive(true);
         UseGobletZone.SetActive(false);
-        foreach(Item i in DEBUG_Ingredients)
-        {
-            InventoryManager.Instance.AddItem(i);
-        }
     }
 
     public void AddItem()

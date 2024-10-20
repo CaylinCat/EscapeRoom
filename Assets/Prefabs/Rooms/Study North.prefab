@@ -678,6 +678,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4416919286326719315, guid: c3ab0c5c6726f4b3395e5ac8ec0f5c4a, type: 3}
     - target: {fileID: 8876519900995953731, guid: 9016f1d9566ed78428f55c5bb7580fd3, type: 3}
+      propertyPath: bricksClue
+      value: 
+      objectReference: {fileID: 1888047502248936572, guid: 4e61f30ff31f34ef5bd36e10d3622e9e, type: 3}
+    - target: {fileID: 8876519900995953731, guid: 9016f1d9566ed78428f55c5bb7580fd3, type: 3}
       propertyPath: lizzardLeg
       value: 
       objectReference: {fileID: 3565599695578534979, guid: 2c855ff517324ce4e943282a7b7cb584, type: 3}
@@ -950,6 +954,10 @@ PrefabInstance:
     - target: {fileID: 3844108244168998471, guid: 0205a29c4915a6c4785f41fbda43551e, type: 3}
       propertyPath: m_Name
       value: Study North
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844108244168998471, guid: 0205a29c4915a6c4785f41fbda43551e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5631500202699115671, guid: 0205a29c4915a6c4785f41fbda43551e, type: 3}
       propertyPath: m_Pivot.x

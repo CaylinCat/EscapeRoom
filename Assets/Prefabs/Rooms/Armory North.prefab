@@ -408,6 +408,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2570808045256182374, guid: fc4c7dada4e55424fa6b1a8e5987a0de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2842146983042500177, guid: fc4c7dada4e55424fa6b1a8e5987a0de, type: 3}
       propertyPath: m_Name
       value: Wallman Puzzle

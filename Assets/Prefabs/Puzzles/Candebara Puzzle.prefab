@@ -375,6 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7dd36d8a4d988748aa04fb695255a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
   Gemstone: {fileID: 3929447430308849632, guid: 36c8f59dc9d19b245a450f60f8937d11, type: 3}
   spriteRenderer: {fileID: 50324515213594916}
   litCandelabraSprite: {fileID: 21300000, guid: e6829affb806e614fb54bd995f0715df, type: 3}
@@ -457,6 +458,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2032278758859707809}
     m_Modifications:
+    - target: {fileID: 3375228157596431575, guid: 3ad4aad0fe78b36409482f28f994791b, type: 3}
+      propertyPath: DontConsumeItem
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3375228157596431575, guid: 3ad4aad0fe78b36409482f28f994791b, type: 3}
       propertyPath: AcceptedItems.Array.size
       value: 1

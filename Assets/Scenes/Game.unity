@@ -554,10 +554,18 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 986380832}
+    - target: {fileID: 2795105663632162180, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2998640840594278185, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: Timer
       value: 
       objectReference: {fileID: 986380832}
+    - target: {fileID: 3918287913525352378, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4090362361270814223, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -630,6 +638,14 @@ PrefabInstance:
       propertyPath: InventoryBar
       value: 
       objectReference: {fileID: 142441017}
+    - target: {fileID: 6370571135170620481, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4828206
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370571135170620481, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.711
+      objectReference: {fileID: 0}
     - target: {fileID: 6636772908125924939, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: m_Name
       value: Room Manager
@@ -638,6 +654,10 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 986380832}
+    - target: {fileID: 8631804674777634192, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_Name
+      value: Main Circle
+      objectReference: {fileID: 0}
     - target: {fileID: 8659231762418790585, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: Timer
       value: 

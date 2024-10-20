@@ -10,7 +10,7 @@ public class InnerCircle : MonoBehaviour
     public List<GameObject> IngredientSlots;
     private List<ItemID> CorrectInnerPlacement;
     private List<ItemID> CurrentInnerPlacement;
-    public Item FingerBone, Hair, Photograph, Mirror, Ring, DragonTooth, Heart, Amulet; // delete later, for debugging
+    public Item FingerBone, DragonTooth, Heart; // delete later, for debugging
 
     void Start() {
         CorrectInnerPlacement = new List<ItemID> {ItemID.FINGER_BONE, ItemID.HAIR, ItemID.PHOTOGRAPH, ItemID.MIRROR, ItemID.RING, ItemID.DRAGON_TOOTH, ItemID.HEART, ItemID.AMULET};
@@ -46,12 +46,7 @@ public class InnerCircle : MonoBehaviour
     private void AddItemsToInventory()
     {
         InventoryManager.Instance.AddItem(FingerBone);
-        InventoryManager.Instance.AddItem(Hair);
-        InventoryManager.Instance.AddItem(Photograph);
-        InventoryManager.Instance.AddItem(Mirror);
-        InventoryManager.Instance.AddItem(Ring);
         InventoryManager.Instance.AddItem(DragonTooth);
         InventoryManager.Instance.AddItem(Heart);
-        InventoryManager.Instance.AddItem(Amulet);
     }
 }

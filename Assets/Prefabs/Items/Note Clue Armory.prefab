@@ -87,6 +87,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note Clue Armory
       objectReference: {fileID: 0}
+    - target: {fileID: 2076574513808495541, guid: 0e073d4dbe9748e4cb351acd46ab9dbc, type: 3}
+      propertyPath: Type
+      value: 33
+      objectReference: {fileID: 0}
     - target: {fileID: 3474806991705208828, guid: 0e073d4dbe9748e4cb351acd46ab9dbc, type: 3}
       propertyPath: m_Color.a
       value: 0

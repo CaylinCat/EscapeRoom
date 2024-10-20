@@ -36,6 +36,10 @@ public enum ItemID
     LETTER_NAMED,
     NR_CLUE_3,
     GEMSTONE,
+    NR_CLUE_6,
+    NR_CLUE_7,
+    BRICKS_CLUE,
+    NR_CLUE_0,
 }
 
 /// <summary>
