@@ -50,6 +50,7 @@ public class Anchor : MonoBehaviour
         Chessboard.selectedPiece = null;
 
         Chessboard.turn++;
+        Debug.Log(Chessboard.turn);
 
         // black makes their move, if it's black's turn
         if (Chessboard.turn % 2 == 1)

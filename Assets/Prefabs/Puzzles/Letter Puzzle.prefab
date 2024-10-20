@@ -1830,6 +1830,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6465264175762713517}
   - component: {fileID: 4001133663439256995}
+  - component: {fileID: 3227665654207078908}
+  - component: {fileID: 9199946345398917417}
   m_Layer: 0
   m_Name: Letter Puzzle
   m_TagString: Untagged
@@ -1890,6 +1892,70 @@ MonoBehaviour:
   WaxUnstamped: {fileID: 4014617135413998602}
   WaxStamped: {fileID: 3346725610161917732}
   MapKeyObject: {fileID: 1363817426184958391}
+  WritingSFX: {fileID: 9199946345398917417}
+  PaperSFX: {fileID: 3227665654207078908}
+--- !u!114 &3227665654207078908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567341486905664526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1859150341
+      Data2: 1157729349
+      Data3: 599639997
+      Data4: 295042468
+    Path: event:/Puzzles/Journal/journal-pickup
+  Event: 
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &9199946345398917417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567341486905664526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1112093688
+      Data2: 1082678233
+      Data3: -1565353287
+      Data4: -1475707610
+    Path: event:/Puzzles/Letter/writing
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &4070296407607838409
 PrefabInstance:
   m_ObjectHideFlags: 0

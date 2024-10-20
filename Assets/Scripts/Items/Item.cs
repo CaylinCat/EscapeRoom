@@ -35,6 +35,7 @@ public enum ItemID
     MAP_KEY,
     LETTER_NAMED,
     NR_CLUE_3,
+    GEMSTONE,
 }
 
 /// <summary>

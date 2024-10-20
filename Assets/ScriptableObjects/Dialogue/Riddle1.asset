@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: Riddle1
   m_EditorClassIdentifier: 
   Lines:
-  - Text: To advance you must answer our riddles three
+  - Text: "In a shadowed corner where secrets hide, \r\nThe gaze of the lost shall
+      be supplied.\r\nSeek not the room with with wraiths inside, \r\nLook to the
+      cage where visions bide. \r"
     Speaker: {fileID: -1330294652, guid: 5e9d1aa14c9a515488a46cfe72db21de, type: 3}
-  - Text: You must bring us the items we seek
-    Speaker: {fileID: -1900744546, guid: 569ba445f62f1784b9baa74f263acd1c, type: 3}
-  - Text: Then we shall reward you for your troubles
-    Speaker: {fileID: -1113012005, guid: 86646ab39e14aca4cbb01b315b6d1347, type: 3}

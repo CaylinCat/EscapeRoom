@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 6465264175762713517}
   - component: {fileID: 3795720818135606799}
   - component: {fileID: -979346251343284179}
+  - component: {fileID: 6197390490412174984}
   m_Layer: 0
   m_Name: Towers Puzzle
   m_TagString: Untagged
@@ -168,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51166ba2cc5b034db91a4254bdb1167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
   Ring: {fileID: 3565599695578534979, guid: 58b9b5a6c46854648869559cc3c07749, type: 3}
   Rings:
   - {fileID: 4467801772657846473}
@@ -178,9 +180,41 @@ MonoBehaviour:
   - {fileID: 3109330829198086134}
   - {fileID: 462137807958644157}
   StartPole: {fileID: 1998174257231500872}
+  PlaceSFX: {fileID: 6197390490412174984}
   _selectedRing: {fileID: 0}
   _oldPole: {fileID: 0}
   Complete: 0
+--- !u!114 &6197390490412174984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567341486905664526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1502959453
+      Data2: 1085266484
+      Data3: -236602190
+      Data4: -2023500339
+    Path: event:/Puzzles/Hanoi/hanoi
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1035160157074747171
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -48,8 +48,7 @@ public class InventoryManager : MonoBehaviour
         SFX.Play();
         SelectedItem = item;
         SelectionIcon.SetActive(true);
-        SelectionIcon.transform.SetParent(item.transform.parent);
-        SelectionIcon.transform.localPosition = Vector3.zero;
+        SelectionIcon.transform.position = item.transform.parent.position;
         UnhoverItem();
     }
 
@@ -58,8 +57,7 @@ public class InventoryManager : MonoBehaviour
         if(CanHover)
         SFX.Play();
         HoverIcon.SetActive(true);
-        HoverIcon.transform.SetParent(item.transform.parent);
-        HoverIcon.transform.localPosition = Vector3.zero;
+        HoverIcon.transform.position = item.transform.parent.position;
     }
 
     public void UnhoverItem()

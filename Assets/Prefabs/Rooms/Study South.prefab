@@ -79,6 +79,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4331515200366714861}
     m_Modifications:
+    - target: {fileID: 624983079440556839, guid: 4698f1965136b2a4cbd5048eb933994b, type: 3}
+      propertyPath: Photograph
+      value: 
+      objectReference: {fileID: 136919599575089999, guid: f60f2ea81575c4c75bf2f24b46280df9, type: 3}
+    - target: {fileID: 2989571114264668665, guid: 4698f1965136b2a4cbd5048eb933994b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319916971711050286, guid: 4698f1965136b2a4cbd5048eb933994b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4328095611159797844, guid: 4698f1965136b2a4cbd5048eb933994b, type: 3}
       propertyPath: m_Name
       value: Puzzle Chess
@@ -101,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6447087366525782428, guid: 4698f1965136b2a4cbd5048eb933994b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.32
+      value: -12.32
       objectReference: {fileID: 0}
     - target: {fileID: 6447087366525782428, guid: 4698f1965136b2a4cbd5048eb933994b, type: 3}
       propertyPath: m_LocalPosition.z

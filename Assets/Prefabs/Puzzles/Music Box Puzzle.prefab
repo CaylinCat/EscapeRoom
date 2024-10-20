@@ -950,6 +950,7 @@ GameObject:
   - component: {fileID: 3542135064040426411}
   - component: {fileID: 2126083572185154925}
   - component: {fileID: 7112264090684981740}
+  - component: {fileID: 8541405183554567180}
   m_Layer: 0
   m_Name: Music Box Puzzle
   m_TagString: Untagged
@@ -1039,6 +1040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8374c5cb6731049bb36b6584c626fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
   Hair: {fileID: 3565599695578534979, guid: 084bbbbcd4e9d364b9a6880f05ead701, type: 3}
   Rows:
   - {fileID: 7995936024117702015}
@@ -1073,6 +1075,38 @@ MonoBehaviour:
   - {fileID: 433368248212264580}
   SelectedPin: {fileID: 0}
   OldSlot: {fileID: 0}
+  PlacePinSFX: {fileID: 8541405183554567180}
+--- !u!114 &8541405183554567180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8847095096367763077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1300093068
+      Data2: 1181795997
+      Data3: 1047506104
+      Data4: -1939026656
+    Path: event:/Puzzles/Music Box/music-box-place
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &113580501737355614
 PrefabInstance:
   m_ObjectHideFlags: 0
