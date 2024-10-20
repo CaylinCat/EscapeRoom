@@ -59,13 +59,13 @@ public class MusicBox : Puzzle
         PlacePinSFX.Play();
 
         // Check if puzzle is solved after each action
-        // if(CheckSolution())
-        // {
+        if(CheckSolution())
+        {
             InventoryManager.Instance.AddItem(Hair);
             InventoryManager.Instance.AddItem(NRClue0);
             complete = true;
             OnComplete();
-        // }
+        }
     }
 
     public bool CheckSolution()
