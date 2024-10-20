@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Chessboard : Puzzle
 {
-    public static bool hasMissingPiece = false;
+    [HideInInspector] public static bool hasMissingPiece = false;
 
     public static string positions;
 
@@ -28,6 +28,7 @@ public class Chessboard : Puzzle
     [HideInInspector] public static bool puzzleComplete = false;
     [SerializeField] public SpriteRenderer chessBoardSR;
     [SerializeField] public Sprite completedBoardSprite;
+
 
     private void Awake()
     {
@@ -170,5 +171,9 @@ public class Chessboard : Puzzle
         missingPiece.isPlayerTeam = true;
         AddPieceToBoard(missingPiece, 2, 4);
         hasMissingPiece = true;
+        foreach (Anchor anchor in board)
+        {
+            anchor.GetComponent<CircleCollider2D>().radius = 1.25f;
+        }
     }
 }

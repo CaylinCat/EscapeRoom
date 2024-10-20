@@ -9,6 +9,7 @@ public class ArmorPuzzle : Puzzle
     public static int progress = 0;
     public static bool hasFirstItem, hasSecondItem, hasThirdItem;
 
+    [SerializeField] private GameObject popupButton;
     [SerializeField] private GameObject cage, tooth;
     private void Awake()
     {
@@ -29,7 +30,6 @@ public class ArmorPuzzle : Puzzle
             case 2:
                 DS.DialogueSet = riddle3;
                 Wallman.canPlayPuzzle = true;
-                Debug.Log("should enable wallman");
                 break;
 
             case 3:
@@ -39,6 +39,8 @@ public class ArmorPuzzle : Puzzle
         DS.AdvanceLine();
         
     }
+
+
 
     void OnMouseDown() { DS.AdvanceLine(); }
 

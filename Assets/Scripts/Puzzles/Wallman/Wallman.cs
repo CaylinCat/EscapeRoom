@@ -27,7 +27,6 @@ public class Wallman : Puzzle
 
     public void OnClick()
     {
-        Debug.Log("please");
         if (!canPlayPuzzle)
         {
             return;
@@ -47,7 +46,7 @@ public class Wallman : Puzzle
             StartCoroutine(destroyArmorPiece(index - 1));
         }
 
-        if (health <= 0 && !puzzleComplete)
+        if (health <= -1 && !puzzleComplete)
         {
             InventoryManager.Instance.AddItem(heartItem);
             puzzleComplete = true;
