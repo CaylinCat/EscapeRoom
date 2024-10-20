@@ -35,6 +35,7 @@ public class Anchor : MonoBehaviour
         {
             chessboard.pieceList.Remove(myPiece);
             Destroy(myPiece.gameObject);
+            Chessboard.Instance.MovePieceSFX.Play();
         }
 
         foreach (Anchor anchor in Chessboard.board)

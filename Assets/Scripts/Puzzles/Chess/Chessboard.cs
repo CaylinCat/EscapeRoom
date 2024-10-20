@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class Chessboard : Puzzle
 {
+    public static Chessboard Instance;
     [HideInInspector] public static bool hasMissingPiece = false;
 
     public static string positions;
@@ -15,6 +16,7 @@ public class Chessboard : Puzzle
     [HideInInspector] public static Anchor[,] board = new Anchor[8, 8];
     [HideInInspector] public static Piece selectedPiece;
     public GameObject piecePrefab;
+    public FMODUnity.StudioEventEmitter MovePieceSFX;
 
     [HideInInspector] public static int turn;
     [HideInInspector] public static List<string> bestMoves = new List<string>();
@@ -32,6 +34,13 @@ public class Chessboard : Puzzle
 
     private void Awake()
     {
+        if(Instance == null) Instance = this;
+        else
+        {
+            Debug.LogWarning("Tried to create more than one instance of the Chessboard singleton!");
+            Destroy(this);
+        }
+
         StreamReader reader = new StreamReader("Assets/Scripts/Puzzles/Chess/BestMoves.txt");
         string bestMove;
         while ((bestMove = reader.ReadLine()) != null)
@@ -95,6 +104,7 @@ public class Chessboard : Puzzle
     public static IEnumerator MoveBlackPiece()
     {
         yield return new WaitForSeconds(0.8f);
+        Instance.MovePieceSFX.Play();
         string blackMove = bestMoves[turn];
         selectedPiece = board[int.Parse(blackMove.Substring(0, 1)), int.Parse(blackMove.Substring(1, 1))].myPiece;
         Anchor target = board[int.Parse(blackMove.Substring(2, 1)), int.Parse(blackMove.Substring(3, 1))];
