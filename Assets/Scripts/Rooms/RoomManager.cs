@@ -15,6 +15,7 @@ public class RoomManager : MonoBehaviour
     public Sprite BodyInventorySprite;
     public Sprite SoulInventorySprite;
     private bool bodyRoomActive = true;
+    [SerializeField] private Texture2D cursorStudy, cursorArmory;
 
     void Awake()
     {
@@ -31,7 +32,8 @@ public class RoomManager : MonoBehaviour
         BodyRoom.gameObject.SetActive(true);
         SpiritRoom.gameObject.SetActive(false);
         UpdateInventoryBarSprite();
-
+        Cursor.SetCursor(cursorStudy, Vector2.zero, CursorMode.Auto);
+        Cursor.visible = true;
     }
 
     void Update()
@@ -52,12 +54,14 @@ public class RoomManager : MonoBehaviour
             BodyRoom.gameObject.SetActive(false);
             SpiritRoom.gameObject.SetActive(true);
             bodyRoomActive = false;
+            Cursor.SetCursor(cursorArmory, Vector2.zero, CursorMode.Auto);
         }
         else
         {
             BodyRoom.gameObject.SetActive(true);
             SpiritRoom.gameObject.SetActive(false);
             bodyRoomActive = true;
+            Cursor.SetCursor(cursorStudy, Vector2.zero, CursorMode.Auto);
         }
         UpdateInventoryBarSprite();
     }

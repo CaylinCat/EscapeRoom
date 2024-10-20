@@ -140,6 +140,8 @@ MonoBehaviour:
   InventoryBar: {fileID: 0}
   BodyInventorySprite: {fileID: 21300000, guid: 67cb781eca7939d428532ca283bac6fb, type: 3}
   SoulInventorySprite: {fileID: 21300000, guid: 48b65ca855bb94bab9127053e53d93e6, type: 3}
+  cursorStudy: {fileID: 2800000, guid: b1ecd2726335d71468c878464ad4602a, type: 3}
+  cursorArmory: {fileID: 2800000, guid: 7867b3cdce3d4eb4b91f03f113d68f38, type: 3}
 --- !u!1 &6822824189429133546
 GameObject:
   m_ObjectHideFlags: 0
