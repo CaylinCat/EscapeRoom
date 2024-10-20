@@ -1,0 +1,261 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8701221743341440912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Journal/journal-page-turn
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Journal/journal-page-turn
+  Guid:
+    Data1: 1631559192
+    Data2: 1282832161
+    Data3: 1879225998
+    Data4: -470951753
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &-8644226660451099087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Cauldron/goblet submerge
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Cauldron/goblet submerge
+  Guid:
+    Data1: -843701230
+    Data2: 1317773073
+    Data3: 515787952
+    Data4: -805414311
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1150
+--- !u!114 &-8496320977597320193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Items/torch
+  m_EditorClassIdentifier: 
+  Path: event:/Items/torch
+  Guid:
+    Data1: -2117244914
+    Data2: 1148873799
+    Data3: 1177826220
+    Data4: 1271786289
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 39491
+--- !u!114 &-4870016889974295112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Journal/journal-pickup
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Journal/journal-pickup
+  Guid:
+    Data1: -1859150341
+    Data2: 1157729349
+    Data3: 599639997
+    Data4: 295042468
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 700
+--- !u!114 &-3785660815461998932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Cauldron/plop
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Cauldron/plop
+  Guid:
+    Data1: -638865560
+    Data2: 1262606160
+    Data3: 2012899254
+    Data4: -1787616287
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 876
+--- !u!114 &-668679638939718583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/EscapeRoom/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638648723642391592
+  FileSizes:
+  - Name: Desktop
+    Value: 1080
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -668679638939718583}
+  - {fileID: 7953889665104228310}
+  EditorEvents:
+  - {fileID: -8496320977597320193}
+  - {fileID: -8644226660451099087}
+  - {fileID: -8701221743341440912}
+  - {fileID: -3785660815461998932}
+  - {fileID: 942321237152167731}
+  - {fileID: 2454669309050288268}
+  - {fileID: -4870016889974295112}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 7953889665104228310}
+  StringsBanks:
+  - {fileID: -668679638939718583}
+  cacheTime: 638648723642391592
+  cacheVersion: 131617
+--- !u!114 &942321237152167731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Cauldron/bubbling
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Cauldron/bubbling
+  Guid:
+    Data1: -860388758
+    Data2: 1337086512
+    Data3: 314472066
+    Data4: -987180769
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 21540
+--- !u!114 &2454669309050288268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/ui-hover
+  m_EditorClassIdentifier: 
+  Path: event:/UI/ui-hover
+  Guid:
+    Data1: 1881311604
+    Data2: 1075575699
+    Data3: 2032754563
+    Data4: -1946901766
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 100
+--- !u!114 &7953889665104228310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/EscapeRoom/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638648723642391592
+  FileSizes:
+  - Name: Desktop
+    Value: 1245728
+  Exists: 1
