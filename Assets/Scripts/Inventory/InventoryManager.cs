@@ -13,7 +13,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject HoverIcon;
     public FMODUnity.StudioEventEmitter SFX;
     [HideInInspector] public bool CanHover = true;
-    private List<GameObject> heldItems = new List<GameObject>();
+    public List<GameObject> heldItems = new List<GameObject>();
     private int currentPage = 0;
     private const int itemsPerPage = 10;
     [SerializeField] private Button nextPageButton;
@@ -126,7 +126,6 @@ public class InventoryManager : MonoBehaviour
     private void ReorganizeInventory()
     {
         // Reorganize inventory
-        // TODO account for multiple pages of items
         int slotIndex = 0;
         foreach(GameObject itemObject in heldItems)
         {
@@ -137,23 +136,19 @@ public class InventoryManager : MonoBehaviour
 
     private void UpdateInventoryDisplay()
     {
-       foreach (GameObject itemObject in heldItems)
+        foreach (GameObject itemObject in heldItems)
         {
             itemObject.SetActive(false);
         }
 
         int startIndex = currentPage * itemsPerPage;
         int endIndex = Mathf.Min(startIndex + itemsPerPage, heldItems.Count);
-        Debug.Log("total items: " + heldItems.Count);
-        Debug.Log("start: " + startIndex);
-        Debug.Log("end: " + endIndex);
-
+        int slotIndex = 0;
         for (int i = startIndex; i < endIndex; i++)
         {
-            int slotIndex = i % itemsPerPage;
             heldItems[i].SetActive(true);
             SetItemToSlot(heldItems[i], ItemSlots[slotIndex]);
-            Debug.Log(heldItems[i]);
+            slotIndex++;
         }
 
         UpdateButtons();
@@ -161,23 +156,21 @@ public class InventoryManager : MonoBehaviour
 
     public void ChangePage(int direction)
     {
+        DeselectItem();
         int maxPage = Mathf.CeilToInt((float)heldItems.Count / itemsPerPage) - 1;
         int newPage = Mathf.Clamp(currentPage + direction, 0, maxPage);
 
-        if (newPage != currentPage)
+        if (newPage != currentPage || true)
         {
             currentPage = newPage;
             UpdateInventoryDisplay();
         }
-
-        Debug.Log("current Page: " + currentPage);
     }
 
     public void UpdateButtons()
     {
         int maxPage = Mathf.Max(0, Mathf.CeilToInt((float)heldItems.Count / itemsPerPage) - 1);
 
-        Debug.Log("maxPage: "+ maxPage);
         previousPageButton.gameObject.SetActive(currentPage > 0);
         nextPageButton.gameObject.SetActive(currentPage < maxPage);
     }
