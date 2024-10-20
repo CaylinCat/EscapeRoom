@@ -17,6 +17,7 @@ public class MusicBox : Puzzle
 
     public MusicBoxPin SelectedPin;
     public MusicBoxSlot OldSlot;
+    public FMODUnity.StudioEventEmitter PlacePinSFX;
 
     private List<List<GameObject>> _solutions = new();
     private bool complete = false;
@@ -54,6 +55,7 @@ public class MusicBox : Puzzle
         // Activate pin in given slot
         newSlot.IsFilled = true;
         newSlot.GetComponent<BoxCollider2D>().enabled = false;
+        PlacePinSFX.Play();
 
         // Check if puzzle is solved after each action
         if(CheckSolution())

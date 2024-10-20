@@ -598,6 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2151846610394036966}
   - component: {fileID: -633176342198859930}
+  - component: {fileID: 729093388238590047}
   m_Layer: 0
   m_Name: Bricks Puzzle
   m_TagString: Untagged
@@ -642,12 +643,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b3aa2c1e4b7704bacc000cf181ef40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
   BrickStart: {fileID: 8152024715439914509}
   BricksEnd: {fileID: 21300000, guid: 53b0c76dd00d6014caccdab6054fef9f, type: 3}
   Mandrake: {fileID: 3565599695578534979, guid: 604dbc4e8158f1f40922cbd7597f727f, type: 3}
   Stamp: {fileID: 6326408444202092144, guid: a1146bcd4f5cfac4082f903b1845f511, type: 3}
   MandrakeClickable: {fileID: 3037598194353185107, guid: 604dbc4e8158f1f40922cbd7597f727f, type: 3}
   StampClickable: {fileID: 5519112453567001440, guid: a1146bcd4f5cfac4082f903b1845f511, type: 3}
+  SlideSFX: {fileID: 729093388238590047}
+--- !u!114 &729093388238590047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4227313323304560454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -364164336
+      Data2: 1206566295
+      Data3: 1442527106
+      Data4: -1082944402
+    Path: event:/Puzzles/Bricks/brick
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5638731243263930962
 GameObject:
   m_ObjectHideFlags: 0

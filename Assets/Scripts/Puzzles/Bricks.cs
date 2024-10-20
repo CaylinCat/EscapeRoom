@@ -13,6 +13,7 @@ public class Bricks : Puzzle
     public Item Stamp;
     public GameObject MandrakeClickable;
     public GameObject StampClickable;
+    public FMODUnity.StudioEventEmitter SlideSFX;
 
     public void Start() {
         nextBrickClicked = 0;
@@ -30,6 +31,7 @@ public class Bricks : Puzzle
     public void OnEntityClicked(int index)
     {
         if(bricksComplete) return;
+        SlideSFX.Play();
 
         if (index == bricksOrder[nextBrickClicked])
         {

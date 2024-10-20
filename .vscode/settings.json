@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "EscapeRoom.sln"
+    "dotnet.defaultSolution": "Escape Room.sln"
 }
