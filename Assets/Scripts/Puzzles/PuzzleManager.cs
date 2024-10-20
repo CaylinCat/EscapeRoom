@@ -8,6 +8,7 @@ public class PuzzleManager : MonoBehaviour
     public GameObject Background;
     public GameObject ItemInspect;
     public SpriteRenderer ItemInspectSR;
+    public FMODUnity.StudioEventEmitter OnCompleteSFX;
     private GameObject activePuzzle;
 
     void Awake()
@@ -58,5 +59,10 @@ public class PuzzleManager : MonoBehaviour
     {
         ItemInspectSR.sprite = item.GetItemSprite();
         ShowPuzzle(ItemInspect);
+    }
+
+    public void PlaySFX()
+    {
+        OnCompleteSFX.Play();
     }
 }

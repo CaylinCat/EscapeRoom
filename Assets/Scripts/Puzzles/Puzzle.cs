@@ -8,5 +8,6 @@ public class Puzzle : MonoBehaviour
     public void OnComplete()
     {
         Timer.AddTimePuzzleComplete(180);
+        PuzzleManager.Instance.PlaySFX();
     }
 }
