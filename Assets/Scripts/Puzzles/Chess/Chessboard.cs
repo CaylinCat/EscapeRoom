@@ -46,6 +46,7 @@ public class Chessboard : Puzzle
         if (puzzleComplete)
         {
             chessBoardSR.sprite = completedBoardSprite;
+            photographGrabbable.SetActive(true);
         }
         else
         {
@@ -103,11 +104,11 @@ public class Chessboard : Puzzle
     public IEnumerator CompletePuzzle()
     {
         OnComplete();
+        puzzleComplete = true;
         yield return new WaitForSeconds(0.8f);
         blackKing.GetComponent<SpriteRenderer>().sprite = blackKing.fallenKingSprite;
         // play sound effect?
         photographGrabbable.SetActive(true);
-        //InventoryManager.Instance.AddItem(photograph);
         yield return new WaitForSeconds(1.0f);
         for (int i = 1; i < 11; i++)
         {
@@ -123,7 +124,7 @@ public class Chessboard : Puzzle
         }
 
         chessBoardSR.sprite = completedBoardSprite;
-        puzzleComplete = true;
+        
 
         
     }

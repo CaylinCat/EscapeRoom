@@ -323,12 +323,12 @@ public class Piece : MonoBehaviour
 
     public void OnClickPiece()
     {
-        if (!Chessboard.hasMissingPiece)
+        if (!Chessboard.hasMissingPiece || Chessboard.turn % 2 == 1)
         {
             return;
         }
 
-        if (!IsEnemyPiece(Chessboard.selectedPiece))
+        if (!IsEnemyPiece(Chessboard.selectedPiece) && isPlayerTeam)
         {
             SelectPiece();
         }
