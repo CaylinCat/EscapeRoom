@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bricks : Puzzle
 {
-    private readonly int[] bricksOrder = { 0, 1, 2, 3, 4, 5, 6 };
+    private readonly int[] bricksOrder = { 6, 2, 1, 6, 0, 4, 2, 1, 5, 3 };
     private int nextBrickClicked = 0;
     public SpriteRenderer BrickStart;
     public Sprite BricksEnd;
@@ -13,6 +13,7 @@ public class Bricks : Puzzle
     public Item Stamp;
     public GameObject MandrakeClickable;
     public GameObject StampClickable;
+    public FMODUnity.StudioEventEmitter SlideSFX;
 
     public void Start() {
         nextBrickClicked = 0;
@@ -30,6 +31,7 @@ public class Bricks : Puzzle
     public void OnEntityClicked(int index)
     {
         if(bricksComplete) return;
+        SlideSFX.Play();
 
         if (index == bricksOrder[nextBrickClicked])
         {
@@ -41,7 +43,7 @@ public class Bricks : Puzzle
                 bricksComplete = true;
                 MandrakeClickable.SetActive(true);
                 StampClickable.SetActive(true);
-                OnComplete();
+                this.OnComplete();
             }
         }
         else

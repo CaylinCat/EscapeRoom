@@ -9,9 +9,18 @@ public class Anchor : MonoBehaviour
     public SpriteRenderer myRenderer;
     public int x, y;
     public Chessboard chessboard;
+
     private void Start()
     {
         myRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
+    {
+        if (InventoryManager.Instance.SelectedItem != null)
+        {
+            GetComponent<CircleCollider2D>().radius = (InventoryManager.Instance.SelectedItem.GetItemID() == ItemID.ROOK) ? 0.01f : 1.25f;
+        }
     }
 
     public void MovePieceHere()
@@ -48,7 +57,7 @@ public class Anchor : MonoBehaviour
         myPiece.posX = x; 
         myPiece.posY = y;
         Chessboard.selectedPiece = null;
-
+        // sfx go here
         Chessboard.turn++;
 
         // black makes their move, if it's black's turn
@@ -56,7 +65,6 @@ public class Anchor : MonoBehaviour
         {
             if (Chessboard.turn >= Chessboard.bestMoves.Count)
             {
-                Debug.Log("you're winner!");
                 Chessboard.selectedPiece = null;
                 StartCoroutine(chessboard.CompletePuzzle());
             }

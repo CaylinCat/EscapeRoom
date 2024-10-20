@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
+  ItemInspectOverride: {fileID: 0}
   Filled: 1
   FingerBone: {fileID: 3565599695578534979, guid: 592cf21834ca3f24fa9bafe97989353e, type: 3}
 --- !u!1 &7464111432516684968

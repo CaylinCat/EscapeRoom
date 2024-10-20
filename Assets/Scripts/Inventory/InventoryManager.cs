@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class InventoryManager : MonoBehaviour
 {
@@ -12,6 +14,10 @@ public class InventoryManager : MonoBehaviour
     public FMODUnity.StudioEventEmitter SFX;
     [HideInInspector] public bool CanHover = true;
     private List<GameObject> heldItems = new List<GameObject>();
+    private int currentPage = 0;
+    private const int itemsPerPage = 10;
+    [SerializeField] private Button nextPageButton;
+    [SerializeField] private Button previousPageButton;
     
     void Awake()
     {
@@ -27,20 +33,23 @@ public class InventoryManager : MonoBehaviour
     {
         SelectionIcon.SetActive(false);
         HoverIcon.SetActive(false);
+        UpdateInventoryDisplay();
     }
 
     public void AddItem(Item item)
     {
-        if(heldItems.Count + 1 >= ItemSlots.Length)
+        if(heldItems.Count >= ItemSlots.Length * (currentPage + 1))
         {
-            Debug.LogWarning("Could not add item, will exceed item slot capacity");
-            return;
-            // TODO add second page of items
+            Debug.LogWarning("Item added exceeds the current page capacity. Moving to the next page.");
+            currentPage++;
+            UpdateInventoryDisplay();
         }
 
         GameObject itemInstance = Instantiate(item.gameObject);
         heldItems.Add(itemInstance);
-        SetItemToSlot(itemInstance, ItemSlots[heldItems.Count-1]);
+        int slotIndex = (heldItems.Count - 1) % itemsPerPage;
+        SetItemToSlot(itemInstance, ItemSlots[slotIndex]);
+        UpdateInventoryDisplay();
     }
 
     public void SelectItem(Item item)
@@ -48,8 +57,7 @@ public class InventoryManager : MonoBehaviour
         SFX.Play();
         SelectedItem = item;
         SelectionIcon.SetActive(true);
-        SelectionIcon.transform.SetParent(item.transform.parent);
-        SelectionIcon.transform.localPosition = Vector3.zero;
+        SelectionIcon.transform.position = item.transform.parent.position;
         UnhoverItem();
     }
 
@@ -58,8 +66,7 @@ public class InventoryManager : MonoBehaviour
         if(CanHover)
         SFX.Play();
         HoverIcon.SetActive(true);
-        HoverIcon.transform.SetParent(item.transform.parent);
-        HoverIcon.transform.localPosition = Vector3.zero;
+        HoverIcon.transform.position = item.transform.parent.position;
     }
 
     public void UnhoverItem()
@@ -83,7 +90,41 @@ public class InventoryManager : MonoBehaviour
         DeselectItem();
         heldItems.Remove(item.gameObject);
         Destroy(item.gameObject);
-        
+        ReorganizeInventory();
+    }
+
+    /// <summary>
+    /// Removes the first instance of an item with the matching ID.
+    /// If no items match then nothing happens and a warning is logged.
+    /// </summary>
+    /// <param name="id"></param>
+    public void RemoveItemByID(ItemID id)
+    {
+        foreach(GameObject itemObject in heldItems)
+        {
+            Item item = itemObject.GetComponent<Item>();
+            if(item != null && item.GetItemID() == id)
+            {
+                DeselectItem();
+                heldItems.Remove(item.gameObject);
+                Destroy(item.gameObject);
+                ReorganizeInventory();
+                return;
+            }
+        }
+
+        Debug.LogWarning($"Trying to remove item with the ID {id} but no match was found!");
+    }
+
+    private void SetItemToSlot(GameObject item, GameObject slot)
+    {
+        item.transform.SetParent(slot.transform);
+        item.transform.localPosition = Vector3.zero;
+        item.transform.localScale = Vector3.one;
+    }
+
+    private void ReorganizeInventory()
+    {
         // Reorganize inventory
         // TODO account for multiple pages of items
         int slotIndex = 0;
@@ -94,10 +135,50 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    private void SetItemToSlot(GameObject item, GameObject slot)
+    private void UpdateInventoryDisplay()
     {
-        item.transform.SetParent(slot.transform);
-        item.transform.localPosition = Vector3.zero;
-        item.transform.localScale = Vector3.one;
+       foreach (GameObject itemObject in heldItems)
+        {
+            itemObject.SetActive(false);
+        }
+
+        int startIndex = currentPage * itemsPerPage;
+        int endIndex = Mathf.Min(startIndex + itemsPerPage, heldItems.Count);
+        Debug.Log("total items: " + heldItems.Count);
+        Debug.Log("start: " + startIndex);
+        Debug.Log("end: " + endIndex);
+
+        for (int i = startIndex; i < endIndex; i++)
+        {
+            int slotIndex = i % itemsPerPage;
+            heldItems[i].SetActive(true);
+            SetItemToSlot(heldItems[i], ItemSlots[slotIndex]);
+            Debug.Log(heldItems[i]);
+        }
+
+        UpdateButtons();
+    }
+
+    public void ChangePage(int direction)
+    {
+        int maxPage = Mathf.CeilToInt((float)heldItems.Count / itemsPerPage) - 1;
+        int newPage = Mathf.Clamp(currentPage + direction, 0, maxPage);
+
+        if (newPage != currentPage)
+        {
+            currentPage = newPage;
+            UpdateInventoryDisplay();
+        }
+
+        Debug.Log("current Page: " + currentPage);
+    }
+
+    public void UpdateButtons()
+    {
+        int maxPage = Mathf.Max(0, Mathf.CeilToInt((float)heldItems.Count / itemsPerPage) - 1);
+
+        Debug.Log("maxPage: "+ maxPage);
+        previousPageButton.gameObject.SetActive(currentPage > 0);
+        nextPageButton.gameObject.SetActive(currentPage < maxPage);
     }
 }

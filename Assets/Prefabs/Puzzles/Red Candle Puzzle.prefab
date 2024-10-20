@@ -336,6 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2198544771245723514}
   - component: {fileID: 662704422080695509}
+  - component: {fileID: 2762192478921685662}
   m_Layer: 0
   m_Name: Red Candle Puzzle
   m_TagString: Untagged
@@ -375,10 +376,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c585c7df087664eac60eb7f8e8c15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
   Wax: {fileID: 3929447430308849632, guid: d74fded5673066248a068dfeae107cb6, type: 3}
   spriteRenderer: {fileID: 2095485960653578809}
   litCandleSprite: {fileID: 21300000, guid: 69ddcb89bfa6cd248b755937dc9b5cd2, type: 3}
   WaxImg: {fileID: 441628923317940448}
+  IgniteSFX: {fileID: 2762192478921685662}
+--- !u!114 &2762192478921685662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2318529111871494097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 608330710
+      Data2: 1169863250
+      Data3: -1855748976
+      Data4: -2117052576
+    Path: event:/Puzzles/Candle/ignition
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &7979251302972613266
 PrefabInstance:
   m_ObjectHideFlags: 0

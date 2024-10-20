@@ -11,6 +11,7 @@ public class TowerPuzzle : Puzzle
     public List<TowerRing> Rings;
     public List<TowerPole> Poles;
     public TowerPole StartPole;
+    public FMODUnity.StudioEventEmitter PlaceSFX;
 
     [SerializeField] private TowerRing _selectedRing;
     public TowerRing SelectedRing
@@ -73,6 +74,7 @@ public class TowerPuzzle : Puzzle
         SelectedRing.Pole = newPole;
         SelectedRing.transform.position = newPole.GetTopAnchorPosition();
         SelectedRing.Deselect();
+        PlaceSFX.Play();
 
         if(CheckSolution())
         {

@@ -54,6 +54,12 @@ public class Piece : MonoBehaviour
 
         GetComponent<SpriteRenderer>().sprite = sprites[spriteIndex];
     }
+
+    private void OnDisable()
+    {
+        Destroy(gameObject);
+    }
+
     private void Update()
     {
         if (transform.position != targetPos)
@@ -317,6 +323,11 @@ public class Piece : MonoBehaviour
 
     public void OnClickPiece()
     {
+        if (!Chessboard.hasMissingPiece)
+        {
+            return;
+        }
+
         if (!IsEnemyPiece(Chessboard.selectedPiece))
         {
             SelectPiece();

@@ -30,6 +30,11 @@ public class CountdownTimer : MonoBehaviour
             }
         }
     }
+    
+    public void AddTimePuzzleComplete(float time)
+    {
+        timeRemaining += time;
+    }
 
     void UpdateTimerDisplay()
     {

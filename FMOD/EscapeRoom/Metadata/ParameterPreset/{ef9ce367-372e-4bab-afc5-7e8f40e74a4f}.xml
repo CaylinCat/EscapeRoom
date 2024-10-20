@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{ef9ce367-372e-4bab-afc5-7e8f40e74a4f}">
+		<property name="name">
+			<value>Semitones</value>
+		</property>
+		<relationship name="folder">
+			<destination>{e11f2e5b-5cb9-4af8-b54e-8f033711011d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{627f9916-4f27-43d3-a8c4-eaf8f15792ff}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{627f9916-4f27-43d3-a8c4-eaf8f15792ff}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

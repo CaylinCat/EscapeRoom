@@ -28,6 +28,8 @@ public class LetterPuzzle : Puzzle
     public GameObject WaxUnstamped;
     public GameObject WaxStamped;
     public GameObject MapKeyObject;
+    public FMODUnity.StudioEventEmitter WritingSFX;
+    public FMODUnity.StudioEventEmitter PaperSFX;
 
     private string _solutionName = "Elizabeth";
     private bool letterComplete = false;
@@ -62,6 +64,7 @@ public class LetterPuzzle : Puzzle
         {
             LetterSR.sprite = NamedLetterSprite;
             NameInput.transform.parent.gameObject.SetActive(false);
+            WritingSFX.Play();
             StartCoroutine(WaitCloseLetter());
         }
         else
@@ -78,6 +81,7 @@ public class LetterPuzzle : Puzzle
 
     public void CloseLetter()
     {
+        PaperSFX.Play();
         EnvelopeSR.sprite = ClosedEnvelopeSprite;
         LetterSR.gameObject.SetActive(false); 
         UseWaxZone.SetActive(true);
