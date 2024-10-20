@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Chessboard : Puzzle
 {
-    public static bool hasMissingPiece = false;
+    [HideInInspector] public static bool hasMissingPiece = false;
 
     public static string positions;
 
@@ -20,7 +20,6 @@ public class Chessboard : Puzzle
     [HideInInspector] public static List<string> bestMoves = new List<string>();
     [HideInInspector] public static Piece blackKing;
 
-    [SerializeField] public Item scrollItem;
     [SerializeField] public Item photograph;
 
     [HideInInspector] public List<Piece> pieceList;
@@ -28,6 +27,8 @@ public class Chessboard : Puzzle
     [HideInInspector] public static bool puzzleComplete = false;
     [SerializeField] public SpriteRenderer chessBoardSR;
     [SerializeField] public Sprite completedBoardSprite;
+
+    [SerializeField] private GameObject photographGrabbable;
 
     private void Awake()
     {
@@ -105,7 +106,8 @@ public class Chessboard : Puzzle
         yield return new WaitForSeconds(0.8f);
         blackKing.GetComponent<SpriteRenderer>().sprite = blackKing.fallenKingSprite;
         // play sound effect?
-        InventoryManager.Instance.AddItem(photograph);
+        photographGrabbable.SetActive(true);
+        //InventoryManager.Instance.AddItem(photograph);
         yield return new WaitForSeconds(1.0f);
         for (int i = 1; i < 11; i++)
         {
@@ -170,5 +172,9 @@ public class Chessboard : Puzzle
         missingPiece.isPlayerTeam = true;
         AddPieceToBoard(missingPiece, 2, 4);
         hasMissingPiece = true;
+        foreach (Anchor anchor in board)
+        {
+            anchor.GetComponent<CircleCollider2D>().radius = 1.25f;
+        }
     }
 }
