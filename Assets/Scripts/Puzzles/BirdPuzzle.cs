@@ -26,6 +26,7 @@ public class BirdPuzzle : Puzzle
     public Transform AnchorLand;
 
     private bool complete = false;
+    private int _state = 0;
 
     void Awake()
     {
@@ -37,10 +38,36 @@ public class BirdPuzzle : Puzzle
 
         BirdSR.transform.position = AnchorAway.position;
         BirdSR.gameObject.SetActive(false);
+
+        _state = 0;
+    }
+
+    void OnEnable()
+    {
+        switch(_state)
+        {
+            case 1:
+                BirdSR.transform.position = AnchorLand.position;
+                BirdSR.sprite = BirdLandSprite;
+                UseEnvelopeZone.SetActive(true);
+                break;
+            case 2:
+                BirdSR.transform.position = AnchorLand.position;
+                BirdSR.sprite = BirdLandAmuletSprite;
+                GrabAmuletZone.SetActive(true);
+                break;
+            case 3:
+                BirdSR.transform.position = AnchorLand.position;
+                BirdSR.sprite = BirdLandSprite;
+                break;
+            default:
+                break;
+        }
     }
 
     public void PlaceBirdseed()
     {
+        _state = 1;
         BowlEmpty.SetActive(false);
         BowlFull.SetActive(true);
         UseBirdseedZone.SetActive(false);
@@ -63,6 +90,7 @@ public class BirdPuzzle : Puzzle
 
     public void GiveLetter()
     {
+        _state = 2;
         BirdSR.sprite = BirdLandLetterSprite;
         UseEnvelopeZone.SetActive(false);
         StartCoroutine(WaitBirdAction(1.5f, BirdAwayLetterSprite, AnchorAway, 1.5f, 
@@ -77,6 +105,7 @@ public class BirdPuzzle : Puzzle
 
     public void GrabAmulet()
     {
+        _state = 3;
         if(complete) return;
 
         complete = true;
