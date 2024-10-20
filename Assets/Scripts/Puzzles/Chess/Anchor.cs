@@ -9,9 +9,18 @@ public class Anchor : MonoBehaviour
     public SpriteRenderer myRenderer;
     public int x, y;
     public Chessboard chessboard;
+
     private void Start()
     {
         myRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
+    {
+        if (InventoryManager.Instance.SelectedItem != null)
+        {
+            GetComponent<CircleCollider2D>().radius = (InventoryManager.Instance.SelectedItem.GetItemID() == ItemID.ROOK) ? 0.01f : 1.25f;
+        }
     }
 
     public void MovePieceHere()

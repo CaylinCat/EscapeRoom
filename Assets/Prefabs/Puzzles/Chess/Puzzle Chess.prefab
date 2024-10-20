@@ -109,6 +109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chessboard
       objectReference: {fileID: 0}
+    - target: {fileID: 4589261523021031134, guid: 7ad6752d08a888148b8882bc786e32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4808996365926160086, guid: 7ad6752d08a888148b8882bc786e32ff, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4676999085847281212}
   - component: {fileID: 8773522303768395761}
   m_Layer: 0
-  m_Name: Arnor 4
+  m_Name: Armor 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

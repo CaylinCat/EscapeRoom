@@ -4937,6 +4937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2a9b6a0de48b046879376af0a4dc64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
   armorPieces:
   - {fileID: 6978804783884942965}
   - {fileID: 3044507139509813247}
@@ -5006,7 +5007,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.9051175}
+  m_Offset: {x: 0, y: 0.08178425}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5017,7 +5018,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.669008, y: 14.1337805}
+  m_Size: {x: 17.679462, y: 22.803896}
   m_EdgeRadius: 0
 --- !u!1001 &818423224211328602
 PrefabInstance:
@@ -5093,7 +5094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7746805366918869039, guid: dc83a447146e8e6499446f984a0b06e4, type: 3}
       propertyPath: m_Name
-      value: Arnor 1
+      value: Armor 1
       objectReference: {fileID: 0}
     - target: {fileID: 7746805366918869039, guid: dc83a447146e8e6499446f984a0b06e4, type: 3}
       propertyPath: m_IsActive
@@ -5132,7 +5133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2954442208191434665, guid: ee33c8c1d516e474b90ca2b6021b5cb0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 2954442208191434665, guid: ee33c8c1d516e474b90ca2b6021b5cb0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5165,6 +5166,10 @@ PrefabInstance:
     - target: {fileID: 3582873853907043163, guid: ee33c8c1d516e474b90ca2b6021b5cb0, type: 3}
       propertyPath: m_Name
       value: Blocker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582873853907043163, guid: ee33c8c1d516e474b90ca2b6021b5cb0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5246,7 +5251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7746805366918869039, guid: 88e751093ff30024ba50dfb4cbd0c672, type: 3}
       propertyPath: m_Name
-      value: Arnor 6
+      value: Armor 6
       objectReference: {fileID: 0}
     - target: {fileID: 7746805366918869039, guid: 88e751093ff30024ba50dfb4cbd0c672, type: 3}
       propertyPath: m_IsActive
@@ -5341,7 +5346,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 1ae3f9da1071f484d93199f11efcfc2d, type: 3}
     - target: {fileID: 7746805366918869039, guid: f4c2ab444ac42bb4595f8789d53f0a91, type: 3}
       propertyPath: m_Name
-      value: Arnor 5
+      value: Armor 5
       objectReference: {fileID: 0}
     - target: {fileID: 7746805366918869039, guid: f4c2ab444ac42bb4595f8789d53f0a91, type: 3}
       propertyPath: m_IsActive
@@ -5416,7 +5421,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c837ea489fcacb4459e329e2037f4761, type: 3}
     - target: {fileID: 7746805366918869039, guid: 516505149c2316448ba564c48b4e8b51, type: 3}
       propertyPath: m_Name
-      value: Arnor 4
+      value: Armor 4
       objectReference: {fileID: 0}
     - target: {fileID: 7746805366918869039, guid: 516505149c2316448ba564c48b4e8b51, type: 3}
       propertyPath: m_IsActive
@@ -5535,7 +5540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7746805366918869039, guid: ed739941f343e314d873d640b133daed, type: 3}
       propertyPath: m_Name
-      value: Arnor 2
+      value: Armor 2
       objectReference: {fileID: 0}
     - target: {fileID: 7746805366918869039, guid: ed739941f343e314d873d640b133daed, type: 3}
       propertyPath: m_IsActive
@@ -5634,7 +5639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7746805366918869039, guid: 932ebc3b1aa1e97489307cba1145afe7, type: 3}
       propertyPath: m_Name
-      value: Arnor 3
+      value: Armor 3
       objectReference: {fileID: 0}
     - target: {fileID: 7746805366918869039, guid: 932ebc3b1aa1e97489307cba1145afe7, type: 3}
       propertyPath: m_IsActive

@@ -135,6 +135,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 876
+--- !u!114 &-3085388466160476718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Hanoi/hanoi
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Hanoi/hanoi
+  Guid:
+    Data1: 1502959453
+    Data2: 1085266484
+    Data3: -236602190
+    Data4: -2023500339
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &-2586805944550475605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Bricks/brick
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Bricks/brick
+  Guid:
+    Data1: -364164336
+    Data2: 1206566295
+    Data3: 1442527106
+    Data4: -1082944402
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1216
 --- !u!114 &-668679638939718583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,10 +204,10 @@ MonoBehaviour:
   Path: FMOD/EscapeRoom/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638649588406301787
+  lastModified: 638649678316462989
   FileSizes:
   - Name: Desktop
-    Value: 1296
+    Value: 1538
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -179,6 +233,11 @@ MonoBehaviour:
   - {fileID: 2454669309050288268}
   - {fileID: -4870016889974295112}
   - {fileID: 2827302317025363598}
+  - {fileID: -2586805944550475605}
+  - {fileID: -3085388466160476718}
+  - {fileID: 1890036906732333603}
+  - {fileID: 3910734528735084880}
+  - {fileID: 8281643285935907909}
   EditorParameters:
   - {fileID: 6150899174731630867}
   - {fileID: 555775798249439709}
@@ -186,7 +245,7 @@ MonoBehaviour:
   - {fileID: 7953889665104228310}
   StringsBanks:
   - {fileID: -668679638939718583}
-  cacheTime: 638649588406301787
+  cacheTime: 638649678316462989
   cacheVersion: 131617
 --- !u!114 &555775798249439709
 MonoBehaviour:
@@ -239,6 +298,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 21540
+--- !u!114 &1890036906732333603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Music Box/music-box-place
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Music Box/music-box-place
+  Guid:
+    Data1: -1300093068
+    Data2: 1181795997
+    Data3: 1047506104
+    Data4: -1939026656
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &2454669309050288268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +379,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 272184
+--- !u!114 &3910734528735084880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Candle/ignition
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Candle/ignition
+  Guid:
+    Data1: 608330710
+    Data2: 1169863250
+    Data3: -1855748976
+    Data4: -2117052576
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1418
 --- !u!114 &6150899174731630867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,8 +445,35 @@ MonoBehaviour:
   Path: FMOD/EscapeRoom/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638649588406286757
+  lastModified: 638649678316452911
   FileSizes:
   - Name: Desktop
-    Value: 5339488
+    Value: 5428064
   Exists: 1
+--- !u!114 &8281643285935907909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Letter/writing
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Letter/writing
+  Guid:
+    Data1: 1112093688
+    Data2: 1082678233
+    Data3: -1565353287
+    Data4: -1475707610
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 875
