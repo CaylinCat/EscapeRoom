@@ -29,6 +29,7 @@ public class ArmorPuzzle : Puzzle
 
             case 2:
                 DS.DialogueSet = riddle3;
+                popupButton.SetActive(true);
                 Wallman.canPlayPuzzle = true;
                 break;
 
