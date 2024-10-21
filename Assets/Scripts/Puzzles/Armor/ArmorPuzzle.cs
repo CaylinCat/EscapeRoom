@@ -9,7 +9,7 @@ public class ArmorPuzzle : Puzzle
     public static int progress = 0;
     public static bool hasFirstItem, hasSecondItem, hasThirdItem;
 
-    [SerializeField] private GameObject popupButton;
+    [SerializeField] private GameObject popupButton, popupButtonMouse;
     [SerializeField] private GameObject cage, tooth;
     private void Awake()
     {
@@ -24,7 +24,8 @@ public class ArmorPuzzle : Puzzle
         {
             case 1:
                 DS.DialogueSet = riddle2;
-                tooth.SetActive(true); // enable the grabbable for the dragon tooth
+                popupButtonMouse.SetActive(true);
+                tooth.SetActive(true);
                 break;
 
             case 2:
@@ -56,11 +57,7 @@ public class ArmorPuzzle : Puzzle
 
     }
 
-    public void AddProgress() // needed for dragon tooth grabbable, which doesn't have a puzzle component
-    {
-        progress++;
-        CountdownTimer.Instance.AddTimePuzzleComplete(progress);
-    }
+
 
 
 }
