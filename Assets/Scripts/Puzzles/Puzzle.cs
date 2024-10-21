@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Puzzle : MonoBehaviour
 {
-    public CountdownTimer Timer;
     public void OnComplete()
     {
-        Timer.AddTimePuzzleComplete(180);
+        CountdownTimer.Instance.AddTimePuzzleComplete(180);
         PuzzleManager.Instance.PlaySFX();
     }
 }

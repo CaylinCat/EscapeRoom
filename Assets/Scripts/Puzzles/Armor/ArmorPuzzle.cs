@@ -58,7 +58,7 @@ public class ArmorPuzzle : Puzzle
     public void AddProgress() // needed for dragon tooth grabbable, which doesn't have a puzzle component
     {
         progress++;
-        Timer.AddTimePuzzleComplete(progress);
+        CountdownTimer.Instance.AddTimePuzzleComplete(progress);
     }
 
 

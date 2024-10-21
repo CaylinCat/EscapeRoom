@@ -3,10 +3,21 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
+    public static CountdownTimer Instance;
     public float timeRemaining;
     public bool timerIsRunning = false;
     
     public TMPro.TMP_Text timeText;
+    
+    void Awake()
+    {
+        if(Instance == null) Instance = this;
+        else
+        {
+            Debug.LogWarning("Tried to create more than one instance of the CountdownTimer singleton!");
+            Destroy(this);
+        }
+    }
 
     void Start()
     {

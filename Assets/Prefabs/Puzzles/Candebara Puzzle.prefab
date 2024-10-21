@@ -336,6 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032278758859707809}
   - component: {fileID: 1648341077090715206}
+  - component: {fileID: 7876860592712370875}
   m_Layer: 0
   m_Name: Candebara Puzzle
   m_TagString: Untagged
@@ -380,6 +381,38 @@ MonoBehaviour:
   spriteRenderer: {fileID: 50324515213594916}
   litCandelabraSprite: {fileID: 21300000, guid: e6829affb806e614fb54bd995f0715df, type: 3}
   GemstoneImg: {fileID: 1401358033158005805}
+  IgniteSFX: {fileID: 7876860592712370875}
+--- !u!114 &7876860592712370875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6386194998560501717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 608330710
+      Data2: 1169863250
+      Data3: -1855748976
+      Data4: -2117052576
+    Path: event:/Puzzles/Candle/ignition
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &612023694253489556
 PrefabInstance:
   m_ObjectHideFlags: 0
