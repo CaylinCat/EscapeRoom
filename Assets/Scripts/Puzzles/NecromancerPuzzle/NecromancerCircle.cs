@@ -39,6 +39,7 @@ public class NecromancerCircle : Puzzle
         {
             Debug.Log("Your Soul Is Merged!!!!");
             OnComplete();
+            GameManager.Instance.LoadVictoryScene();
         }
     }
 
