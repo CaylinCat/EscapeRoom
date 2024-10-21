@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
@@ -7,9 +8,13 @@ public class PuzzleManager : MonoBehaviour
     public static PuzzleManager Instance;
     public GameObject Background;
     public GameObject ItemInspect;
+    public GameObject HintGameObject;
+    public TextMeshProUGUI HintText;
     public SpriteRenderer ItemInspectSR;
     public FMODUnity.StudioEventEmitter OnCompleteSFX;
+    public int RemainingHints;
     private GameObject activePuzzle;
+    private GameObject hintReturnPuzzle;
 
     void Awake()
     {
@@ -24,6 +29,7 @@ public class PuzzleManager : MonoBehaviour
     void Start()
     {
         Background.SetActive(false);
+        RemainingHints = 3;
     }
 
     public void ShowPuzzle(GameObject puzzle)
@@ -64,5 +70,17 @@ public class PuzzleManager : MonoBehaviour
     public void PlaySFX()
     {
         OnCompleteSFX.Play();
+    }
+
+    public void ShowHint(Hint hint)
+    {
+        hintReturnPuzzle = activePuzzle;
+        HintText.text = hint.HintText;
+        ShowPuzzle(HintGameObject);
+    }
+
+    public void ReturnFromHint()
+    {
+        ShowPuzzle(hintReturnPuzzle);
     }
 }
