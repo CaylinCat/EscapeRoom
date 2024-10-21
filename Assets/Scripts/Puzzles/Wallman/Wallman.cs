@@ -10,6 +10,7 @@ public class Wallman : Puzzle
 
     [SerializeField] public Item heartItem;
 
+    public FMODUnity.StudioEventEmitter ArmorHitSFX;
     [SerializeField] private Sprite noHeartSprite;
 
     [SerializeField] private ParticleSystem particle;
@@ -33,6 +34,7 @@ public class Wallman : Puzzle
         }
 
         health--;
+        ArmorHitSFX.Play();
         // particles and sfx go here
         particle.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
         particle.Stop();
