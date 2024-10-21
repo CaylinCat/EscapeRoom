@@ -41,12 +41,17 @@ public class Chessboard : Puzzle
             Destroy(this);
         }
 
+
+        bestMoves = new List<string>();
         StreamReader reader = new StreamReader("Assets/Scripts/Puzzles/Chess/BestMoves.txt");
         string bestMove;
         while ((bestMove = reader.ReadLine()) != null)
         {
             bestMoves.Add(bestMove);
         }
+
+        hasMissingPiece = false;
+        turn = 0;
 
     }
 
@@ -107,7 +112,6 @@ public class Chessboard : Puzzle
     public static IEnumerator MoveBlackPiece()
     {
         yield return new WaitForSeconds(0.8f);
-        Instance.MovePieceSFX.Play();
         string blackMove = bestMoves[turn];
         selectedPiece = board[int.Parse(blackMove.Substring(0, 1)), int.Parse(blackMove.Substring(1, 1))].myPiece;
         Anchor target = board[int.Parse(blackMove.Substring(2, 1)), int.Parse(blackMove.Substring(3, 1))];
@@ -123,13 +127,13 @@ public class Chessboard : Puzzle
         // play sound effect?
         photographGrabbable.SetActive(true);
         yield return new WaitForSeconds(1.0f);
-        for (int i = 1; i < 11; i++)
+        for (int i = 1; i < 101; i++)
         {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.02f);
             foreach (Piece piece in pieceList)
             {
-                piece.GetComponent<SpriteRenderer>().color = Color.white.WithAlpha((10.0f - i) / 10);
-                if (i ==  10)
+                piece.GetComponent<SpriteRenderer>().color = Color.white.WithAlpha((100.0f - i) / 100);
+                if (i ==  100)
                 {
                     Destroy(piece.gameObject);
                 }

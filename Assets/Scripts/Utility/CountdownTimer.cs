@@ -6,8 +6,8 @@ public class CountdownTimer : MonoBehaviour
     public static CountdownTimer Instance;
     public float timeRemaining;
     public bool timerIsRunning = false;
-    
-    public TMPro.TMP_Text timeText;
+    public float fadeawaySpeed;
+    public TMPro.TMP_Text timeText, addTimeText;
     
     void Awake()
     {
@@ -40,11 +40,24 @@ public class CountdownTimer : MonoBehaviour
                 TimerEnded();
             }
         }
+
+        if (addTimeText.alpha > 0)
+        {
+            addTimeText.alpha -= fadeawaySpeed * Time.deltaTime;
+        }
     }
     
     public void AddTimePuzzleComplete(float time)
     {
-        timeRemaining += time;
+        if (timeRemaining + time < 0)
+        {
+            timeRemaining = 0.1f;
+        }
+        else
+        {
+            timeRemaining += time;
+        }
+        ShowAddedTime(time);
     }
 
     void UpdateTimerDisplay()
@@ -61,5 +74,21 @@ public class CountdownTimer : MonoBehaviour
     {
         Debug.Log("Timer ended!");
         GameManager.Instance.LoadDeathScene();
+    }
+
+    void ShowAddedTime(float time)
+    {
+        int minutes = Mathf.FloorToInt(Mathf.Abs(time) / 60);
+        int seconds = Mathf.FloorToInt(Mathf.Abs(time) % 60);
+        addTimeText.text = (time > 0 ? "+" : "-") + string.Format("{0:00}:{1:00}", minutes, seconds);
+        addTimeText.alpha = 1;
+        if (time > 0)
+        {
+            addTimeText.color = Color.green;
+        }
+        else
+        {
+            addTimeText.color = Color.red;
+        }
     }
 }
