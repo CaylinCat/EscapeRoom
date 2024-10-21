@@ -16,6 +16,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -2.8
       objectReference: {fileID: 0}
+    - target: {fileID: 1986115675703213788, guid: 3c0b3e92a82934b2b994545490a03cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5371996726639497118, guid: de13112c16739466da7b82246ffe2b2d, type: 3}
+    - target: {fileID: 1986115675703213788, guid: 3c0b3e92a82934b2b994545490a03cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadGameScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986115675703213788, guid: 3c0b3e92a82934b2b994545490a03cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986115675703213788, guid: 3c0b3e92a82934b2b994545490a03cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5692232576333006079, guid: 3c0b3e92a82934b2b994545490a03cf2, type: 3}
       propertyPath: m_Sprite
       value: 

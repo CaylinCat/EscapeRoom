@@ -49,6 +49,6 @@ public class CountdownTimer : MonoBehaviour
     void TimerEnded()
     {
         Debug.Log("Timer ended!");
-        
+        GameManager.Instance.LoadDeathScene();
     }
 }
