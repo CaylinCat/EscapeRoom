@@ -170,9 +170,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4167379014714278848, guid: 4aa277d6dfd3e412bb6ccbff7d31e91e, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5497372474776305246, guid: 4aa277d6dfd3e412bb6ccbff7d31e91e, type: 3}
       propertyPath: m_Name
       value: Credits
+      objectReference: {fileID: 0}
+    - target: {fileID: 7369905353402727907, guid: 4aa277d6dfd3e412bb6ccbff7d31e91e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 818
+      objectReference: {fileID: 0}
+    - target: {fileID: 7369905353402727907, guid: 4aa277d6dfd3e412bb6ccbff7d31e91e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -443
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -654,6 +654,10 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 986380832}
+    - target: {fileID: 8588755808519731461, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8631804674777634192, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: m_Name
       value: Main Circle
@@ -963,6 +967,10 @@ PrefabInstance:
     - target: {fileID: 6482896758933661397, guid: ea84b7f730148a348ad5d285c8838ce6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098368616619348857, guid: ea84b7f730148a348ad5d285c8838ce6, type: 3}
+      propertyPath: timeRemaining
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 7335510340166568785, guid: ea84b7f730148a348ad5d285c8838ce6, type: 3}
       propertyPath: m_SizeDelta.x

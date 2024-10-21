@@ -10,12 +10,11 @@ public class GameManager : MonoBehaviour
         if(Instance == null) 
         {
             Instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Debug.LogWarning("Tried to create more than one instance of the GameManager singleton!");
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 
@@ -30,7 +29,6 @@ public class GameManager : MonoBehaviour
     }
     public void LoadCreditsScene()
     {
-        Debug.Log("Start button clicked! Loading credits scene...");
         SceneManager.LoadScene("CreditsScene");
     }
 
@@ -41,7 +39,6 @@ public class GameManager : MonoBehaviour
 
     public void LoadGameScene()
     {
-        Debug.Log("Start button clicked! Loading game scene...");
         SceneManager.LoadScene("Game");
     }
 }

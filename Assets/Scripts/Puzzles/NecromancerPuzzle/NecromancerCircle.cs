@@ -37,7 +37,6 @@ public class NecromancerCircle : Puzzle
     {
         if (isInnerCircleComplete && isOuterCircleComplete)
         {
-            Debug.Log("Your Soul Is Merged!!!!");
             OnComplete();
             GameManager.Instance.LoadVictoryScene();
         }

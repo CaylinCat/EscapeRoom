@@ -20,7 +20,6 @@ public class InnerCircle : MonoBehaviour
     public void AddItemToSlot(NRIngredientSlot slot, ItemID itemID)
     {
             CurrentInnerPlacement[slot.Index] = itemID;
-            Debug.Log(itemID);
             if (AreInnerItemsCorrect()) 
             {
                 Debug.Log("Inner Circle Complete!!");
