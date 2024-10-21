@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8d2fd4ab-493c-44e3-ac09-b0640d5d0d98}">
+		<property name="assetPath">
+			<value>137243__xenognosis__sunflower-seed-pour.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>40.363354166666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{09f47125-d08c-4d36-9baf-2651d7276065}</destination>
+		</relationship>
+	</object>
+</objects>

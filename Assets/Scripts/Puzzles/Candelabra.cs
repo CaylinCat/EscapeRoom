@@ -10,6 +10,7 @@ public class Candelabra : Puzzle
     public SpriteRenderer spriteRenderer;
     public Sprite litCandelabraSprite;
     public GameObject GemstoneImg;
+    public FMODUnity.StudioEventEmitter IgniteSFX;
     // private bool complete = false;
 
     public void GrabGemstone()
@@ -23,8 +24,10 @@ public class Candelabra : Puzzle
 
     public void LightCandle()
     {
+        IgniteSFX.Play();
         spriteRenderer.sprite = litCandelabraSprite;
         GemstoneImg.SetActive(true);
+        OnComplete();
     }
 
     public void Start()

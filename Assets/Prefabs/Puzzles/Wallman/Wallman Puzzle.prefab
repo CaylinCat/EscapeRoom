@@ -4843,6 +4843,7 @@ GameObject:
   - component: {fileID: 5864869979418747110}
   - component: {fileID: 4230147181726616846}
   - component: {fileID: 5804353131518466897}
+  - component: {fileID: 6597307170639202555}
   m_Layer: 0
   m_Name: Wallman Puzzle
   m_TagString: Untagged
@@ -4946,6 +4947,7 @@ MonoBehaviour:
   - {fileID: 5260421426737423900}
   - {fileID: 5344590279921064340}
   heartItem: {fileID: 3929447430308849632, guid: e2a9c1d2e1c3d7c419ce430b57760237, type: 3}
+  ArmorHitSFX: {fileID: 6597307170639202555}
   noHeartSprite: {fileID: 21300000, guid: 912a76bb8682a57468c28bd312fb1564, type: 3}
   particle: {fileID: 3540795627644131341}
 --- !u!114 &4230147181726616846
@@ -5020,6 +5022,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 17.679462, y: 22.803896}
   m_EdgeRadius: 0
+--- !u!114 &6597307170639202555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2842146983042500177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2057961153
+      Data2: 1299511209
+      Data3: 1743778730
+      Data4: 770749669
+    Path: event:/Puzzles/Wall Man/armor-hit
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &818423224211328602
 PrefabInstance:
   m_ObjectHideFlags: 0

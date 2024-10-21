@@ -26,6 +26,7 @@ public class BirdPuzzle : Puzzle
     public Transform AnchorLand;
     public FMODUnity.StudioEventEmitter ChirpingSFX;
     public FMODUnity.StudioEventEmitter FlappingSFX;
+    public FMODUnity.StudioEventEmitter SeedsSFX;
 
     private bool complete = false;
     private int _state = 0;
@@ -69,6 +70,7 @@ public class BirdPuzzle : Puzzle
 
     public void PlaceBirdseed()
     {
+        SeedsSFX.Play();
         _state = 1;
         BowlEmpty.SetActive(false);
         BowlFull.SetActive(true);
