@@ -81,6 +81,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 39491
+--- !u!114 &-7338861496079961226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Bird/flapping
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Bird/flapping
+  Guid:
+    Data1: 589469031
+    Data2: 1305746204
+    Data3: -783137617
+    Data4: -699407543
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 812
+--- !u!114 &-6069621852408383161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/puzzle-solve
+  m_EditorClassIdentifier: 
+  Path: event:/Music/puzzle-solve
+  Guid:
+    Data1: -1438701442
+    Data2: 1081391474
+    Data3: -508444786
+    Data4: 525584263
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4500
 --- !u!114 &-4870016889974295112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,10 +258,10 @@ MonoBehaviour:
   Path: FMOD/EscapeRoom/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638649667151369122
+  lastModified: 638650393436739875
   FileSizes:
   - Name: Desktop
-    Value: 1538
+    Value: 1842
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -238,6 +292,12 @@ MonoBehaviour:
   - {fileID: 1890036906732333603}
   - {fileID: 3910734528735084880}
   - {fileID: 8281643285935907909}
+  - {fileID: 2999622462564808650}
+  - {fileID: -7338861496079961226}
+  - {fileID: 8619587263872178844}
+  - {fileID: -6069621852408383161}
+  - {fileID: 3813132665531497001}
+  - {fileID: 89568671331555756}
   EditorParameters:
   - {fileID: 6150899174731630867}
   - {fileID: 555775798249439709}
@@ -245,8 +305,35 @@ MonoBehaviour:
   - {fileID: 7953889665104228310}
   StringsBanks:
   - {fileID: -668679638939718583}
-  cacheTime: 638649667151369122
+  cacheTime: 638650393436739875
   cacheVersion: 131617
+--- !u!114 &89568671331555756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Letter/stamp
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Letter/stamp
+  Guid:
+    Data1: 521077412
+    Data2: 1334774528
+    Data3: -1120467574
+    Data4: -1685403535
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &151695244109454803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,6 +493,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 272184
+--- !u!114 &2999622462564808650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Bookshelf/book
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Bookshelf/book
+  Guid:
+    Data1: 1834614085
+    Data2: 1292736626
+    Data3: 1035773117
+    Data4: 205920808
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 759
+--- !u!114 &3813132665531497001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Chess/chess
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Chess/chess
+  Guid:
+    Data1: -1381920379
+    Data2: 1151405779
+    Data3: 1334858934
+    Data4: 303113004
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 655
 --- !u!114 &3910734528735084880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,10 +613,10 @@ MonoBehaviour:
   Path: FMOD/EscapeRoom/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638649667151366338
+  lastModified: 638650393436729709
   FileSizes:
   - Name: Desktop
-    Value: 5428064
+    Value: 5598432
   Exists: 1
 --- !u!114 &8281643285935907909
 MonoBehaviour:
@@ -504,3 +645,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 875
+--- !u!114 &8619587263872178844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Bird/chirp
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Bird/chirp
+  Guid:
+    Data1: -822782613
+    Data2: 1341119155
+    Data3: 25359493
+    Data4: -142895393
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2274

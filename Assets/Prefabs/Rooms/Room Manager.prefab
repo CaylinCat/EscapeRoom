@@ -289,7 +289,7 @@ PrefabInstance:
     - target: {fileID: 4203332772708055095, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
       propertyPath: popupButton
       value: 
-      objectReference: {fileID: 1652922444207615626}
+      objectReference: {fileID: 7440658915311095587}
     - target: {fileID: 4406913508159197645, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -370,6 +370,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7042071099934776807, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7404859307163372603, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -406,11 +410,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 713933816716858181, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
   m_PrefabInstance: {fileID: 502416919221899972}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1652922444207615626 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1155364285361028174, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
-  m_PrefabInstance: {fileID: 502416919221899972}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2161113104644036774 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1946999168205703778, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
@@ -436,6 +435,11 @@ MonoBehaviour:
 --- !u!4 &4969362116860762108 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4759822131676235064, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
+  m_PrefabInstance: {fileID: 502416919221899972}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7440658915311095587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7042071099934776807, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
   m_PrefabInstance: {fileID: 502416919221899972}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2077274445724894508
