@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    [SerializeField] private Texture2D cursor;
     void Awake()
     {
         if(Instance == null) 
@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
     }
 
     public void LoadVictoryScene()
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
     public void LoadTitleScene()
     {
         SceneManager.LoadScene("TitleScreen");
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
     }
 
     public void LoadGameScene()
