@@ -634,6 +634,10 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 986380832}
+    - target: {fileID: 5248843455128338053, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5931359821177596451, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: InventoryBar
       value: 
@@ -882,7 +886,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3996402245428332759, guid: ea84b7f730148a348ad5d285c8838ce6, type: 3}
       propertyPath: m_text
-      value: 20:00
+      value: 10:00
       objectReference: {fileID: 0}
     - target: {fileID: 4040601393690879822, guid: ea84b7f730148a348ad5d285c8838ce6, type: 3}
       propertyPath: m_Name
