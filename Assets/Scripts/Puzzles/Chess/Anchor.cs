@@ -23,11 +23,17 @@ public class Anchor : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        myRenderer.enabled = false;
+    }
+
     public void MovePieceHere()
     {
         if (!IsBestMove(Chessboard.selectedPiece.posX, Chessboard.selectedPiece.posY))
         {
             // apply time penalty?
+            CountdownTimer.Instance.AddTimePuzzleComplete(-10);
             return;
         }
 
@@ -35,7 +41,6 @@ public class Anchor : MonoBehaviour
         {
             chessboard.pieceList.Remove(myPiece);
             Destroy(myPiece.gameObject);
-            Chessboard.Instance.MovePieceSFX.Play();
         }
 
         foreach (Anchor anchor in Chessboard.board)
@@ -59,6 +64,7 @@ public class Anchor : MonoBehaviour
         myPiece.posY = y;
         Chessboard.selectedPiece = null;
         // sfx go here
+        Chessboard.Instance.MovePieceSFX.Play();
         Chessboard.turn++;
 
         // black makes their move, if it's black's turn
