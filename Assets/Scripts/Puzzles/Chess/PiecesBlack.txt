@@ -1,0 +1,5 @@
+black
+54King
+65Pawn
+46Rook
+77Rook

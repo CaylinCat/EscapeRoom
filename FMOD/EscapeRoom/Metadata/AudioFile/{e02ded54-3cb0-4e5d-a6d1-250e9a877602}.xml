@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e02ded54-3cb0-4e5d-a6d1-250e9a877602}">
+		<property name="assetPath">
+			<value>335510__newagesoup__writing-short-3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.875</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{09f47125-d08c-4d36-9baf-2651d7276065}</destination>
+		</relationship>
+	</object>
+</objects>

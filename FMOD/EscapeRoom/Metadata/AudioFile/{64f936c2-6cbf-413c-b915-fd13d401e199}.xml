@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{64f936c2-6cbf-413c-b915-fd13d401e199}">
+		<property name="assetPath">
+			<value>brick.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.2163492063492063</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{09f47125-d08c-4d36-9baf-2651d7276065}</destination>
+		</relationship>
+	</object>
+</objects>
