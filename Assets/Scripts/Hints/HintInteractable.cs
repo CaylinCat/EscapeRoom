@@ -5,13 +5,17 @@ using UnityEngine;
 public class HintInteractable : MonoBehaviour
 {
     public Hint HintRef;
+    public SpriteRenderer HintSR;
     private bool paidFor;
 
     void Start() { paidFor = false; }
 
     void OnEnable()
     {
-        // TODO indicate if all hints used up
+        if(PuzzleManager.Instance.RemainingHints <= 0 && !paidFor)
+        {
+            HintSR.sprite = PuzzleManager.Instance.HintDisabled;
+        }
     }
 
     void OnMouseDown()
@@ -21,11 +25,24 @@ public class HintInteractable : MonoBehaviour
             if(PuzzleManager.Instance.RemainingHints > 0)
             {
                 PuzzleManager.Instance.RemainingHints--;
+                HintSR.sprite = PuzzleManager.Instance.HintPaid;
                 paidFor = true;
             }
-            else return;
+            else
+            {
+                // TODO play sound effect
+                return;
+            };
         }
 
         PuzzleManager.Instance.ShowHint(HintRef);
+    }
+
+    public void UpdateHint(Hint hint)
+    {
+        HintRef = hint;
+        paidFor = false;
+        if(PuzzleManager.Instance.RemainingHints > 0) HintSR.sprite = PuzzleManager.Instance.HintUnpaid;
+        else HintSR.sprite = PuzzleManager.Instance.HintDisabled;
     }
 }

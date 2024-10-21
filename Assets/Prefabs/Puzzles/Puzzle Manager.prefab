@@ -158,6 +158,9 @@ MonoBehaviour:
   HintText: {fileID: 7091916089229877378}
   ItemInspectSR: {fileID: 4585921331752608659}
   OnCompleteSFX: {fileID: 1047128283113687270}
+  HintUnpaid: {fileID: 21300000, guid: 065a6e19e85913347ae98e0d07a53f70, type: 3}
+  HintPaid: {fileID: 21300000, guid: 01674e9ceaf018b44bd24fc9fa44fedd, type: 3}
+  HintDisabled: {fileID: 21300000, guid: 1ae1101a1bfa769448245e02ce908fda, type: 3}
   RemainingHints: 0
 --- !u!114 &1047128283113687270
 MonoBehaviour:

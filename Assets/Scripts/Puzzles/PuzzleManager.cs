@@ -12,7 +12,11 @@ public class PuzzleManager : MonoBehaviour
     public TextMeshProUGUI HintText;
     public SpriteRenderer ItemInspectSR;
     public FMODUnity.StudioEventEmitter OnCompleteSFX;
+    public Sprite HintUnpaid;
+    public Sprite HintPaid;
+    public Sprite HintDisabled;
     public int RemainingHints;
+
     private GameObject activePuzzle;
     private GameObject hintReturnPuzzle;
 
