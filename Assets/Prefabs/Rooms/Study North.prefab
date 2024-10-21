@@ -790,12 +790,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 985702675170035823, guid: 0b24711470b0549a7833a95648ff009a, type: 3}
       propertyPath: pageSprites.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 985702675170035823, guid: 0b24711470b0549a7833a95648ff009a, type: 3}
       propertyPath: pageSprites.Array.data[2]
       value: 
       objectReference: {fileID: 21300000, guid: 88c4efae8b25b4b8cbdbc85669e23dd3, type: 3}
+    - target: {fileID: 985702675170035823, guid: 0b24711470b0549a7833a95648ff009a, type: 3}
+      propertyPath: pageSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 438350653c331412282320df05d3d8cc, type: 3}
     - target: {fileID: 1005833008186476607, guid: 0b24711470b0549a7833a95648ff009a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.91161

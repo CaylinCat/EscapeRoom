@@ -265,6 +265,8 @@ MonoBehaviour:
   pageSprites:
   - {fileID: 21300000, guid: 3f6ac4665ba7543289b4caa9299e3b9a, type: 3}
   - {fileID: 21300000, guid: 92474499f3fb845edbac4cad6c075984, type: 3}
+  - {fileID: 21300000, guid: 88c4efae8b25b4b8cbdbc85669e23dd3, type: 3}
+  - {fileID: 21300000, guid: 438350653c331412282320df05d3d8cc, type: 3}
   PageTurnSFX: {fileID: 6393194093541652526}
 --- !u!212 &1099675854373169881
 SpriteRenderer:

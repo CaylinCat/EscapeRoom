@@ -19,7 +19,7 @@ public class Journal : Puzzle
 
     public void TurnPageFoward() 
     {
-        if (currentPage < 2) // change if ever add more interactable pages
+        if (currentPage < 3) // change if ever add more interactable pages
         {
             PageTurnSFX.Play();
             currentPage++;
