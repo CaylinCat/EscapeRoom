@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class ArmorPuzzle : Puzzle
 {
+    public static ArmorPuzzle Instance;
     public DialogueSystem DS;
     public Dialogue intro, riddle1, riddle2, riddle3, complete;
     public static int progress = 0;
     public static bool hasFirstItem, hasSecondItem, hasThirdItem;
+    public HintInteractable ArmorHI;
+    public Hint ArmorHint2;
+    public Hint ArmorHint3;
 
     [SerializeField] private GameObject popupButton, popupButtonMouse;
     [SerializeField] private GameObject cage, tooth;
     private void Awake()
     {
+        if(Instance == null) Instance = this;
+        else
+        {
+            Debug.LogWarning("Tried to create more than one instance of the ArmorPuzzle singleton!");
+            Destroy(this);
+        }
         DS.DialogueSet = intro;
     }
 

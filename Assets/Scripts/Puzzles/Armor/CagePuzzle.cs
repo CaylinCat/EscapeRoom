@@ -18,6 +18,6 @@ public class CagePuzzle : Puzzle
         eyeball.SetActive(false);
         ArmorPuzzle.progress++;
         OnComplete();
-
+        ArmorPuzzle.Instance.ArmorHI.UpdateHint(ArmorPuzzle.Instance.ArmorHint2);
     }
 }

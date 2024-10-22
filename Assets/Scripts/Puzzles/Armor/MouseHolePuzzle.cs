@@ -17,6 +17,6 @@ public class MouseHolePuzzle : Puzzle
         tooth.SetActive(false);
         ArmorPuzzle.progress++;
         OnComplete();
-
+        ArmorPuzzle.Instance.ArmorHI.UpdateHint(ArmorPuzzle.Instance.ArmorHint3);
     }
 }
