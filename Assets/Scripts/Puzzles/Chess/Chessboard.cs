@@ -22,7 +22,8 @@ public class Chessboard : Puzzle
     public Hint ChessHint3;
 
     [HideInInspector] public static int turn;
-    [HideInInspector] public static List<string> bestMoves = new List<string>();
+    //[HideInInspector] public static List<string> bestMoves = new List<string>();
+    [HideInInspector] public static string[] bestMoves;
     [HideInInspector] public static Piece blackKing;
 
     [SerializeField] public Item photograph;
@@ -45,14 +46,14 @@ public class Chessboard : Puzzle
         }
 
 
-        bestMoves = new List<string>();
-        StreamReader reader = new StreamReader("Assets/Scripts/Puzzles/Chess/BestMoves.txt");
+        
+        /*StreamReader reader = new StreamReader("Assets/Scripts/Puzzles/Chess/BestMoves.txt");
         string bestMove;
         while ((bestMove = reader.ReadLine()) != null)
         {
             bestMoves.Add(bestMove);
-        }
-
+        }*/
+        bestMoves = Resources.Load<TextAsset>("BestMoves").text.Split("\n");
         hasMissingPiece = false;
         turn = 0;
 
@@ -75,13 +76,14 @@ public class Chessboard : Puzzle
             pieceList = new List<Piece>();
 
             // populate anchors
-            StreamReader anchorReader = new StreamReader("Assets/Scripts/Puzzles/Chess/AnchorPositions.txt");
-            List<string> posStrings = new List<string>();
+            /*StreamReader anchorReader = new StreamReader("Assets/Scripts/Puzzles/Chess/AnchorPositions.txt");
+            List<string> posStrings = new List<string>();*/
+            string[] posStrings = Resources.Load<TextAsset>("AnchorPositions").text.Split("\n");
 
-            for (int i = 0; i < 64; i++)
+            /*for (int i = 0; i < 64; i++)
             {
                 posStrings.Add(anchorReader.ReadLine());
-            }
+            }*/
 
             for (int i = 0; i < 8; i++)
             {
@@ -104,8 +106,8 @@ public class Chessboard : Puzzle
 
             
 
-            AddPiecesFromFile("Assets/Scripts/Puzzles/Chess/PiecesWhite.txt");
-            AddPiecesFromFile("Assets/Scripts/Puzzles/Chess/PiecesBlack.txt");
+            AddPiecesFromFile("PiecesWhite");
+            AddPiecesFromFile("PiecesBlack");
         }
     }
 
@@ -162,17 +164,20 @@ public class Chessboard : Puzzle
 
     private void AddPiecesFromFile(string path)
     {
-        StreamReader reader = new StreamReader(path);
-        string line;
+        /*StreamReader reader = new StreamReader(path);
+        string line;*/
         bool isPlayerTeam = true;
-        while ((line = reader.ReadLine()) != null)
+        string[] pieces = Resources.Load<TextAsset>(path).text.Split("\n");
+        foreach (string line in pieces)
         {
-            if (line.Equals("white"))
+            
+            if (line.Contains("white"))
             {
+                Debug.Log(line);
                 isPlayerTeam = true;
                 continue;
             }
-            else if (line.Equals("black"))
+            else if (line.Contains("black"))
             {
                 isPlayerTeam = false;
                 continue;
@@ -183,6 +188,11 @@ public class Chessboard : Puzzle
             newPiece.type = (Piece.PieceType)Enum.Parse(typeof(Piece.PieceType), line.Substring(2));
             AddPieceToBoard(newPiece, int.Parse(line.Substring(0, 1)), int.Parse(line.Substring(1, 1)));
         }
+
+        /*while ((line = reader.ReadLine()) != null)
+        {
+            
+        }*/
     }
 
     public void AddMissingPiece()
