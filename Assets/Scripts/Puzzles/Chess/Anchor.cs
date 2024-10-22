@@ -70,7 +70,7 @@ public class Anchor : MonoBehaviour
         // black makes their move, if it's black's turn
         if (Chessboard.turn % 2 == 1)
         {
-            if (Chessboard.turn >= Chessboard.bestMoves.Count)
+            if (Chessboard.turn >= Chessboard.bestMoves.Length)
             {
                 Chessboard.selectedPiece = null;
                 StartCoroutine(chessboard.CompletePuzzle());
