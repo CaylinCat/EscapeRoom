@@ -129,6 +129,7 @@ public class LetterPuzzle : Puzzle
         mapKeyComplete = true;
         MapKeyObject.SetActive(false);
         InventoryManager.Instance.AddItem(MapKey);
+        MapPuzzle.ObtainedMapKey = true;
         gameObject.SetActive(false);
     }
 }
