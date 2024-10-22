@@ -10,9 +10,9 @@ public class RedCandlePuzzle : Puzzle
     public Sprite litCandleSprite;
     public GameObject WaxImg;
     public FMODUnity.StudioEventEmitter IgniteSFX;
-    private bool complete = false;
-    private bool candleLit = false; 
-    private bool waxCollected = false;
+    [SerializeField] private bool complete = false;
+    [SerializeField] private bool candleLit = false; 
+    [SerializeField] private bool waxCollected = false;
 
     public void GrabWax()
     {
