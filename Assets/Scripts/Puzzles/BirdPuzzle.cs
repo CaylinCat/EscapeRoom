@@ -27,6 +27,8 @@ public class BirdPuzzle : Puzzle
     public FMODUnity.StudioEventEmitter ChirpingSFX;
     public FMODUnity.StudioEventEmitter FlappingSFX;
     public FMODUnity.StudioEventEmitter SeedsSFX;
+    public HintInteractable BirdHI;
+    public Hint BirdHint2;
 
     private bool complete = false;
     private int _state = 0;
@@ -76,6 +78,7 @@ public class BirdPuzzle : Puzzle
         BowlFull.SetActive(true);
         UseBirdseedZone.SetActive(false);
         BirdSR.gameObject.SetActive(true);
+        BirdHI.UpdateHint(BirdHint2);
         StartCoroutine(WaitBirdAction(3.0f, BirdApproachSprite, AnchorLand, 1f, 
                 BirdLandSprite, OnBirdArrival, false));
     }
