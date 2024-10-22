@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SettingsManager : MonoBehaviour
 {
     public GameObject SettingsCanvas;
+    public Slider SliderMusic;
+    public Slider SliderSFX;
     private bool isVisible;
 
     void Start() 
@@ -36,4 +39,7 @@ public class SettingsManager : MonoBehaviour
             isVisible = false;
         }
     }
+
+    public void SetMusicVolume() { AudioManager.Instance.ChangeMusicVolume(SliderMusic.value); }
+    public void SetSFXVolume() { AudioManager.Instance.ChangeSFXVolume(SliderSFX.value); }
 }

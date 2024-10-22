@@ -5,6 +5,9 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
+    
+    private FMOD.Studio.Bus musicBus;
+    private FMOD.Studio.Bus sfxBus;
 
     // <summary>
     /// Changes speed and pitch. A value of 0 is 0 semitones (no change) and
@@ -31,6 +34,9 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        musicBus = FMODUnity.RuntimeManager.GetBus("bus:/Music");
+        sfxBus = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
+
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName(SEMITONES, 0f);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName(FFT_MULT, 0f);
     }
@@ -49,5 +55,15 @@ public class AudioManager : MonoBehaviour
 
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName(SEMITONES, speed);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName(FFT_MULT, fftMultInvLerp);
+    }
+
+    public void ChangeMusicVolume(float volume)
+    {
+        musicBus.setVolume(volume);
+    }
+
+    public void ChangeSFXVolume(float volume)
+    {
+        sfxBus.setVolume(volume);
     }
 }
