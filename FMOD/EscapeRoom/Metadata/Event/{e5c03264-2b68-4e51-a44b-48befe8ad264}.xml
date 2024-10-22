@@ -73,9 +73,9 @@
 	<object class="MarkerTrack" id="{68476767-b914-44bc-937d-366d6143d3cf}" />
 	<object class="GroupTrack" id="{6b110e13-154a-486a-816e-193b3b7a9636}">
 		<relationship name="modules">
-			<destination>{7212771b-b6a2-4161-a595-9c798ab60179}</destination>
 			<destination>{c63bec93-177c-4d22-89a1-bbde88da1763}</destination>
 			<destination>{0e8251c5-9902-4fb7-83f7-03f16b9de4fa}</destination>
+			<destination>{785a532e-c0d9-47de-8bbf-db34a252ea11}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{0e2efcb5-83b7-4e90-bafe-96b8c59b5f07}</destination>
@@ -85,7 +85,7 @@
 		<relationship name="modules">
 			<destination>{4cde4cd9-b99a-4dbc-b9ee-fd137fe3ad62}</destination>
 			<destination>{aa12590f-49aa-4e41-961b-8a535bf4874a}</destination>
-			<destination>{3c7d4f6e-c04e-456a-8bd5-a03ff479d49b}</destination>
+			<destination>{38c7d1d6-5d36-4e34-a96b-4c1db5ef3fef}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{5700e1bc-9795-42e8-b60d-b71e4d8822f7}</destination>
@@ -93,8 +93,8 @@
 	</object>
 	<object class="Timeline" id="{d82af9e2-eb5f-4cac-8924-31c42aa3983d}">
 		<relationship name="modules">
-			<destination>{7212771b-b6a2-4161-a595-9c798ab60179}</destination>
-			<destination>{3c7d4f6e-c04e-456a-8bd5-a03ff479d49b}</destination>
+			<destination>{785a532e-c0d9-47de-8bbf-db34a252ea11}</destination>
+			<destination>{38c7d1d6-5d36-4e34-a96b-4c1db5ef3fef}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{500bf172-fd02-482c-a1ef-04e73f035d47}</destination>
@@ -132,14 +132,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c4348def-647f-4592-8a3b-9278bb482127}" />
-	<object class="SingleSound" id="{7212771b-b6a2-4161-a595-9c798ab60179}">
-		<property name="length">
-			<value>272.18421768707481</value>
-		</property>
-		<relationship name="audioFile">
-			<destination>{f95f7482-a12c-40a9-8c09-073dd5fb358d}</destination>
-		</relationship>
-	</object>
 	<object class="TransitionSourceSound" id="{c63bec93-177c-4d22-89a1-bbde88da1763}">
 		<property name="length">
 			<value>5</value>
@@ -153,7 +145,18 @@
 			<value>4.9999999999999991</value>
 		</property>
 	</object>
+	<object class="SingleSound" id="{785a532e-c0d9-47de-8bbf-db34a252ea11}">
+		<property name="length">
+			<value>226.84238095238095</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{731fda49-cfcc-4700-ac4c-f94723b457ee}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{0e2efcb5-83b7-4e90-bafe-96b8c59b5f07}">
+		<property name="volume">
+			<value>-6</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -180,12 +183,12 @@
 			<value>5</value>
 		</property>
 	</object>
-	<object class="SingleSound" id="{3c7d4f6e-c04e-456a-8bd5-a03ff479d49b}">
+	<object class="SingleSound" id="{38c7d1d6-5d36-4e34-a96b-4c1db5ef3fef}">
 		<property name="length">
-			<value>265.26972789115644</value>
+			<value>219.13587301587302</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{113999d7-ca82-41b7-b361-33d0ef969139}</destination>
+			<destination>{a46bf355-3a41-44a7-8031-b7cf2c4c17b4}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{5700e1bc-9795-42e8-b60d-b71e4d8822f7}">
@@ -210,7 +213,7 @@
 			<value>0</value>
 		</property>
 		<property name="tempo">
-			<value>95</value>
+			<value>115</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{d82af9e2-eb5f-4cac-8924-31c42aa3983d}</destination>
@@ -235,7 +238,7 @@
 	</object>
 	<object class="TransitionMarker" id="{538118c1-3d04-4807-b832-6454d517292d}">
 		<property name="position">
-			<value>262.73684210526312</value>
+			<value>217.04347826086956</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{d82af9e2-eb5f-4cac-8924-31c42aa3983d}</destination>
@@ -277,6 +280,9 @@
 		</property>
 		<property name="attackTime">
 			<value>0</value>
+		</property>
+		<property name="releaseTime">
+			<value>3000</value>
 		</property>
 		<property name="finalValue">
 			<value>-80</value>
