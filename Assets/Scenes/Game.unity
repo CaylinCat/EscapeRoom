@@ -418,17 +418,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &986380832 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7098368616619348857, guid: ea84b7f730148a348ad5d285c8838ce6, type: 3}
-  m_PrefabInstance: {fileID: 4380620920456782227}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d56bc8bbd64e3cd4c8291a8bf56fa9b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1254380322
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,66 +528,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 17162391230458762, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
+    - target: {fileID: 2161113104644036774, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: timeDisplay
       value: 
-      objectReference: {fileID: 986380832}
-    - target: {fileID: 38561778240567440, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_Size.x
-      value: 3.684215
-      objectReference: {fileID: 0}
-    - target: {fileID: 38561778240567440, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_Size.y
-      value: 5.6159353
-      objectReference: {fileID: 0}
-    - target: {fileID: 38561778240567440, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.89333653
-      objectReference: {fileID: 0}
-    - target: {fileID: 38561778240567440, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.07006502
-      objectReference: {fileID: 0}
-    - target: {fileID: 362153780846290639, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 641853085000688931, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1081704747658917076, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
-      value: 
-      objectReference: {fileID: 986380832}
-    - target: {fileID: 1493671404325298091, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
-      value: 
-      objectReference: {fileID: 986380832}
-    - target: {fileID: 2599053854635716023, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
-      value: 
-      objectReference: {fileID: 986380832}
-    - target: {fileID: 2795105663632162180, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1669905374}
     - target: {fileID: 2809135654695028273, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: timeDisplay
       value: 
       objectReference: {fileID: 1669905374}
-    - target: {fileID: 2998640840594278185, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
-      value: 
-      objectReference: {fileID: 986380832}
     - target: {fileID: 3293433890934011578, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: timeDisplay
       value: 
       objectReference: {fileID: 1669905374}
-    - target: {fileID: 3918287913525352378, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4090362361270814223, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -639,82 +580,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4206922336924552905, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
+    - target: {fileID: 5931359821177596451, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: timeDisplay
       value: 
-      objectReference: {fileID: 986380832}
-    - target: {fileID: 4225340849613303857, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
-      value: 
-      objectReference: {fileID: 986380832}
-    - target: {fileID: 4372376644126206707, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
-      value: 
-      objectReference: {fileID: 986380832}
-    - target: {fileID: 4638582102814587434, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
-      value: 
-      objectReference: {fileID: 986380832}
-    - target: {fileID: 4707805782689785582, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864607817543559191, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
-      value: 
-      objectReference: {fileID: 986380832}
-    - target: {fileID: 5162883196032811071, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
-      value: 
-      objectReference: {fileID: 986380832}
-    - target: {fileID: 5248843455128338053, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1669905374}
     - target: {fileID: 5931359821177596451, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: InventoryBar
       value: 
       objectReference: {fileID: 142441017}
-    - target: {fileID: 6370571135170620481, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.4828206
-      objectReference: {fileID: 0}
-    - target: {fileID: 6370571135170620481, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.711
-      objectReference: {fileID: 0}
     - target: {fileID: 6636772908125924939, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
       propertyPath: m_Name
       value: Room Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 6807572315349721160, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7348452851820428289, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
+    - target: {fileID: 9099813512609691758, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
+      propertyPath: timeDisplay
       value: 
-      objectReference: {fileID: 986380832}
-    - target: {fileID: 8588755808519731461, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8631804674777634192, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: m_Name
-      value: Main Circle
-      objectReference: {fileID: 0}
-    - target: {fileID: 8659231762418790585, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
-      value: 
-      objectReference: {fileID: 986380832}
-    - target: {fileID: 8659231762418790585, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: NRClue0
-      value: 
-      objectReference: {fileID: 8024224844977435112, guid: ab73c8c971e12a249a91ff9d9d1b5c49, type: 3}
-    - target: {fileID: 8779224222497151150, guid: 775b4cd9a24bba44e861a5625a3bba67, type: 3}
-      propertyPath: Timer
-      value: 
-      objectReference: {fileID: 986380832}
+      objectReference: {fileID: 1669905374}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

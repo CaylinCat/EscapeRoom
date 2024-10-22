@@ -16,6 +16,7 @@ public class RoomManager : MonoBehaviour
     public Sprite SoulInventorySprite;
     private bool bodyRoomActive = true;
     [SerializeField] private Texture2D cursorStudy, cursorArmory;
+    public GameObject timeDisplay;
 
     void Awake()
     {
@@ -45,6 +46,10 @@ public class RoomManager : MonoBehaviour
     {
         PuzzleManager.Instance.HidePuzzle();
         TransitionManager.Instance.SwitchRoomsTransition(SetRoom);
+        if (timeDisplay != null)
+        {
+            timeDisplay.SetActive(false);
+        }
     }
 
     private void SetRoom()

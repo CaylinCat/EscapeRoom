@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 07f2cdb3daab3694ab1a83eb495ef117, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -142,6 +142,7 @@ MonoBehaviour:
   SoulInventorySprite: {fileID: 21300000, guid: 48b65ca855bb94bab9127053e53d93e6, type: 3}
   cursorStudy: {fileID: 2800000, guid: b1ecd2726335d71468c878464ad4602a, type: 3}
   cursorArmory: {fileID: 2800000, guid: 7867b3cdce3d4eb4b91f03f113d68f38, type: 3}
+  timeDisplay: {fileID: 0}
 --- !u!1 &6822824189429133546
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +238,22 @@ PrefabInstance:
     - target: {fileID: 287756998986331147, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
       propertyPath: m_Name
       value: Armory
+      objectReference: {fileID: 0}
+    - target: {fileID: 463886416954370644, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
+      propertyPath: m_Size.x
+      value: 3.684215
+      objectReference: {fileID: 0}
+    - target: {fileID: 463886416954370644, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
+      propertyPath: m_Size.y
+      value: 5.6159353
+      objectReference: {fileID: 0}
+    - target: {fileID: 463886416954370644, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.89333653
+      objectReference: {fileID: 0}
+    - target: {fileID: 463886416954370644, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07006502
       objectReference: {fileID: 0}
     - target: {fileID: 1013486371771938791, guid: 0c31e80139ff89548a785e8fcecdee10, type: 3}
       propertyPath: m_LocalPosition.z

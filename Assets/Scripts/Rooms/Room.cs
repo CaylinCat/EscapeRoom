@@ -10,6 +10,7 @@ public class Room : MonoBehaviour
 {
     public List<GameObject> Walls;
     private int wallIndex = 0;
+    public GameObject timeDisplay;
 
     void Start()
     {
@@ -38,6 +39,10 @@ public class Room : MonoBehaviour
     {
         PuzzleManager.Instance.HidePuzzle();
         TransitionManager.Instance.SwitchWallsTransition(() => SetWall(direction));
+        if (timeDisplay != null)
+        {
+            timeDisplay.SetActive(false);
+        }
     }
 
     private void SetWall(bool direction)
