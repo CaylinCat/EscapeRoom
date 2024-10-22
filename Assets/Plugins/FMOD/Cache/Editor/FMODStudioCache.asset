@@ -285,10 +285,10 @@ MonoBehaviour:
   Path: FMOD/EscapeRoom/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638650556426747938
+  lastModified: 638651460291990428
   FileSizes:
   - Name: Desktop
-    Value: 1926
+    Value: 1962
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -327,6 +327,7 @@ MonoBehaviour:
   - {fileID: 89568671331555756}
   - {fileID: 3163427236155016969}
   - {fileID: -6884325916265966575}
+  - {fileID: 5743323339171847528}
   EditorParameters:
   - {fileID: 6150899174731630867}
   - {fileID: 555775798249439709}
@@ -334,7 +335,7 @@ MonoBehaviour:
   - {fileID: 7953889665104228310}
   StringsBanks:
   - {fileID: -668679638939718583}
-  cacheTime: 638650556426747938
+  cacheTime: 638651460291990428
   cacheVersion: 131617
 --- !u!114 &89568671331555756
 MonoBehaviour:
@@ -630,6 +631,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1418
+--- !u!114 &5743323339171847528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/title
+  m_EditorClassIdentifier: 
+  Path: event:/Music/title
+  Guid:
+    Data1: -511012218
+    Data2: 1128310230
+    Data3: -1605851997
+    Data4: 4893836
+  Banks:
+  - {fileID: 7953889665104228310}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 35086
 --- !u!114 &6150899174731630867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,10 +697,10 @@ MonoBehaviour:
   Path: FMOD/EscapeRoom/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638650556426737936
+  lastModified: 638651460291980335
   FileSizes:
   - Name: Desktop
-    Value: 6418208
+    Value: 6826560
   Exists: 1
 --- !u!114 &8281643285935907909
 MonoBehaviour:
