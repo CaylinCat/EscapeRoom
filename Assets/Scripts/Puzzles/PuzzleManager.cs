@@ -49,7 +49,7 @@ public class PuzzleManager : MonoBehaviour
 
     public void TryHidePuzzle()
     {
-        Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), 1f);
+        Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), 0.001f);
         foreach(Collider2D col in collider2Ds)
         {
             if(col.gameObject.tag == "blocker")
