@@ -414,9 +414,25 @@ PrefabInstance:
       propertyPath: m_text
       value: QUIT
       objectReference: {fileID: 0}
+    - target: {fileID: 3795560381546242110, guid: 3c0b3e92a82934b2b994545490a03cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4932338297378317291}
+    - target: {fileID: 3795560381546242110, guid: 3c0b3e92a82934b2b994545490a03cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795560381546242110, guid: 3c0b3e92a82934b2b994545490a03cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SettingsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795560381546242110, guid: 3c0b3e92a82934b2b994545490a03cf2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7404961331598048564, guid: 3c0b3e92a82934b2b994545490a03cf2, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: Quit
       objectReference: {fileID: 0}
     - target: {fileID: 8646669401215909557, guid: 3c0b3e92a82934b2b994545490a03cf2, type: 3}
       propertyPath: m_Pivot.x
