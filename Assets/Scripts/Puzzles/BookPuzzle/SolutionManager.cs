@@ -5,15 +5,18 @@ using UnityEngine;
 public class SolutionManager : Puzzle
 {
     public Transform[] bookSlots;
-    public GameObject[] correctOrder;
-    public GameObject[] correctOrder2;
-    public GameObject[] correctOrder3;
+    public GameObject[] correctOrder; // Symbols
+    public GameObject[] correctOrder2; // Alphabetical authors
+    public GameObject[] correctOrder3; // Alphabetical titles
     public GameObject moon1;
     public GameObject moon2;
     public GameObject moon3;
     public Item mirror;
     public Item lizzardLeg;
     public Item bricksClue;
+    public HintInteractable BookshelfHI;
+    public Hint BookshelfHint2; // Authors hint
+    public Hint BookshelfHint3; // Titles hint
     bool c = false;
     bool c2 = false;
     bool c3 = false;
@@ -33,18 +36,22 @@ public class SolutionManager : Puzzle
             c = true;
             completedCount++;
             starUpdate();
+            if(!c2) BookshelfHI.UpdateHint(BookshelfHint2);
+            else if(!c3) BookshelfHI.UpdateHint(BookshelfHint3);
         }
         else if ((IsPuzzleSolved(correctOrder2) || IsPuzzleSolvedReverse(correctOrder2)) && !c2)
         {
             c2 = true;
             completedCount++;
             starUpdate();
+            if(c && !c3) BookshelfHI.UpdateHint(BookshelfHint3);
         }
         else if ((IsPuzzleSolved(correctOrder3) || IsPuzzleSolvedReverse(correctOrder3)) && !c3)
         {
             c3 = true;
             completedCount++;
             starUpdate();
+            if(c && !c2) BookshelfHI.UpdateHint(BookshelfHint2);
         }
     }
 
