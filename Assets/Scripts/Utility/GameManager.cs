@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public GameObject IntroSequence;
     [SerializeField] private Texture2D cursor;
     void Awake()
     {
@@ -42,5 +43,15 @@ public class GameManager : MonoBehaviour
     public void LoadGameScene()
     {
         SceneManager.LoadScene("Game");
+    }
+
+    public void ShowIntro()
+    {
+        IntroSequence.SetActive(true);
+    }
+
+    public void StartGame()
+    {
+        LoadGameScene();
     }
 }

@@ -718,6 +718,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6762885262231842893, guid: cbaae33c6feee444cb5ca96fcc9c0b1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762885262231842893, guid: cbaae33c6feee444cb5ca96fcc9c0b1c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5371996726639497118, guid: de13112c16739466da7b82246ffe2b2d, type: 3}
@@ -860,12 +864,16 @@ PrefabInstance:
       value: Start Button
       objectReference: {fileID: 0}
     - target: {fileID: 5987799755156860294, guid: c98b71248000348adb2d87196cedbe8a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987799755156860294, guid: c98b71248000348adb2d87196cedbe8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5371996726639497118, guid: de13112c16739466da7b82246ffe2b2d, type: 3}
     - target: {fileID: 5987799755156860294, guid: c98b71248000348adb2d87196cedbe8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadGameScene
+      value: ShowIntro
       objectReference: {fileID: 0}
     - target: {fileID: 5987799755156860294, guid: c98b71248000348adb2d87196cedbe8a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1113,6 +1121,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1744847571728941450, guid: 05c79388c00b14d9da55b7681759174c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585775118154325761, guid: 05c79388c00b14d9da55b7681759174c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
