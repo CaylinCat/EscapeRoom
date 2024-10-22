@@ -136,7 +136,7 @@ public class Chessboard : Puzzle
             foreach (Piece piece in pieceList)
             {
                 Color temp = Color.white;
-                piece.GetComponent<SpriteRenderer>().color = Unity.VisualScripting.ColorUtility.WithAlpha(Color.white, (100.0f - i) / 100);
+                piece.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, (100.0f - i) / 100); 
                 if (i ==  100)
                 {
                     Destroy(piece.gameObject);
