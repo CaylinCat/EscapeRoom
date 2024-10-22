@@ -17,6 +17,9 @@ public class Chessboard : Puzzle
     [HideInInspector] public static Piece selectedPiece;
     public GameObject piecePrefab;
     public FMODUnity.StudioEventEmitter MovePieceSFX;
+    public HintInteractable ChessHI;
+    public Hint ChessHint2;
+    public Hint ChessHint3;
 
     [HideInInspector] public static int turn;
     [HideInInspector] public static List<string> bestMoves = new List<string>();
@@ -140,10 +143,8 @@ public class Chessboard : Puzzle
             }
         }
 
+        ChessHI.UpdateHint(ChessHint3);
         chessBoardSR.sprite = completedBoardSprite;
-        
-
-        
     }
 
     private void AddPieceToBoard(Piece piece, int posX, int posY)
@@ -185,6 +186,7 @@ public class Chessboard : Puzzle
 
     public void AddMissingPiece()
     {
+        ChessHI.UpdateHint(ChessHint2);
         Piece missingPiece = Instantiate(piecePrefab, transform.position, Quaternion.identity).GetComponent<Piece>();
         missingPiece.type = Piece.PieceType.Rook;
         missingPiece.isPlayerTeam = true;
