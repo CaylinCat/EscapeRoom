@@ -39,10 +39,7 @@ public class Room : MonoBehaviour
     {
         PuzzleManager.Instance.HidePuzzle();
         TransitionManager.Instance.SwitchWallsTransition(() => SetWall(direction));
-        if (timeDisplay != null)
-        {
-            timeDisplay.SetActive(false);
-        }
+        
     }
 
     private void SetWall(bool direction)
@@ -61,5 +58,9 @@ public class Room : MonoBehaviour
         }
 
         Walls[wallIndex].SetActive(true);
+        if (timeDisplay != null)
+        {
+            timeDisplay.SetActive(false);
+        }
     }
 }
