@@ -135,7 +135,8 @@ public class Chessboard : Puzzle
             yield return new WaitForSeconds(0.02f);
             foreach (Piece piece in pieceList)
             {
-                piece.GetComponent<SpriteRenderer>().color = Color.white.WithAlpha((100.0f - i) / 100);
+                Color temp = Color.white;
+                piece.GetComponent<SpriteRenderer>().color = Unity.VisualScripting.ColorUtility.WithAlpha(Color.white, (100.0f - i) / 100);
                 if (i ==  100)
                 {
                     Destroy(piece.gameObject);
