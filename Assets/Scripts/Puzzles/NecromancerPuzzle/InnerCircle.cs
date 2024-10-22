@@ -10,8 +10,6 @@ public class InnerCircle : MonoBehaviour
     public List<GameObject> IngredientSlots;
     private List<ItemID> CorrectInnerPlacement;
     private List<ItemID> CurrentInnerPlacement;
-    public Item DragonTooth, Heart; // delete later, for debugging
-
     void Start() {
         CorrectInnerPlacement = new List<ItemID> {ItemID.FINGER_BONE, ItemID.HAIR, ItemID.PHOTOGRAPH, ItemID.MIRROR, ItemID.RING, ItemID.DRAGON_TOOTH, ItemID.HEART, ItemID.AMULET};
         CurrentInnerPlacement = new List<ItemID> {ItemID.NONE, ItemID.NONE, ItemID.NONE, ItemID.NONE, ItemID.NONE, ItemID.NONE, ItemID.NONE, ItemID.NONE};
@@ -27,25 +25,8 @@ public class InnerCircle : MonoBehaviour
             }
     }
 
-     void Update()
-    {
-        // Check if the Backslash key is pressed
-        if (Input.GetKeyDown(KeyCode.Backslash))
-        {
-            Debug.Log("Items Given");
-            AddItemsToInventory();
-        }
-    }
-
     private bool AreInnerItemsCorrect() 
     {
         return CorrectInnerPlacement.All(item => CurrentInnerPlacement.Contains(item)); // dont check order here, just if its in the circle
     }   
-
-    // DELETE LATER! for easy debugging
-    private void AddItemsToInventory()
-    {
-        InventoryManager.Instance.AddItem(DragonTooth);
-        InventoryManager.Instance.AddItem(Heart);
-    }
 }
