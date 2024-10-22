@@ -32,6 +32,9 @@ public class LetterPuzzle : Puzzle
     public FMODUnity.StudioEventEmitter WritingSFX;
     public FMODUnity.StudioEventEmitter PaperSFX;
     public FMODUnity.StudioEventEmitter StampSFX;
+    public HintInteractable LetterHI;
+    public Hint LetterHint2;
+    public Hint LetterHint3;
 
     private string _solutionName = "Elizabeth";
     private bool letterComplete = false;
@@ -67,6 +70,7 @@ public class LetterPuzzle : Puzzle
             LetterSR.sprite = NamedLetterSprite;
             NameLetterCanvas.SetActive(false);
             WritingSFX.Play();
+            LetterHI.UpdateHint(LetterHint2);
             StartCoroutine(WaitCloseLetter());
         }
         else
@@ -94,6 +98,7 @@ public class LetterPuzzle : Puzzle
         WaxUnstamped.SetActive(true);
         UseWaxZone.SetActive(false);
         UseStampZone.SetActive(true);
+        LetterHI.UpdateHint(LetterHint3);
     }
 
     public void StampWax()

@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c4f32775eebb4e4597f85c7b6be19f9, type: 3}
-  m_Name: Cauldron Hint 2
+  m_Name: Letter Hint 3
   m_EditorClassIdentifier: 
-  HintText: Is there something I could use to scoop up this liquid?
+  HintText: "I still need to stamp this seal... I should come back after I\u2019ve
+    found a stamp."
