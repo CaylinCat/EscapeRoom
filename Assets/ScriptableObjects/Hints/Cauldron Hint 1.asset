@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c4f32775eebb4e4597f85c7b6be19f9, type: 3}
-  m_Name: CandelabraHint
+  m_Name: Cauldron Hint 1
   m_EditorClassIdentifier: 
-  HintText: Maybe there is something I could use to light these candles...
+  HintText: What kind of potion is this? Maybe I could find a recipe somewhere...

@@ -14,6 +14,8 @@ public class CauldronPuzzle : Puzzle
     public GameObject UseGobletZone;
     public FMODUnity.StudioEventEmitter AddItemSFX;
     public FMODUnity.StudioEventEmitter GobletSubmergeSFX;
+    public HintInteractable CauldronHI;
+    public Hint CauldronHint2;
     private bool complete = false;
 
     void Awake()
@@ -35,6 +37,7 @@ public class CauldronPuzzle : Puzzle
             UseIngredientZone.SetActive(false);
             UseGobletZone.SetActive(true);
             complete = true;
+            CauldronHI.UpdateHint(CauldronHint2);
             OnComplete();
         }
     }
