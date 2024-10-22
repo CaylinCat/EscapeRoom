@@ -9,6 +9,7 @@ public class PuzzleManager : MonoBehaviour
     public GameObject Background;
     public GameObject ItemInspect;
     public GameObject HintGameObject;
+    public GameObject Tutorial;
     public TextMeshProUGUI HintText;
     public SpriteRenderer ItemInspectSR;
     public FMODUnity.StudioEventEmitter OnCompleteSFX;
@@ -34,6 +35,7 @@ public class PuzzleManager : MonoBehaviour
     {
         Background.SetActive(false);
         RemainingHints = 3;
+        ShowPuzzle(Tutorial);
     }
 
     public void ShowPuzzle(GameObject puzzle)
