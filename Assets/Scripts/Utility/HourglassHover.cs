@@ -6,7 +6,7 @@ public class HourglassHover : MonoBehaviour
     
     private void OnMouseEnter()
     {
-        if (timeDisplay != null)
+        if (timeDisplay != null && !PuzzleManager.Instance.Background.activeInHierarchy)
         {
             timeDisplay.SetActive(true);
         }

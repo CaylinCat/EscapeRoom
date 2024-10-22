@@ -46,10 +46,7 @@ public class RoomManager : MonoBehaviour
     {
         PuzzleManager.Instance.HidePuzzle();
         TransitionManager.Instance.SwitchRoomsTransition(SetRoom);
-        if (timeDisplay != null)
-        {
-            timeDisplay.SetActive(false);
-        }
+        
     }
 
     private void SetRoom()
@@ -69,6 +66,10 @@ public class RoomManager : MonoBehaviour
             Cursor.SetCursor(cursorStudy, Vector2.zero, CursorMode.Auto);
         }
         UpdateInventoryBarSprite();
+        if (timeDisplay != null)
+        {
+            timeDisplay.SetActive(false);
+        }
     }
 
     private void UpdateInventoryBarSprite()
