@@ -15,6 +15,7 @@ public class RoomManager : MonoBehaviour
     public Sprite BodyInventorySprite;
     public Sprite SoulInventorySprite;
     private bool bodyRoomActive = true;
+    private Vector2 cursorOffset = new Vector2(5, 0);
     [SerializeField] private Texture2D cursorStudy, cursorArmory;
     public GameObject timeDisplay;
 
@@ -33,7 +34,7 @@ public class RoomManager : MonoBehaviour
         BodyRoom.gameObject.SetActive(true);
         SpiritRoom.gameObject.SetActive(false);
         UpdateInventoryBarSprite();
-        Cursor.SetCursor(cursorStudy, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(cursorStudy, cursorOffset, CursorMode.Auto);
         Cursor.visible = true;
     }
 
@@ -56,14 +57,14 @@ public class RoomManager : MonoBehaviour
             BodyRoom.gameObject.SetActive(false);
             SpiritRoom.gameObject.SetActive(true);
             bodyRoomActive = false;
-            Cursor.SetCursor(cursorArmory, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(cursorArmory, cursorOffset, CursorMode.Auto);
         }
         else
         {
             BodyRoom.gameObject.SetActive(true);
             SpiritRoom.gameObject.SetActive(false);
             bodyRoomActive = true;
-            Cursor.SetCursor(cursorStudy, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(cursorStudy, cursorOffset, CursorMode.Auto);
         }
         UpdateInventoryBarSprite();
         if (timeDisplay != null)
